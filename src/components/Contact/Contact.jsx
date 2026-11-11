@@ -164,124 +164,129 @@ export default function Contact({ onOpenResume }) {
 
         {/* Right Column: Functional Contact Form (7 cols) */}
         <div className="lg:col-span-7">
-          <div className="glass-card-interactive p-6 sm:p-8 rounded-[32px] border border-white/90 shadow-glass-md">
-            <h3 className="font-display font-bold text-xl text-pastel-ink mb-1">
-              Send a Direct Message
-            </h3>
-            <p className="font-mono text-xs text-pastel-slate mb-6">
-              Messages will be routed directly to {profileData.name}'s primary inbox.
-            </p>
+          <div className="glass-card-interactive p-6 sm:p-8 rounded-[32px] border border-white/90 shadow-glass-md relative overflow-hidden">
+            {/* Prismatic Rainbow Corner Flare */}
+            <div className="chromatic-flare-br opacity-60" />
 
-            {status === 'success' ? (
-              <div className="p-8 rounded-2xl bg-pastel-mint/30 border border-accent-spring/30 text-center space-y-3 animate-fade-in">
-                <div className="w-12 h-12 rounded-full bg-pastel-mint flex items-center justify-center mx-auto text-accent-spring">
-                  <CheckCircle2 className="w-6 h-6" />
+            <div className="relative z-10">
+              <h3 className="font-display font-bold text-xl text-pastel-ink mb-1">
+                Send a Direct Message
+              </h3>
+              <p className="font-mono text-xs text-pastel-slate mb-6">
+                Messages will be routed directly to {profileData.name}'s primary inbox.
+              </p>
+
+              {status === 'success' ? (
+                <div className="p-8 rounded-2xl bg-pastel-mint/30 border border-accent-spring/30 text-center space-y-3 animate-fade-in">
+                  <div className="w-12 h-12 rounded-full bg-pastel-mint flex items-center justify-center mx-auto text-accent-spring">
+                    <CheckCircle2 className="w-6 h-6" />
+                  </div>
+                  <h4 className="font-display font-bold text-lg text-pastel-ink">
+                    Message Dispatched!
+                  </h4>
+                  <p className="font-body text-xs sm:text-sm text-pastel-slate max-w-md mx-auto">
+                    Thank you! Your email client has been prepared, and a direct notification has been triggered. I'll get back to you shortly.
+                  </p>
+                  <button
+                    onClick={() => {
+                      setStatus('idle');
+                      setFormData({ name: '', email: '', subject: '', message: '' });
+                    }}
+                    className="mt-3 px-4 py-2 rounded-xl glass-panel text-xs font-mono text-pastel-ink hover:bg-white"
+                  >
+                    Send another message
+                  </button>
                 </div>
-                <h4 className="font-display font-bold text-lg text-pastel-ink">
-                  Message Dispatched!
-                </h4>
-                <p className="font-body text-xs sm:text-sm text-pastel-slate max-w-md mx-auto">
-                  Thank you! Your email client has been prepared, and a direct notification has been triggered. I'll get back to you shortly.
-                </p>
-                <button
-                  onClick={() => {
-                    setStatus('idle');
-                    setFormData({ name: '', email: '', subject: '', message: '' });
-                  }}
-                  className="mt-3 px-4 py-2 rounded-xl glass-panel text-xs font-mono text-pastel-ink hover:bg-white"
-                >
-                  Send another message
-                </button>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-4" noValidate>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {/* Name */}
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-4" noValidate>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    {/* Name */}
+                    <div className="space-y-1">
+                      <label className="font-mono text-xs text-pastel-ink block">
+                        Your Name *
+                      </label>
+                      <input
+                        type="text"
+                        value={formData.name}
+                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                        placeholder="Jane Doe"
+                        className={`w-full px-4 py-2.5 rounded-full liquid-glass-input ${
+                          errors.name ? 'border-red-400' : ''
+                        } text-pastel-ink text-sm placeholder:text-pastel-slate/50 focus:outline-none`}
+                      />
+                      {errors.name && <p className="font-mono text-[10px] text-red-500">{errors.name}</p>}
+                    </div>
+
+                    {/* Email */}
+                    <div className="space-y-1">
+                      <label className="font-mono text-xs text-pastel-ink block">
+                        Email Address *
+                      </label>
+                      <input
+                        type="email"
+                        value={formData.email}
+                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                        placeholder="jane@company.com"
+                        className={`w-full px-4 py-2.5 rounded-full liquid-glass-input ${
+                          errors.email ? 'border-red-400' : ''
+                        } text-pastel-ink text-sm placeholder:text-pastel-slate/50 focus:outline-none`}
+                      />
+                      {errors.email && <p className="font-mono text-[10px] text-red-500">{errors.email}</p>}
+                    </div>
+                  </div>
+
+                  {/* Subject */}
                   <div className="space-y-1">
                     <label className="font-mono text-xs text-pastel-ink block">
-                      Your Name *
+                      Subject / Topic
                     </label>
                     <input
                       type="text"
-                      value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      placeholder="Jane Doe"
-                      className={`w-full px-4 py-2.5 rounded-xl bg-white/70 border ${
-                        errors.name ? 'border-red-400' : 'border-white'
-                      } text-pastel-ink text-sm placeholder:text-pastel-slate/50 focus:outline-none focus:ring-2 focus:ring-pastel-ink/20`}
+                      value={formData.subject}
+                      onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+                      placeholder="Internship opportunity / Full-stack inquiry"
+                      className="w-full px-4 py-2.5 rounded-full liquid-glass-input text-pastel-ink text-sm placeholder:text-pastel-slate/50 focus:outline-none"
                     />
-                    {errors.name && <p className="font-mono text-[10px] text-red-500">{errors.name}</p>}
                   </div>
 
-                  {/* Email */}
+                  {/* Message */}
                   <div className="space-y-1">
                     <label className="font-mono text-xs text-pastel-ink block">
-                      Email Address *
+                      Message *
                     </label>
-                    <input
-                      type="email"
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      placeholder="jane@company.com"
-                      className={`w-full px-4 py-2.5 rounded-xl bg-white/70 border ${
-                        errors.email ? 'border-red-400' : 'border-white'
-                      } text-pastel-ink text-sm placeholder:text-pastel-slate/50 focus:outline-none focus:ring-2 focus:ring-pastel-ink/20`}
+                    <textarea
+                      rows={4}
+                      value={formData.message}
+                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                      placeholder="Hi Vanshika, I'd like to discuss..."
+                      className={`w-full px-4 py-2.5 rounded-2xl bg-white/70 backdrop-blur-md border ${
+                        errors.message ? 'border-red-400' : 'border-white'
+                      } text-pastel-ink text-sm placeholder:text-pastel-slate/50 focus:outline-none focus:ring-2 focus:ring-purple-300 resize-none shadow-xs`}
                     />
-                    {errors.email && <p className="font-mono text-[10px] text-red-500">{errors.email}</p>}
+                    {errors.message && <p className="font-mono text-[10px] text-red-500">{errors.message}</p>}
                   </div>
-                </div>
 
-                {/* Subject */}
-                <div className="space-y-1">
-                  <label className="font-mono text-xs text-pastel-ink block">
-                    Subject / Topic
-                  </label>
-                  <input
-                    type="text"
-                    value={formData.subject}
-                    onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                    placeholder="Internship opportunity / Full-stack inquiry"
-                    className="w-full px-4 py-2.5 rounded-xl bg-white/70 border border-white text-pastel-ink text-sm placeholder:text-pastel-slate/50 focus:outline-none focus:ring-2 focus:ring-pastel-ink/20"
-                  />
-                </div>
-
-                {/* Message */}
-                <div className="space-y-1">
-                  <label className="font-mono text-xs text-pastel-ink block">
-                    Message *
-                  </label>
-                  <textarea
-                    rows={4}
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    placeholder="Hi Vanshika, I'd like to discuss..."
-                    className={`w-full px-4 py-2.5 rounded-xl bg-white/70 border ${
-                      errors.message ? 'border-red-400' : 'border-white'
-                    } text-pastel-ink text-sm placeholder:text-pastel-slate/50 focus:outline-none focus:ring-2 focus:ring-pastel-ink/20 resize-none`}
-                  />
-                  {errors.message && <p className="font-mono text-[10px] text-red-500">{errors.message}</p>}
-                </div>
-
-                {/* Submit Button */}
-                <button
-                  type="submit"
-                  disabled={status === 'submitting'}
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-pastel-ink text-pastel-white text-xs font-mono font-medium hover:bg-pastel-ink/90 transition-all shadow-glass-sm hover:shadow-glass-md disabled:opacity-70"
-                >
-                  {status === 'submitting' ? (
-                    <>
-                      <span className="w-3.5 h-3.5 border-2 border-white/40 border-t-white rounded-full animate-spin" />
-                      <span>Transmitting...</span>
-                    </>
-                  ) : (
-                    <>
-                      <Send className="w-3.5 h-3.5" />
-                      <span>Transmit Inquiry</span>
-                    </>
-                  )}
-                </button>
-              </form>
-            )}
+                  {/* Submit Button (Purple Liquid Glass Pill) */}
+                  <button
+                    type="submit"
+                    disabled={status === 'submitting'}
+                    className="liquid-pill-purple w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3 text-xs font-mono font-medium disabled:opacity-70 shadow-lg cursor-pointer"
+                  >
+                    {status === 'submitting' ? (
+                      <>
+                        <span className="w-3.5 h-3.5 border-2 border-white/40 border-t-white rounded-full animate-spin" />
+                        <span>Transmitting...</span>
+                      </>
+                    ) : (
+                      <>
+                        <Send className="w-3.5 h-3.5 text-white/90" />
+                        <span>Transmit Inquiry</span>
+                      </>
+                    )}
+                  </button>
+                </form>
+              )}
+            </div>
           </div>
         </div>
 

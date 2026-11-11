@@ -41,7 +41,9 @@ export default function Experience() {
                 {/* Timeline Node */}
                 <div className="absolute left-1.5 top-1.5 w-3 h-3 rounded-full bg-pastel-white border-2 border-pastel-ink transition-transform group-hover:scale-125 shadow-xs" />
 
-                <div className="glass-panel p-6 rounded-2xl border border-white/80 transition-all hover:bg-white/90">
+                <div className="glass-panel p-6 rounded-2xl border border-white/80 transition-all hover:bg-white/40 relative overflow-hidden shadow-glass-sm">
+                  <div className="chromatic-flare-br opacity-50 !w-20 !h-20" />
+                  <div className="relative z-10">
                   <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
                     <span className="font-mono text-xs text-pastel-slate flex items-center gap-1.5">
                       <Calendar className="w-3.5 h-3.5" />
@@ -71,10 +73,11 @@ export default function Experience() {
 
                   <div className="flex flex-wrap gap-1.5 pt-3 border-t border-pastel-ink/5">
                     {item.tags.map((tag, tIdx) => (
-                      <span key={tIdx} className="font-mono text-[10px] px-2 py-0.5 rounded bg-white/70 text-pastel-ink border border-white">
+                      <span key={tag} className="font-mono text-[10px] px-2 py-0.5 rounded bg-white/70 text-pastel-ink border border-white">
                         {tag}
                       </span>
                     ))}
+                  </div>
                   </div>
                 </div>
               </div>
@@ -97,7 +100,9 @@ export default function Experience() {
                 {/* Timeline Node */}
                 <div className="absolute left-1.5 top-1.5 w-3 h-3 rounded-full bg-pastel-white border-2 border-accent-spring transition-transform group-hover:scale-125 shadow-xs" />
 
-                <div className="glass-panel p-6 rounded-2xl border border-white/80 transition-all hover:bg-white/90">
+                <div className="glass-panel p-6 rounded-2xl border border-white/80 transition-all hover:bg-white/40 relative overflow-hidden shadow-glass-sm">
+                  <div className="chromatic-flare-br opacity-50 !w-20 !h-20" />
+                  <div className="relative z-10">
                   <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
                     <span className="font-mono text-xs text-pastel-slate flex items-center gap-1.5">
                       <Calendar className="w-3.5 h-3.5" />
@@ -131,6 +136,7 @@ export default function Experience() {
                       </li>
                     ))}
                   </ul>
+                  </div>
                 </div>
               </div>
             ))}

@@ -18,22 +18,25 @@ export default function ProjectModal({ project, onClose }) {
   if (!project) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-pastel-ink/35 backdrop-blur-md animate-fade-in overflow-y-auto">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-pastel-ink/40 backdrop-blur-md animate-fade-in overflow-y-auto">
       <div 
-        className="relative w-full max-w-4xl my-auto glass-panel p-6 sm:p-10 rounded-3xl sm:rounded-[32px] border border-white shadow-glass-lg max-h-[92vh] overflow-y-auto"
+        className="relative w-full max-w-4xl my-auto glass-panel p-6 sm:p-10 rounded-3xl sm:rounded-[32px] border border-white/90 shadow-glass-lg max-h-[92vh] overflow-y-auto relative overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
+        {/* Prismatic Rainbow Corner Flare */}
+        <div className="chromatic-flare-br opacity-60" />
+
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-5 right-5 p-2 rounded-full glass-panel hover:bg-white text-pastel-ink transition-transform hover:scale-110 active:scale-95"
+          className="absolute top-5 right-5 p-2 rounded-full glass-panel hover:bg-white text-pastel-ink transition-transform hover:scale-110 active:scale-95 z-20"
           aria-label="Close case study"
         >
           <X className="w-5 h-5" />
         </button>
 
         {/* Modal Header */}
-        <div className="mb-8 pr-12">
+        <div className="mb-8 pr-12 relative z-10">
           <div className="flex flex-wrap items-center gap-2 mb-3">
             <span className="font-mono text-xs px-2.5 py-1 rounded-full bg-pastel-lavender/60 text-pastel-ink border border-white">
               Project {project.number}
@@ -55,13 +58,13 @@ export default function ProjectModal({ project, onClose }) {
         </div>
 
         {/* Project Links & Actions */}
-        <div className="flex flex-wrap items-center gap-3 mb-8 p-4 rounded-2xl bg-white/60 border border-white/80">
+        <div className="flex flex-wrap items-center gap-3 mb-8 p-4 rounded-2xl bg-white/60 border border-white/80 relative z-10">
           {project.githubUrl && (
             <a
               href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-pastel-ink text-pastel-white text-xs font-mono hover:bg-pastel-ink/90 transition-all shadow-sm"
+              className="liquid-pill-purple inline-flex items-center gap-2 px-5 py-2 text-xs font-mono tracking-wide shadow-sm"
             >
               <GithubIcon className="w-4 h-4" />
               <span>Inspect Source Repository</span>
@@ -74,14 +77,14 @@ export default function ProjectModal({ project, onClose }) {
               href={project.demoUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl glass-panel hover:bg-white text-pastel-ink text-xs font-mono transition-all"
+              className="liquid-pill-cyan inline-flex items-center gap-2 px-5 py-2 text-xs font-mono tracking-wide shadow-sm"
             >
-              <ExternalLink className="w-4 h-4 text-accent-spring" />
+              <ExternalLink className="w-4 h-4 text-white" />
               <span>Launch Live Deployment</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
             </a>
           ) : (
-            <div className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-pastel-white/80 border border-dashed border-pastel-slate/30 text-xs font-mono text-pastel-slate">
+            <div className="inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-pastel-white/80 border border-dashed border-pastel-slate/30 text-xs font-mono text-pastel-slate">
               <span className="w-2 h-2 rounded-full bg-accent-java" />
               <span>Live Demo Deployment Link (Reserved)</span>
             </div>
@@ -170,7 +173,7 @@ export default function ProjectModal({ project, onClose }) {
 
         {/* Footer info */}
         <div className="mt-10 pt-5 border-t border-pastel-ink/10 flex items-center justify-between text-xs font-mono text-pastel-slate">
-          <span>Centralized Project Record // {project.id}</span>
+          <span>Centralized Project Record • {project.id}</span>
           <button 
             onClick={onClose}
             className="text-pastel-ink hover:underline font-semibold"

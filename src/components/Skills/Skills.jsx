@@ -41,10 +41,12 @@ export default function Skills() {
           return (
             <div 
               key={category.id} 
-              className="glass-card-interactive p-6 rounded-3xl flex flex-col justify-between border border-white/80 group"
+              className="glass-card-interactive p-6 rounded-3xl flex flex-col justify-between border border-white/80 group relative overflow-hidden"
             >
+              <div className="chromatic-flare-br opacity-50 !w-24 !h-24" />
+
               {/* Category Header */}
-              <div>
+              <div className="relative z-10">
                 <div className="flex items-center justify-between mb-3">
                   <div 
                     className="w-10 h-10 rounded-2xl flex items-center justify-center border border-white/80 shadow-inner transition-transform group-hover:scale-105"

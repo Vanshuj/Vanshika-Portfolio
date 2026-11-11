@@ -108,10 +108,10 @@ export default function Navbar({ onOpenResume }) {
           <div className="flex items-center gap-2">
             <button
               onClick={onOpenResume}
-              className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-medium bg-pastel-peach/60 hover:bg-pastel-peach text-pastel-ink border border-white/80 shadow-sm transition-all duration-300 hover:shadow hover:scale-105 active:scale-95"
+              className="liquid-pill-purple flex items-center gap-1.5 px-4 py-1.5 text-xs font-medium tracking-wide shadow-sm"
               aria-label="View interactive resume"
             >
-              <FileText className="w-3.5 h-3.5 text-pastel-ink/80" />
+              <FileText className="w-3.5 h-3.5 text-white/90" />
               <span>Resume</span>
             </button>
 

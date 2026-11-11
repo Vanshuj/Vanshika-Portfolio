@@ -33,11 +33,13 @@ export default function Certificates() {
           <div
             key={cert.id}
             onClick={() => setActiveCert(cert)}
-            className={`glass-card-interactive p-6 rounded-3xl border border-white/80 flex flex-col justify-between cursor-pointer group ${
+            className={`glass-card-interactive p-6 rounded-3xl border border-white/80 flex flex-col justify-between cursor-pointer group relative overflow-hidden ${
               cert.isNationalHonor ? 'ring-2 ring-accent-java/40' : ''
             }`}
           >
-            <div>
+            <div className="chromatic-flare-br opacity-50 !w-24 !h-24" />
+
+            <div className="relative z-10">
               {/* Badge & Date */}
               <div className="flex items-center justify-between mb-4">
                 <span className="font-mono text-[10px] px-2.5 py-1 rounded-full bg-white/80 text-pastel-ink border border-white shadow-xs font-semibold">

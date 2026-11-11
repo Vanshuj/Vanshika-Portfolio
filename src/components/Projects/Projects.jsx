@@ -43,8 +43,11 @@ export default function Projects() {
             PROJECT 01: Pixel-Arena (Wide Asymmetrical Split)
            ======================================================== */}
         {projectsData[0] && (
-          <div className="glass-card-interactive p-6 sm:p-10 rounded-[32px] border border-white/90 shadow-glass-md">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          <div className="glass-card-interactive p-6 sm:p-10 rounded-[32px] border border-white/90 shadow-glass-md relative overflow-hidden group">
+            {/* Prismatic Rainbow Caustic Corner Flare */}
+            <div className="chromatic-flare-br opacity-60" />
+
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
               
               {/* Visual Showcase (7 cols) */}
               <div className="lg:col-span-7 order-2 lg:order-1">
@@ -86,7 +89,7 @@ export default function Projects() {
                   {/* Technology Chips */}
                   <div className="flex flex-wrap gap-1.5 mb-8">
                     {projectsData[0].technologies.slice(0, 5).map((t, idx) => (
-                      <span key={idx} className="font-mono text-[11px] px-2.5 py-1 rounded-md bg-white/70 text-pastel-ink border border-white">
+                      <span key={idx} className="font-mono text-[11px] px-3 py-1 rounded-full bg-white/70 text-pastel-ink border border-white shadow-2xs">
                         {t}
                       </span>
                     ))}
@@ -97,7 +100,7 @@ export default function Projects() {
                 <div className="flex flex-wrap items-center gap-3 pt-4 border-t border-pastel-ink/10">
                   <button
                     onClick={() => setSelectedProject(projectsData[0])}
-                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-pastel-ink text-pastel-white text-xs font-medium hover:bg-pastel-ink/90 transition-all shadow-sm"
+                    className="liquid-pill-purple inline-flex items-center gap-1.5 px-4 py-2 text-xs font-medium tracking-wide shadow-sm"
                   >
                     <span>View Case Study</span>
                     <ChevronRight className="w-3.5 h-3.5" />
@@ -107,7 +110,7 @@ export default function Projects() {
                     href={projectsData[0].githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl glass-panel hover:bg-white text-pastel-ink text-xs font-mono transition-all"
+                    className="liquid-pill-cyan inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-mono tracking-wide shadow-sm"
                   >
                     <GithubIcon className="w-3.5 h-3.5" />
                     <span>Source</span>
@@ -118,7 +121,7 @@ export default function Projects() {
                       href={projectsData[0].demoUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl glass-panel text-pastel-ink text-xs font-mono"
+                      className="inline-flex items-center gap-1.5 px-3 py-2 rounded-full glass-panel text-pastel-ink text-xs font-mono"
                     >
                       <ExternalLink className="w-3.5 h-3.5" />
                       <span>Live Demo</span>
@@ -139,8 +142,10 @@ export default function Projects() {
             PROJECT 02: KathaVani (Asymmetric Split Editorial)
            ======================================================== */}
         {projectsData[1] && (
-          <div className="glass-card-interactive p-6 sm:p-10 rounded-[32px] border border-white/90 shadow-glass-md bg-gradient-to-br from-white/70 via-pastel-peach/10 to-white/60">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          <div className="glass-card-interactive p-6 sm:p-10 rounded-[32px] border border-white/90 shadow-glass-md bg-gradient-to-br from-white/30 via-pastel-peach/15 to-white/20 relative overflow-hidden group">
+            <div className="chromatic-flare-br opacity-60" />
+
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
               
               {/* Information Panel (5 cols) - Left on desktop */}
               <div className="lg:col-span-5 flex flex-col justify-between space-y-6">
@@ -177,7 +182,7 @@ export default function Projects() {
                   {/* Technology Chips */}
                   <div className="flex flex-wrap gap-1.5 mb-8">
                     {projectsData[1].technologies.slice(0, 5).map((t, idx) => (
-                      <span key={idx} className="font-mono text-[11px] px-2.5 py-1 rounded-md bg-white/70 text-pastel-ink border border-white">
+                      <span key={idx} className="font-mono text-[11px] px-3 py-1 rounded-full bg-white/70 text-pastel-ink border border-white shadow-2xs">
                         {t}
                       </span>
                     ))}
@@ -188,7 +193,7 @@ export default function Projects() {
                 <div className="flex flex-wrap items-center gap-3 pt-4 border-t border-pastel-ink/10">
                   <button
                     onClick={() => setSelectedProject(projectsData[1])}
-                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-pastel-ink text-pastel-white text-xs font-medium hover:bg-pastel-ink/90 transition-all shadow-sm"
+                    className="liquid-pill-purple inline-flex items-center gap-1.5 px-4 py-2 text-xs font-medium tracking-wide shadow-sm"
                   >
                     <span>View Case Study</span>
                     <ChevronRight className="w-3.5 h-3.5" />
@@ -198,7 +203,7 @@ export default function Projects() {
                     href={projectsData[1].githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl glass-panel hover:bg-white text-pastel-ink text-xs font-mono transition-all"
+                    className="liquid-pill-cyan inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-mono tracking-wide shadow-sm"
                   >
                     <GithubIcon className="w-3.5 h-3.5" />
                     <span>Source</span>
@@ -209,7 +214,7 @@ export default function Projects() {
                       href={projectsData[1].demoUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl glass-panel text-pastel-ink text-xs font-mono"
+                      className="inline-flex items-center gap-1.5 px-3 py-2 rounded-full glass-panel text-pastel-ink text-xs font-mono"
                     >
                       <ExternalLink className="w-3.5 h-3.5" />
                       <span>Live Demo</span>
@@ -235,8 +240,10 @@ export default function Projects() {
             PROJECT 03: GYAN.AI (Layered Editorial Magazine)
            ======================================================== */}
         {projectsData[2] && (
-          <div className="glass-card-interactive p-6 sm:p-10 rounded-[32px] border border-white/90 shadow-glass-md bg-gradient-to-br from-white/70 via-pastel-lavender/15 to-white/60">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          <div className="glass-card-interactive p-6 sm:p-10 rounded-[32px] border border-white/90 shadow-glass-md bg-gradient-to-br from-white/30 via-pastel-lavender/20 to-white/20 relative overflow-hidden group">
+            <div className="chromatic-flare-br opacity-60" />
+
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
               
               {/* Visual Showcase (7 cols) */}
               <div className="lg:col-span-7 order-2 lg:order-1">
@@ -278,7 +285,7 @@ export default function Projects() {
                   {/* Technology Chips */}
                   <div className="flex flex-wrap gap-1.5 mb-8">
                     {projectsData[2].technologies.slice(0, 5).map((t, idx) => (
-                      <span key={idx} className="font-mono text-[11px] px-2.5 py-1 rounded-md bg-white/70 text-pastel-ink border border-white">
+                      <span key={idx} className="font-mono text-[11px] px-3 py-1 rounded-full bg-white/70 text-pastel-ink border border-white shadow-2xs">
                         {t}
                       </span>
                     ))}
@@ -289,7 +296,7 @@ export default function Projects() {
                 <div className="flex flex-wrap items-center gap-3 pt-4 border-t border-pastel-ink/10">
                   <button
                     onClick={() => setSelectedProject(projectsData[2])}
-                    className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-pastel-ink text-pastel-white text-xs font-medium hover:bg-pastel-ink/90 transition-all shadow-sm"
+                    className="liquid-pill-purple inline-flex items-center gap-1.5 px-4 py-2 text-xs font-medium tracking-wide shadow-sm"
                   >
                     <span>View Case Study</span>
                     <ChevronRight className="w-3.5 h-3.5" />
@@ -299,7 +306,7 @@ export default function Projects() {
                     href={projectsData[2].githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl glass-panel hover:bg-white text-pastel-ink text-xs font-mono transition-all"
+                    className="liquid-pill-cyan inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-mono tracking-wide shadow-sm"
                   >
                     <GithubIcon className="w-3.5 h-3.5" />
                     <span>Source</span>
@@ -310,7 +317,7 @@ export default function Projects() {
                       href={projectsData[2].demoUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl glass-panel text-pastel-ink text-xs font-mono"
+                      className="inline-flex items-center gap-1.5 px-3 py-2 rounded-full glass-panel text-pastel-ink text-xs font-mono"
                     >
                       <ExternalLink className="w-3.5 h-3.5" />
                       <span>Live Demo</span>

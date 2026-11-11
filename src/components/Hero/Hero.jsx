@@ -46,23 +46,23 @@ export default function Hero({ onOpenResume, onOpenContactModal }) {
             {profileData.tagline} Focused on modern full-stack systems with <span className="text-pastel-ink font-medium">Java, Spring Boot, React, and Node.js</span>, bridging robust enterprise engineering with intelligent AI capabilities.
           </p>
 
-          {/* Action CTAs */}
+          {/* Action CTAs (Transparent Liquid Glass Buttons) */}
           <div className="flex flex-wrap items-center gap-3 sm:gap-4 mb-10 w-full sm:w-auto">
-            <a
-              href="#projects"
-              className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-pastel-ink text-pastel-white text-sm font-medium hover:bg-pastel-ink/90 transition-all duration-300 shadow-glass-md hover:shadow-glass-lg hover:-translate-y-0.5 active:translate-y-0"
-            >
-              <span>Explore Projects</span>
-              <ArrowDown className="w-4 h-4 animate-bounce" />
-            </a>
-
             <button
               onClick={onOpenResume}
-              className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full glass-panel hover:bg-white text-pastel-ink text-sm font-medium transition-all duration-300 hover:shadow-glass-md hover:-translate-y-0.5"
+              className="liquid-pill-purple flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-medium tracking-wide shadow-lg"
             >
-              <FileText className="w-4 h-4 text-pastel-slate" />
+              <FileText className="w-4 h-4 text-white/90" />
               <span>Digital Resume</span>
             </button>
+
+            <a
+              href="#projects"
+              className="liquid-pill-cyan flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-medium tracking-wide shadow-lg"
+            >
+              <span>Explore Projects</span>
+              <ArrowDown className="w-4 h-4 animate-bounce text-white/90" />
+            </a>
           </div>
 
           {/* Social Proof & Direct Channels */}
@@ -113,11 +113,19 @@ export default function Hero({ onOpenResume, onOpenContactModal }) {
 
         {/* Right Area: Liquid Glass Refractive Sculpture Visual Anchor */}
         <div className="lg:col-span-5 flex flex-col items-center justify-center relative">
-          <LiquidGlassSculpture />
-          
-          {/* Subtle caption */}
-          <div className="mt-4 px-3 py-1 rounded-full glass-badge text-[11px] font-mono text-pastel-slate tracking-wider uppercase">
-            Interactive Refractive Glass Material
+          <div className="w-full max-w-[440px] p-4 sm:p-6 rounded-[36px] glass-panel border border-white/80 shadow-glass-lg relative overflow-hidden flex flex-col items-center">
+            {/* Prismatic Rainbow Corner Flares */}
+            <div className="chromatic-flare-br opacity-70" />
+            <div className="chromatic-flare-tl opacity-50" />
+
+            <div className="relative z-10 w-full flex flex-col items-center">
+              <LiquidGlassSculpture />
+              
+              {/* Subtle caption */}
+              <div className="mt-3 px-3.5 py-1 rounded-full glass-badge text-[10px] font-mono text-pastel-slate tracking-wider uppercase">
+                Interactive Liquid Glass Material
+              </div>
+            </div>
           </div>
         </div>
       </div>

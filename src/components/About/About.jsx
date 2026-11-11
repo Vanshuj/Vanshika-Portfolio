@@ -28,36 +28,45 @@ export default function About() {
             </p>
           </div>
 
-          {/* Quick Stats / Highlights Micro-Panels */}
+          {/* Quick Stats / Highlights Micro-Panels (Transparent Liquid Glass) */}
           <div className="grid grid-cols-2 gap-3 pt-2">
-            <div className="glass-panel p-4 rounded-2xl border border-white/80">
-              <div className="flex items-center gap-2 mb-1 text-accent-java">
-                <GraduationCap className="w-4 h-4" />
-                <span className="font-mono text-xs text-pastel-slate">Academics</span>
+            <div className="glass-panel p-4 rounded-2xl border border-white/80 shadow-sm relative overflow-hidden">
+              <div className="chromatic-flare-br opacity-50 !w-20 !h-20" />
+              <div className="relative z-10">
+                <div className="flex items-center gap-2 mb-1 text-accent-java">
+                  <GraduationCap className="w-4 h-4" />
+                  <span className="font-mono text-xs text-pastel-slate">Academics</span>
+                </div>
+                <div className="font-display font-bold text-xl text-pastel-ink">7.54 GPA</div>
+                <p className="font-mono text-[11px] text-pastel-slate">B.Tech Computer Engg (SRIT)</p>
               </div>
-              <div className="font-display font-bold text-xl text-pastel-ink">7.54 GPA</div>
-              <p className="font-mono text-[11px] text-pastel-slate">B.Tech Computer Engg (SRIT)</p>
             </div>
 
-            <div className="glass-panel p-4 rounded-2xl border border-white/80">
-              <div className="flex items-center gap-2 mb-1 text-accent-spring">
-                <Award className="w-4 h-4" />
-                <span className="font-mono text-xs text-pastel-slate">National Honor</span>
+            <div className="glass-panel p-4 rounded-2xl border border-white/80 shadow-sm relative overflow-hidden">
+              <div className="chromatic-flare-br opacity-50 !w-20 !h-20" />
+              <div className="relative z-10">
+                <div className="flex items-center gap-2 mb-1 text-accent-spring">
+                  <Award className="w-4 h-4" />
+                  <span className="font-mono text-xs text-pastel-slate">National Honor</span>
+                </div>
+                <div className="font-display font-bold text-xl text-pastel-ink">Top 40</div>
+                <p className="font-mono text-[11px] text-pastel-slate">Smart India Hackathon '25</p>
               </div>
-              <div className="font-display font-bold text-xl text-pastel-ink">Top 40</div>
-              <p className="font-mono text-[11px] text-pastel-slate">Smart India Hackathon '25</p>
             </div>
           </div>
 
           {/* Working Philosophy Pill Panel */}
-          <div className="glass-panel tint-lavender p-5 rounded-2xl border border-white/90 shadow-glass-sm">
-            <div className="flex items-center gap-2 text-pastel-ink font-display font-semibold text-sm mb-2">
-              <Compass className="w-4 h-4 text-pastel-ink" />
-              <span>Development Creed</span>
+          <div className="glass-panel tint-lavender p-5 rounded-2xl border border-white/90 shadow-glass-sm relative overflow-hidden">
+            <div className="chromatic-flare-br opacity-60" />
+            <div className="relative z-10">
+              <div className="flex items-center gap-2 text-pastel-ink font-display font-semibold text-sm mb-2">
+                <Compass className="w-4 h-4 text-purple-700" />
+                <span>Development Creed</span>
+              </div>
+              <p className="font-body text-xs sm:text-sm text-pastel-ink/90 leading-relaxed italic">
+                "Every layer—from database schemas and REST endpoints to client-side component state—deserves rigorous structural care and intentional design."
+              </p>
             </div>
-            <p className="font-body text-xs sm:text-sm text-pastel-ink/90 leading-relaxed italic">
-              "Every layer—from database schemas and REST endpoints to client-side component state—deserves rigorous structural care and intentional design."
-            </p>
           </div>
         </div>
 
