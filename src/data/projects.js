@@ -68,11 +68,11 @@ export const projectsData = [
     role: "Frontend Architect & Narrative Systems Developer",
     summary: "An interactive branching narrative platform enabling cultural creators to craft non-linear folklore and interactive stories with dynamic story trees, multi-lingual speech narration, and offline-first client storage.",
     
-    // Space reserved for user to add their screenshot and demo link
+    // Live links and demo video
     screenshot: null, // Set image path here: e.g. "/assets/projects/kathavani-main.png"
     additionalScreenshots: [],
-    demoUrl: "", // Space reserved for live deployment link
-    videoUrl: "", // Space reserved for demo video link (YouTube, Loom, Google Drive, or MP4)
+    demoUrl: "https://kathavani-frontend.onrender.com",
+    videoUrl: "./videos/kathavani-demo.mp4",
     githubUrl: "https://github.com/Vanshuj/KathaVani",
     
     status: "Active / PWA Enabled",
