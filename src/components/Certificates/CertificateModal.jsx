@@ -79,18 +79,32 @@ export default function CertificateModal({ certificate, onClose }) {
         </div>
 
         {/* Action Controls */}
-        <div className="flex items-center justify-between pt-2">
+        <div className="flex flex-wrap items-center justify-between gap-3 pt-2">
           <div className="flex items-center gap-1.5 text-xs font-mono text-accent-spring">
             <ShieldCheck className="w-4 h-4" />
             <span>Document verified against official transcript</span>
           </div>
 
-          <button
-            onClick={onClose}
-            className="liquid-pill-primary px-5 py-2 text-xs font-medium"
-          >
-            Done
-          </button>
+          <div className="flex items-center gap-2">
+            {certificate.verificationUrl && (
+              <a
+                href={certificate.verificationUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="liquid-pill-primary inline-flex items-center gap-1.5 px-4 py-2 text-xs font-mono font-medium shadow-sm"
+              >
+                <ExternalLink className="w-3.5 h-3.5" />
+                <span>Verify Credential</span>
+              </a>
+            )}
+
+            <button
+              onClick={onClose}
+              className="liquid-pill-secondary px-4 py-2 text-xs font-mono font-medium"
+            >
+              Done
+            </button>
+          </div>
         </div>
       </div>
     </div>

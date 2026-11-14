@@ -74,8 +74,13 @@ export default function Certificates() {
               </div>
 
               <div className="pt-3 border-t border-pastel-ink/10 flex items-center justify-between text-xs font-mono text-pastel-ink">
-                <span className="text-pastel-slate group-hover:text-pastel-ink">View credential record</span>
-                <ChevronRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+                <span className="text-pastel-slate group-hover:text-pastel-ink">
+                  {cert.verificationUrl ? 'View & Verify Credential' : 'View credential record'}
+                </span>
+                <div className="flex items-center gap-1.5">
+                  {cert.verificationUrl && <ExternalLink className="w-3 h-3 text-accent-spring" />}
+                  <ChevronRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+                </div>
               </div>
             </div>
           </div>
