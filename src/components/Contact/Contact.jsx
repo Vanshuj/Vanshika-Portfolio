@@ -47,7 +47,7 @@ export default function Contact({ onOpenResume }) {
           particleCount: 60,
           spread: 60,
           origin: { y: 0.8 },
-          colors: ['#DCD5F5', '#D5E8F5', '#D7EBDD', '#F6DFD2', '#F89820']
+          colors: ['#FFEB97', '#E5BF5A', '#FAF7F0', '#7B4F1F', '#583714']
         });
       } catch (e) {}
 
@@ -87,12 +87,12 @@ export default function Contact({ onOpenResume }) {
           </div>
 
           {/* Email Copy Card */}
-          <div className="glass-panel tint-lavender p-5 rounded-2xl border border-white/90 shadow-glass-sm space-y-3">
+          <div className="glass-panel p-5 rounded-2xl border border-white/90 shadow-glass-sm space-y-3">
             <span className="font-mono text-xs text-pastel-slate block uppercase tracking-wider">
               Direct Inquiries
             </span>
-            <div className="flex items-center justify-between gap-2 p-3 rounded-xl bg-white/70 border border-white">
-              <div className="flex items-center gap-2 overflow-hidden">
+            <div className="flex items-center justify-between gap-2 p-3 rounded-2xl glass-pill">
+              <div className="flex items-center gap-2 overflow-hidden pl-1">
                 <Mail className="w-4 h-4 text-pastel-ink flex-shrink-0" />
                 <span className="font-mono text-xs sm:text-sm text-pastel-ink truncate">
                   {profileData.socials.email.address}
@@ -100,7 +100,7 @@ export default function Contact({ onOpenResume }) {
               </div>
               <button
                 onClick={copyEmail}
-                className="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-white hover:bg-pastel-white text-xs font-mono text-pastel-ink shadow-xs border border-pastel-ink/10 transition-all active:scale-95 flex-shrink-0"
+                className="flex items-center gap-1 px-3 py-1.5 rounded-full glass-badge text-xs font-mono text-pastel-ink shadow-xs transition-all active:scale-95 flex-shrink-0 hover:bg-white/30"
                 aria-label="Copy email address"
               >
                 {copied ? <Check className="w-3.5 h-3.5 text-accent-spring" /> : <Copy className="w-3.5 h-3.5" />}
@@ -139,7 +139,7 @@ export default function Contact({ onOpenResume }) {
               className="flex items-center justify-between p-4 rounded-xl glass-panel hover:bg-white transition-all group"
             >
               <div className="flex items-center gap-3">
-                <LinkedinIcon className="w-4 h-4 text-blue-600" />
+                <LinkedinIcon className="w-4 h-4 text-pastel-ink" />
                 <span className="font-display font-medium text-sm text-pastel-ink">
                   LinkedIn Profile
                 </span>
@@ -165,9 +165,6 @@ export default function Contact({ onOpenResume }) {
         {/* Right Column: Functional Contact Form (7 cols) */}
         <div className="lg:col-span-7">
           <div className="glass-card-interactive p-6 sm:p-8 rounded-[32px] border border-white/90 shadow-glass-md relative overflow-hidden">
-            {/* Prismatic Rainbow Corner Flare */}
-            <div className="chromatic-flare-br opacity-60" />
-
             <div className="relative z-10">
               <h3 className="font-display font-bold text-xl text-pastel-ink mb-1">
                 Send a Direct Message
@@ -177,8 +174,8 @@ export default function Contact({ onOpenResume }) {
               </p>
 
               {status === 'success' ? (
-                <div className="p-8 rounded-2xl bg-pastel-mint/30 border border-accent-spring/30 text-center space-y-3 animate-fade-in">
-                  <div className="w-12 h-12 rounded-full bg-pastel-mint flex items-center justify-center mx-auto text-accent-spring">
+                <div className="p-8 rounded-2xl glass-panel-subtle border border-gold-amber/40 text-center space-y-3 animate-fade-in">
+                  <div className="w-12 h-12 rounded-full glass-badge flex items-center justify-center mx-auto text-accent-spring">
                     <CheckCircle2 className="w-6 h-6" />
                   </div>
                   <h4 className="font-display font-bold text-lg text-pastel-ink">
@@ -259,18 +256,18 @@ export default function Contact({ onOpenResume }) {
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       placeholder="Hi Vanshika, I'd like to discuss..."
-                      className={`w-full px-4 py-2.5 rounded-2xl bg-white/70 backdrop-blur-md border ${
-                        errors.message ? 'border-red-400' : 'border-white'
-                      } text-pastel-ink text-sm placeholder:text-pastel-slate/50 focus:outline-none focus:ring-2 focus:ring-purple-300 resize-none shadow-xs`}
+                      className={`w-full px-4 py-3 rounded-2xl glass-panel-subtle ${
+                        errors.message ? 'border-red-400' : 'border-white/90'
+                      } text-pastel-ink text-sm placeholder:text-pastel-slate/50 focus:outline-none focus:bg-white/80 focus:ring-2 focus:ring-pastel-ink/20 resize-none shadow-inner transition-all`}
                     />
                     {errors.message && <p className="font-mono text-[10px] text-red-500">{errors.message}</p>}
                   </div>
 
-                  {/* Submit Button (Purple Liquid Glass Pill) */}
+                  {/* Submit Button (Deep Ink Liquid Glass Pill) */}
                   <button
                     type="submit"
                     disabled={status === 'submitting'}
-                    className="liquid-pill-purple w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3 text-xs font-mono font-medium disabled:opacity-70 shadow-lg cursor-pointer"
+                    className="liquid-pill-primary w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3 text-xs font-mono font-medium disabled:opacity-70 shadow-lg cursor-pointer"
                   >
                     {status === 'submitting' ? (
                       <>

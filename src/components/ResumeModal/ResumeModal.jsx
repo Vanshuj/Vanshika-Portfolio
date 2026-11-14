@@ -32,7 +32,7 @@ export default function ResumeModal({ onClose }) {
         {/* Top Control Bar */}
         <div className="flex items-center justify-between pb-6 mb-8 border-b border-pastel-ink/10 no-print">
           <div className="flex items-center gap-2">
-            <span className="font-mono text-xs px-2.5 py-1 rounded-full bg-pastel-mint text-pastel-ink font-semibold">
+            <span className="font-mono text-xs px-2.5 py-1 rounded-full glass-badge font-semibold">
               ATS-Standard Curriculum Vitae
             </span>
             <span className="font-mono text-xs text-pastel-slate hidden sm:inline">
@@ -43,7 +43,7 @@ export default function ResumeModal({ onClose }) {
           <div className="flex items-center gap-2">
             <button
               onClick={handlePrint}
-              className="liquid-pill-purple inline-flex items-center gap-1.5 px-4 py-2 text-xs font-mono font-medium shadow-sm active:scale-95"
+              className="liquid-pill-primary inline-flex items-center gap-1.5 px-4 py-2 text-xs font-mono font-medium shadow-sm active:scale-95"
             >
               <Printer className="w-3.5 h-3.5 text-white/90" />
               <span>Print / Save PDF</span>
@@ -84,7 +84,7 @@ export default function ResumeModal({ onClose }) {
                 href={profileData.socials.linkedin.url} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="hover:underline flex items-center gap-1 text-blue-700"
+                className="hover:underline flex items-center gap-1 text-pastel-ink"
               >
                 <LinkedinIcon className="w-3.5 h-3.5" />
                 <span>LinkedIn</span>

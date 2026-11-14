@@ -4,9 +4,12 @@
 
 @layer base {
   :root {
-    --glass-border: rgba(255, 255, 255, 0.75);
-    --glass-border-subtle: rgba(255, 255, 255, 0.5);
-    --glass-specular: rgba(255, 255, 255, 0.95);
+    --gold-cream: #FFEB97;
+    --brown-deep: #583714;
+    --brown-dark: #36210A;
+    --glass-border: rgba(255, 255, 255, 0.90);
+    --glass-border-gold: rgba(255, 235, 151, 0.6);
+    --glass-specular: rgba(255, 255, 255, 1);
   }
 
   html {
@@ -17,260 +20,305 @@
   }
 
   body {
-    background-color: #FAF9F6;
-    color: #252831;
+    background-color: #FAF7F0;
+    color: #36210A;
     overflow-x: hidden;
   }
 
   ::selection {
-    background: #DCD5F5;
-    color: #252831;
+    background: #FFEB97;
+    color: #36210A;
   }
 }
 
-/* Custom Scrollbar */
+/* Custom Scrollbar in Warm Brown */
 ::-webkit-scrollbar {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #FAF9F6;
+  background: #FAF7F0;
 }
 ::-webkit-scrollbar-thumb {
-  background: #DCD5F5;
+  background: rgba(88, 55, 20, 0.22);
   border-radius: 9999px;
-  border: 2px solid #FAF9F6;
+  border: 2px solid #FAF7F0;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #C4B9EE;
+  background: rgba(88, 55, 20, 0.4);
 }
 
 /* ========================================================
-   TRANSPARENT LIQUID GLASS MATERIAL SYSTEM
+   PREMIUM 3D LIQUID CRYSTAL GLASS DESIGN SYSTEM
+   Dimensional, polished crystal glass with realistic thick edges,
+   smooth chamfers, specular rim reflections & caustic depth.
+   Warm Golden Cream (#FFEB97) × Deep Warm Brown (#583714)
    ======================================================== */
 @layer components {
-  /* Primary Transparent Liquid Glass Panel */
+  /* Master 3D Crystal Liquid Glass Panel (Containers, Navigation, Dialogs) */
   .glass-panel {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.42) 0%, rgba(255, 255, 255, 0.22) 100%);
-    backdrop-filter: blur(24px) saturate(190%);
-    -webkit-backdrop-filter: blur(24px) saturate(190%);
-    border: 1.5px solid rgba(255, 255, 255, 0.75);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.72) 0%, rgba(255, 250, 232, 0.42) 40%, rgba(255, 243, 205, 0.24) 80%, rgba(255, 235, 151, 0.16) 100%);
+    backdrop-filter: blur(24px) saturate(175%) brightness(1.02);
+    -webkit-backdrop-filter: blur(24px) saturate(175%) brightness(1.02);
+    border: 1.5px solid rgba(255, 255, 255, 0.92);
     box-shadow: 
-      0 20px 48px -12px rgba(37, 40, 49, 0.08),
-      0 8px 16px -4px rgba(37, 40, 49, 0.04),
-      inset 0 2px 2.5px 0 rgba(255, 255, 255, 0.95),
-      inset 0 -1.5px 2px 0 rgba(0, 0, 0, 0.03);
-    position: relative;
-  }
-
-  .glass-panel-subtle {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.30) 0%, rgba(255, 255, 255, 0.16) 100%);
-    backdrop-filter: blur(18px) saturate(180%);
-    -webkit-backdrop-filter: blur(18px) saturate(180%);
-    border: 1.2px solid rgba(255, 255, 255, 0.65);
-    box-shadow: 
-      0 10px 24px -6px rgba(37, 40, 49, 0.05),
-      inset 0 1.5px 1.5px 0 rgba(255, 255, 255, 0.85);
-  }
-
-  /* Interactive Liquid Glass Cards (All Project, Skills, Experience & Profile Cards) */
-  .glass-card-interactive {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.38) 0%, rgba(255, 255, 255, 0.18) 100%);
-    backdrop-filter: blur(24px) saturate(190%);
-    -webkit-backdrop-filter: blur(24px) saturate(190%);
-    border: 1.5px solid rgba(255, 255, 255, 0.75);
-    box-shadow: 
-      0 22px 50px -12px rgba(37, 40, 49, 0.09),
-      0 8px 18px -4px rgba(37, 40, 49, 0.04),
-      inset 0 2px 2.5px 0 rgba(255, 255, 255, 0.95),
-      inset 0 -1.5px 2px 0 rgba(0, 0, 0, 0.03);
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      0 24px 52px -12px rgba(88, 55, 20, 0.11),
+      0 6px 16px -3px rgba(88, 55, 20, 0.04),
+      0 0 35px 2px rgba(255, 235, 151, 0.20),
+      inset 0 2.5px 3px 0 rgba(255, 255, 255, 1),
+      inset 0 6px 14px -2px rgba(255, 255, 255, 0.55),
+      inset 2px 0 3px 0 rgba(255, 255, 255, 0.75),
+      inset -2px 0 3px 0 rgba(255, 255, 255, 0.75),
+      inset 0 -3px 5px 0 rgba(88, 55, 20, 0.06),
+      inset 0 -1px 2px 0 rgba(255, 255, 255, 0.90);
     position: relative;
     overflow: hidden;
+  }
+
+  .glass-panel::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0.10) 35%, transparent 65%);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Subtle Inner Crystal Glass Plates & Metric Widgets */
+  .glass-panel-subtle {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.62) 0%, rgba(255, 248, 225, 0.32) 55%, rgba(255, 235, 151, 0.16) 100%);
+    backdrop-filter: blur(16px) saturate(160%);
+    -webkit-backdrop-filter: blur(16px) saturate(160%);
+    border: 1.2px solid rgba(255, 255, 255, 0.88);
+    box-shadow: 
+      0 6px 18px -3px rgba(88, 55, 20, 0.05),
+      0 0 16px rgba(255, 235, 151, 0.12),
+      inset 0 2px 2.5px 0 rgba(255, 255, 255, 0.98),
+      inset 0 4px 8px -1px rgba(255, 255, 255, 0.45),
+      inset 1.5px 0 2px 0 rgba(255, 255, 255, 0.65),
+      inset -1.5px 0 2px 0 rgba(255, 255, 255, 0.65),
+      inset 0 -1.5px 2px 0 rgba(88, 55, 20, 0.04);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .glass-panel-subtle::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.38) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Interactive 3D Crystal Liquid Glass Cards (All Project, Skills, Experience, Notebook Cards) */
+  .glass-card-interactive {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.70) 0%, rgba(255, 250, 230, 0.40) 40%, rgba(255, 242, 200, 0.22) 80%, rgba(255, 235, 151, 0.14) 100%);
+    backdrop-filter: blur(24px) saturate(175%) brightness(1.02);
+    -webkit-backdrop-filter: blur(24px) saturate(175%) brightness(1.02);
+    border: 1.5px solid rgba(255, 255, 255, 0.90);
+    box-shadow: 
+      0 20px 48px -10px rgba(88, 55, 20, 0.10),
+      0 4px 12px -2px rgba(88, 55, 20, 0.04),
+      0 0 28px 2px rgba(255, 235, 151, 0.18),
+      inset 0 2.5px 3px 0 rgba(255, 255, 255, 1),
+      inset 0 6px 14px -2px rgba(255, 255, 255, 0.50),
+      inset 2px 0 3px 0 rgba(255, 255, 255, 0.75),
+      inset -2px 0 3px 0 rgba(255, 255, 255, 0.75),
+      inset 0 -3px 5px 0 rgba(88, 55, 20, 0.05),
+      inset 0 -1px 2px 0 rgba(255, 255, 255, 0.90);
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .glass-card-interactive::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.48) 0%, rgba(255, 255, 255, 0.12) 35%, transparent 65%);
+    pointer-events: none;
+    z-index: 1;
   }
 
   .glass-card-interactive:hover {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.52) 0%, rgba(255, 255, 255, 0.30) 100%);
-    transform: translateY(-4px);
-    border-color: rgba(255, 255, 255, 0.95);
-    box-shadow: 
-      0 32px 64px -14px rgba(37, 40, 49, 0.14),
-      0 0 35px 0 rgba(220, 213, 245, 0.45),
-      inset 0 2.5px 3px 0 rgba(255, 255, 255, 1);
-  }
-
-  /* Prismatic Rainbow Caustic Flares (The signature dispersion glow on corners) */
-  .chromatic-flare-br {
-    position: absolute;
-    bottom: -15px;
-    right: -15px;
-    width: 140px;
-    height: 140px;
-    background: radial-gradient(circle at 65% 65%, 
-      rgba(244, 114, 182, 0.6) 0%, 
-      rgba(167, 139, 250, 0.5) 25%, 
-      rgba(45, 212, 191, 0.55) 50%, 
-      transparent 75%
-    );
-    filter: blur(14px);
-    pointer-events: none;
-    z-index: 0;
-    mix-blend-mode: screen;
-  }
-
-  .chromatic-flare-tl {
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    width: 110px;
-    height: 110px;
-    background: radial-gradient(circle at 35% 35%, 
-      rgba(192, 132, 252, 0.45) 0%, 
-      rgba(125, 211, 252, 0.45) 40%, 
-      transparent 70%
-    );
-    filter: blur(14px);
-    pointer-events: none;
-    z-index: 0;
-    mix-blend-mode: screen;
-  }
-
-  /* Liquid Glass Capsule / Pill Controls */
-  .glass-pill {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.28) 100%);
-    backdrop-filter: blur(18px) saturate(180%);
-    -webkit-backdrop-filter: blur(18px) saturate(180%);
-    border: 1.5px solid rgba(255, 255, 255, 0.85);
-    box-shadow: 
-      0 6px 18px rgba(37, 40, 49, 0.04),
-      inset 0 1.5px 1.5px rgba(255, 255, 255, 0.95),
-      inset 0 -1px 1px rgba(0, 0, 0, 0.03);
-  }
-
-  .glass-badge {
-    background: rgba(255, 255, 255, 0.45);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-    border: 1.2px solid rgba(255, 255, 255, 0.7);
-    box-shadow: 0 2px 10px rgba(37, 40, 49, 0.03);
-  }
-
-  /* Liquid Glass Translucent Purple Pill Button (Primary Actions) */
-  .liquid-pill-purple {
-    background: linear-gradient(135deg, rgba(167, 139, 250, 0.8) 0%, rgba(139, 92, 246, 0.7) 100%);
-    backdrop-filter: blur(20px) saturate(190%);
-    -webkit-backdrop-filter: blur(20px) saturate(190%);
-    border-radius: 9999px;
-    border: 1.5px solid rgba(255, 255, 255, 0.88);
-    box-shadow: 
-      0 12px 28px -4px rgba(139, 92, 246, 0.42),
-      0 4px 10px rgba(139, 92, 246, 0.2),
-      inset 0 1.5px 1.5px rgba(255, 255, 255, 0.95),
-      inset 0 -1.5px 2px rgba(0, 0, 0, 0.12);
-    color: #ffffff;
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-
-  .liquid-pill-purple:hover {
-    background: linear-gradient(135deg, rgba(167, 139, 250, 0.92) 0%, rgba(139, 92, 246, 0.85) 100%);
-    transform: translateY(-2px);
-    box-shadow: 
-      0 18px 36px -4px rgba(139, 92, 246, 0.55),
-      0 6px 14px rgba(139, 92, 246, 0.3),
-      inset 0 2px 2px rgba(255, 255, 255, 1);
-  }
-
-  /* Liquid Glass Translucent Cyan/Mint Pill Button (Secondary Actions) */
-  .liquid-pill-cyan {
-    background: linear-gradient(135deg, rgba(94, 234, 212, 0.8) 0%, rgba(20, 184, 166, 0.7) 100%);
-    backdrop-filter: blur(20px) saturate(190%);
-    -webkit-backdrop-filter: blur(20px) saturate(190%);
-    border-radius: 9999px;
-    border: 1.5px solid rgba(255, 255, 255, 0.88);
-    box-shadow: 
-      0 12px 28px -4px rgba(20, 184, 166, 0.38),
-      0 4px 10px rgba(20, 184, 166, 0.18),
-      inset 0 1.5px 1.5px rgba(255, 255, 255, 0.95),
-      inset 0 -1.5px 2px rgba(0, 0, 0, 0.1);
-    color: #ffffff;
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-
-  .liquid-pill-cyan:hover {
-    background: linear-gradient(135deg, rgba(94, 234, 212, 0.92) 0%, rgba(20, 184, 166, 0.85) 100%);
-    transform: translateY(-2px);
-    box-shadow: 
-      0 18px 36px -4px rgba(20, 184, 166, 0.5),
-      0 6px 14px rgba(20, 184, 166, 0.28),
-      inset 0 2px 2px rgba(255, 255, 255, 1);
-  }
-
-  /* Translucent Liquid Glass Input Pill */
-  .liquid-glass-input {
-    background: rgba(255, 255, 255, 0.55);
-    backdrop-filter: blur(18px) saturate(180%);
-    -webkit-backdrop-filter: blur(18px) saturate(180%);
-    border-radius: 9999px;
-    border: 1.5px solid rgba(255, 255, 255, 0.85);
-    box-shadow: 
-      0 6px 18px rgba(37, 40, 49, 0.04),
-      inset 0 1px 1.5px rgba(255, 255, 255, 0.95);
-    transition: all 0.3s ease;
-  }
-
-  .liquid-glass-input:focus-within {
-    background: rgba(255, 255, 255, 0.8);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.82) 0%, rgba(255, 252, 236, 0.55) 40%, rgba(255, 244, 208, 0.32) 80%, rgba(255, 235, 151, 0.22) 100%);
+    transform: translateY(-5px);
     border-color: rgba(255, 255, 255, 1);
     box-shadow: 
-      0 10px 24px rgba(37, 40, 49, 0.08),
-      0 0 0 3px rgba(167, 139, 250, 0.28),
-      inset 0 1px 1.5px rgba(255, 255, 255, 1);
+      0 30px 65px -12px rgba(88, 55, 20, 0.15),
+      0 8px 20px -3px rgba(88, 55, 20, 0.06),
+      0 0 40px 4px rgba(255, 235, 151, 0.35),
+      inset 0 3px 4px 0 rgba(255, 255, 255, 1),
+      inset 0 8px 18px -2px rgba(255, 255, 255, 0.65),
+      inset 2px 0 3px 0 rgba(255, 255, 255, 0.85),
+      inset -2px 0 3px 0 rgba(255, 255, 255, 0.85),
+      inset 0 -3px 5px 0 rgba(88, 55, 20, 0.05),
+      inset 0 -1.5px 2px 0 rgba(255, 255, 255, 0.95);
   }
 
-  /* Pastel Material Tints (Transparent Liquid Glass) */
-  .tint-lavender {
-    background: linear-gradient(135deg, rgba(220, 213, 245, 0.32) 0%, rgba(255, 255, 255, 0.22) 100%);
-  }
-
-  .tint-blue {
-    background: linear-gradient(135deg, rgba(213, 232, 245, 0.32) 0%, rgba(255, 255, 255, 0.22) 100%);
-  }
-
-  .tint-mint {
-    background: linear-gradient(135deg, rgba(215, 235, 221, 0.32) 0%, rgba(255, 255, 255, 0.22) 100%);
-  }
-
-  .tint-peach {
-    background: linear-gradient(135deg, rgba(246, 223, 210, 0.32) 0%, rgba(255, 255, 255, 0.22) 100%);
-  }
-
-  .tint-butter {
-    background: linear-gradient(135deg, rgba(245, 237, 206, 0.32) 0%, rgba(255, 255, 255, 0.22) 100%);
-  }
-
-  /* Subtle Organic Noise */
-  .bg-noise {
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.025'/%3E%3C/svg%3E");
-  }
-
-  /* Specular Highlight Sheen */
-  .specular-sheen {
+  /* 3D Polished Crystal Glass Capsules (Buttons, Badges, Search Bars, Tags) */
+  .glass-pill {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.80) 0%, rgba(255, 250, 230, 0.45) 55%, rgba(255, 235, 151, 0.22) 100%);
+    backdrop-filter: blur(16px) saturate(170%);
+    -webkit-backdrop-filter: blur(16px) saturate(170%);
+    border: 1.4px solid rgba(255, 255, 255, 0.95);
+    box-shadow: 
+      0 8px 22px -3px rgba(88, 55, 20, 0.07),
+      0 2px 6px -1px rgba(88, 55, 20, 0.04),
+      0 0 18px rgba(255, 235, 151, 0.16),
+      inset 0 2px 2.5px 0 rgba(255, 255, 255, 1),
+      inset 0 4px 8px -1px rgba(255, 255, 255, 0.55),
+      inset 1.5px 0 2px 0 rgba(255, 255, 255, 0.75),
+      inset -1.5px 0 2px 0 rgba(255, 255, 255, 0.75),
+      inset 0 -1.5px 2.5px 0 rgba(88, 55, 20, 0.05),
+      inset 0 -1px 1.5px 0 rgba(255, 255, 255, 0.85);
+    transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
     position: relative;
     overflow: hidden;
   }
-  .specular-sheen::after {
+
+  .glass-pill::before {
     content: '';
     position: absolute;
     top: 0;
-    left: -100%;
-    width: 60%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.55), transparent);
-    transform: skewX(-20deg);
-    transition: left 0.75s ease-in-out;
+    left: 0;
+    right: 0;
+    height: 50%;
+    border-radius: 9999px 9999px 0 0;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0) 100%);
     pointer-events: none;
+    z-index: 1;
   }
-  .specular-sheen:hover::after {
-    left: 140%;
+
+  .glass-pill:hover {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.92) 0%, rgba(255, 252, 238, 0.65) 55%, rgba(255, 235, 151, 0.32) 100%);
+    border-color: rgba(255, 255, 255, 1);
+    transform: translateY(-2px);
+    box-shadow: 
+      0 12px 26px -3px rgba(88, 55, 20, 0.10),
+      0 0 24px rgba(255, 235, 151, 0.32),
+      inset 0 2.5px 3px 0 rgba(255, 255, 255, 1),
+      inset 0 5px 10px -1px rgba(255, 255, 255, 0.65),
+      inset 0 -1px 1.5px 0 rgba(255, 255, 255, 0.95);
+  }
+
+  /* 3D Crystal Glass Badges & Verification Chips */
+  .glass-badge {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 245, 215, 0.45) 50%, rgba(255, 235, 151, 0.28) 100%);
+    backdrop-filter: blur(14px) saturate(160%);
+    -webkit-backdrop-filter: blur(14px) saturate(160%);
+    border: 1.2px solid rgba(255, 255, 255, 0.92);
+    color: #583714;
+    box-shadow: 
+      0 3px 10px -1px rgba(88, 55, 20, 0.05),
+      0 0 14px rgba(255, 235, 151, 0.15),
+      inset 0 1.5px 2px rgba(255, 255, 255, 1),
+      inset 0 3px 6px -1px rgba(255, 255, 255, 0.45),
+      inset 0 -1px 1px rgba(88, 55, 20, 0.04);
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Primary Deep Warm Brown Liquid Glass Action Pill */
+  .liquid-pill-primary {
+    background: linear-gradient(135deg, #6C4419 0%, #583714 60%, #36210A 100%);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 9999px;
+    border: 1.2px solid rgba(255, 235, 151, 0.75);
+    box-shadow: 
+      0 14px 32px -4px rgba(88, 55, 20, 0.38),
+      0 4px 10px rgba(88, 55, 20, 0.18),
+      0 0 20px rgba(255, 235, 151, 0.22),
+      inset 0 2px 2.5px rgba(255, 235, 151, 0.95),
+      inset 0 4px 8px rgba(255, 235, 151, 0.4),
+      inset 0 -2px 3px rgba(0, 0, 0, 0.45);
+    color: #FFFDF5;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+  }
+
+  .liquid-pill-primary:hover {
+    background: linear-gradient(135deg, #7C4F1F 0%, #643F17 60%, #44290E 100%);
+    transform: translateY(-2px);
+    border-color: rgba(255, 235, 151, 0.98);
+    box-shadow: 
+      0 18px 40px -4px rgba(88, 55, 20, 0.46),
+      0 6px 16px rgba(88, 55, 20, 0.24),
+      0 0 28px rgba(255, 235, 151, 0.35),
+      inset 0 2.5px 3px rgba(255, 235, 151, 1),
+      inset 0 5px 10px rgba(255, 235, 151, 0.5);
+  }
+
+  .liquid-pill-primary:active {
+    transform: translateY(0.5px);
+  }
+
+  /* Secondary Light Golden Cream Liquid Glass Action Pill */
+  .liquid-pill-secondary {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.92) 0%, rgba(255, 248, 220, 0.70) 55%, rgba(255, 235, 151, 0.45) 100%);
+    backdrop-filter: blur(18px) saturate(170%);
+    -webkit-backdrop-filter: blur(18px) saturate(170%);
+    border-radius: 9999px;
+    border: 1.5px solid rgba(255, 255, 255, 0.98);
+    box-shadow: 
+      0 10px 28px -3px rgba(88, 55, 20, 0.09),
+      0 2px 8px rgba(88, 55, 20, 0.04),
+      0 0 20px rgba(255, 235, 151, 0.2),
+      inset 0 2px 2.5px rgba(255, 255, 255, 1),
+      inset 0 5px 10px rgba(255, 255, 255, 0.55),
+      inset 0 -1.5px 2px rgba(88, 55, 20, 0.06);
+    color: #583714;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .liquid-pill-secondary:hover {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 250, 225, 0.85) 100%);
+    transform: translateY(-2px);
+    border-color: rgba(255, 235, 151, 1);
+    box-shadow: 
+      0 14px 32px -2px rgba(88, 55, 20, 0.14),
+      0 0 28px rgba(255, 235, 151, 0.35),
+      inset 0 2.5px 3px rgba(255, 255, 255, 1),
+      inset 0 6px 12px rgba(255, 255, 255, 0.65);
+  }
+
+  .liquid-pill-secondary:active {
+    transform: translateY(0.5px);
+  }
+
+  /* 3D Crystal Input Channel */
+  .liquid-glass-input {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.72) 0%, rgba(255, 248, 226, 0.42) 100%);
+    backdrop-filter: blur(18px) saturate(160%);
+    -webkit-backdrop-filter: blur(18px) saturate(160%);
+    border-radius: 9999px;
+    border: 1.4px solid rgba(255, 255, 255, 0.95);
+    box-shadow: 
+      0 6px 18px -2px rgba(88, 55, 20, 0.04),
+      inset 0 1.5px 2px rgba(255, 255, 255, 1),
+      inset 0 3px 6px rgba(255, 255, 255, 0.5),
+      inset 0 -1px 1.5px rgba(88, 55, 20, 0.03);
+    color: #36210A;
+    transition: all 0.3s ease;
+  }
+
+  .liquid-glass-input:focus-within,
+  .liquid-glass-input:focus {
+    background: rgba(255, 255, 255, 0.92);
+    border-color: rgba(255, 235, 151, 1);
+    box-shadow: 
+      0 12px 28px rgba(88, 55, 20, 0.08),
+      0 0 0 3.5px rgba(255, 235, 151, 0.45),
+      inset 0 2px 3px rgba(255, 255, 255, 1);
+  }
+
+  /* Subtle Warm Grain Noise */
+  .bg-noise {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.02'/%3E%3C/svg%3E");
   }
 }
 

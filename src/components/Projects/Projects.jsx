@@ -44,9 +44,6 @@ export default function Projects() {
            ======================================================== */}
         {projectsData[0] && (
           <div className="glass-card-interactive p-6 sm:p-10 rounded-[32px] border border-white/90 shadow-glass-md relative overflow-hidden group">
-            {/* Prismatic Rainbow Caustic Corner Flare */}
-            <div className="chromatic-flare-br opacity-60" />
-
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
               
               {/* Visual Showcase (7 cols) */}
@@ -61,7 +58,7 @@ export default function Projects() {
                     <span className="font-mono text-xs text-pastel-slate">
                       {projectsData[0].number} // {projectsData[0].category}
                     </span>
-                    <span className="font-mono text-[10px] px-2.5 py-1 rounded-full bg-pastel-blue/60 text-pastel-ink border border-white">
+                    <span className="font-mono text-[10px] px-2.5 py-1 rounded-full glass-badge text-pastel-ink">
                       {projectsData[0].year}
                     </span>
                   </div>
@@ -89,7 +86,7 @@ export default function Projects() {
                   {/* Technology Chips */}
                   <div className="flex flex-wrap gap-1.5 mb-8">
                     {projectsData[0].technologies.slice(0, 5).map((t, idx) => (
-                      <span key={idx} className="font-mono text-[11px] px-3 py-1 rounded-full bg-white/70 text-pastel-ink border border-white shadow-2xs">
+                      <span key={idx} className="font-mono text-[11px] px-3 py-1 rounded-full glass-pill text-pastel-ink">
                         {t}
                       </span>
                     ))}
@@ -100,7 +97,7 @@ export default function Projects() {
                 <div className="flex flex-wrap items-center gap-3 pt-4 border-t border-pastel-ink/10">
                   <button
                     onClick={() => setSelectedProject(projectsData[0])}
-                    className="liquid-pill-purple inline-flex items-center gap-1.5 px-4 py-2 text-xs font-medium tracking-wide shadow-sm"
+                    className="liquid-pill-primary inline-flex items-center gap-1.5 px-4 py-2 text-xs font-medium tracking-wide shadow-sm"
                   >
                     <span>View Case Study</span>
                     <ChevronRight className="w-3.5 h-3.5" />
@@ -110,7 +107,7 @@ export default function Projects() {
                     href={projectsData[0].githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="liquid-pill-cyan inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-mono tracking-wide shadow-sm"
+                    className="liquid-pill-secondary inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-mono tracking-wide shadow-sm"
                   >
                     <GithubIcon className="w-3.5 h-3.5" />
                     <span>Source</span>
@@ -142,9 +139,7 @@ export default function Projects() {
             PROJECT 02: KathaVani (Asymmetric Split Editorial)
            ======================================================== */}
         {projectsData[1] && (
-          <div className="glass-card-interactive p-6 sm:p-10 rounded-[32px] border border-white/90 shadow-glass-md bg-gradient-to-br from-white/30 via-pastel-peach/15 to-white/20 relative overflow-hidden group">
-            <div className="chromatic-flare-br opacity-60" />
-
+          <div className="glass-card-interactive p-6 sm:p-10 rounded-[32px] border border-white/90 shadow-glass-md relative overflow-hidden group">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
               
               {/* Information Panel (5 cols) - Left on desktop */}
@@ -154,7 +149,7 @@ export default function Projects() {
                     <span className="font-mono text-xs text-pastel-slate">
                       {projectsData[1].number} // {projectsData[1].category}
                     </span>
-                    <span className="font-mono text-[10px] px-2.5 py-1 rounded-full bg-pastel-peach/60 text-pastel-ink border border-white">
+                    <span className="font-mono text-[10px] px-2.5 py-1 rounded-full glass-badge text-pastel-ink">
                       {projectsData[1].year}
                     </span>
                   </div>
@@ -182,7 +177,7 @@ export default function Projects() {
                   {/* Technology Chips */}
                   <div className="flex flex-wrap gap-1.5 mb-8">
                     {projectsData[1].technologies.slice(0, 5).map((t, idx) => (
-                      <span key={idx} className="font-mono text-[11px] px-3 py-1 rounded-full bg-white/70 text-pastel-ink border border-white shadow-2xs">
+                      <span key={idx} className="font-mono text-[11px] px-3 py-1 rounded-full glass-pill text-pastel-ink">
                         {t}
                       </span>
                     ))}
@@ -193,7 +188,7 @@ export default function Projects() {
                 <div className="flex flex-wrap items-center gap-3 pt-4 border-t border-pastel-ink/10">
                   <button
                     onClick={() => setSelectedProject(projectsData[1])}
-                    className="liquid-pill-purple inline-flex items-center gap-1.5 px-4 py-2 text-xs font-medium tracking-wide shadow-sm"
+                    className="liquid-pill-primary inline-flex items-center gap-1.5 px-4 py-2 text-xs font-medium tracking-wide shadow-sm"
                   >
                     <span>View Case Study</span>
                     <ChevronRight className="w-3.5 h-3.5" />
@@ -203,7 +198,7 @@ export default function Projects() {
                     href={projectsData[1].githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="liquid-pill-cyan inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-mono tracking-wide shadow-sm"
+                    className="liquid-pill-secondary inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-mono tracking-wide shadow-sm"
                   >
                     <GithubIcon className="w-3.5 h-3.5" />
                     <span>Source</span>
@@ -240,9 +235,7 @@ export default function Projects() {
             PROJECT 03: GYAN.AI (Layered Editorial Magazine)
            ======================================================== */}
         {projectsData[2] && (
-          <div className="glass-card-interactive p-6 sm:p-10 rounded-[32px] border border-white/90 shadow-glass-md bg-gradient-to-br from-white/30 via-pastel-lavender/20 to-white/20 relative overflow-hidden group">
-            <div className="chromatic-flare-br opacity-60" />
-
+          <div className="glass-card-interactive p-6 sm:p-10 rounded-[32px] border border-white/90 shadow-glass-md relative overflow-hidden group">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
               
               {/* Visual Showcase (7 cols) */}
@@ -257,7 +250,7 @@ export default function Projects() {
                     <span className="font-mono text-xs text-pastel-slate">
                       {projectsData[2].number} // {projectsData[2].category}
                     </span>
-                    <span className="font-mono text-[10px] px-2.5 py-1 rounded-full bg-pastel-lavender/70 text-pastel-ink border border-white">
+                    <span className="font-mono text-[10px] px-2.5 py-1 rounded-full glass-badge text-pastel-ink">
                       {projectsData[2].year}
                     </span>
                   </div>
@@ -265,7 +258,7 @@ export default function Projects() {
                   <h3 className="font-display font-bold text-2xl sm:text-3xl text-pastel-ink tracking-tight mb-2">
                     {projectsData[2].title}
                   </h3>
-                  <p className="font-mono text-xs text-purple-700 font-medium mb-4">
+                  <p className="font-mono text-xs text-accent-java font-medium mb-4">
                     {projectsData[2].tagline}
                   </p>
                   <p className="font-body text-xs sm:text-sm text-pastel-slate leading-relaxed mb-6">
@@ -276,7 +269,7 @@ export default function Projects() {
                   <div className="space-y-2 mb-6">
                     {projectsData[2].highlights.slice(0, 3).map((hl, i) => (
                       <div key={i} className="flex items-start gap-2 text-xs text-pastel-ink/80">
-                        <span className="text-purple-600 font-mono font-bold">›</span>
+                        <span className="text-accent-java font-mono font-bold">›</span>
                         <span>{hl}</span>
                       </div>
                     ))}
@@ -285,7 +278,7 @@ export default function Projects() {
                   {/* Technology Chips */}
                   <div className="flex flex-wrap gap-1.5 mb-8">
                     {projectsData[2].technologies.slice(0, 5).map((t, idx) => (
-                      <span key={idx} className="font-mono text-[11px] px-3 py-1 rounded-full bg-white/70 text-pastel-ink border border-white shadow-2xs">
+                      <span key={idx} className="font-mono text-[11px] px-3 py-1 rounded-full glass-pill text-pastel-ink">
                         {t}
                       </span>
                     ))}
@@ -296,7 +289,7 @@ export default function Projects() {
                 <div className="flex flex-wrap items-center gap-3 pt-4 border-t border-pastel-ink/10">
                   <button
                     onClick={() => setSelectedProject(projectsData[2])}
-                    className="liquid-pill-purple inline-flex items-center gap-1.5 px-4 py-2 text-xs font-medium tracking-wide shadow-sm"
+                    className="liquid-pill-primary inline-flex items-center gap-1.5 px-4 py-2 text-xs font-medium tracking-wide shadow-sm"
                   >
                     <span>View Case Study</span>
                     <ChevronRight className="w-3.5 h-3.5" />
@@ -306,7 +299,7 @@ export default function Projects() {
                     href={projectsData[2].githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="liquid-pill-cyan inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-mono tracking-wide shadow-sm"
+                    className="liquid-pill-secondary inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-mono tracking-wide shadow-sm"
                   >
                     <GithubIcon className="w-3.5 h-3.5" />
                     <span>Source</span>

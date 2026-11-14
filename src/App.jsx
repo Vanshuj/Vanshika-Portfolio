@@ -24,8 +24,8 @@ export default function App() {
   };
 
   return (
-    <div className="relative min-h-screen bg-pastel-white selection:bg-pastel-lavender selection:text-pastel-ink">
-      {/* Background Pastel Atmospheric Mesh */}
+    <div className="relative min-h-screen bg-pastel-white selection:bg-pastel-ink selection:text-pastel-white">
+      {/* Background Atmospheric Mesh */}
       <BackgroundMesh />
 
       {/* Floating Liquid Glass Navigation */}

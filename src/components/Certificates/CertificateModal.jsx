@@ -43,7 +43,7 @@ export default function CertificateModal({ certificate, onClose }) {
               <span className="font-mono text-xs text-pastel-slate">
                 {certificate.issuer}
               </span>
-              <span className="font-mono text-[10px] px-2 py-0.5 rounded-full bg-pastel-mint/80 text-pastel-ink border border-white">
+              <span className="font-mono text-[10px] px-2 py-0.5 rounded-full glass-badge border border-white">
                 Verified Credential
               </span>
             </div>
@@ -54,7 +54,7 @@ export default function CertificateModal({ certificate, onClose }) {
         </div>
 
         {/* Document-Inspired Certificate Box */}
-        <div className="p-6 rounded-2xl bg-white/70 border border-white/90 space-y-4 mb-6 shadow-sm">
+        <div className="p-6 rounded-2xl glass-panel-subtle space-y-4 mb-6 shadow-sm">
           <div className="flex items-center justify-between text-xs font-mono text-pastel-slate border-b border-pastel-ink/10 pb-3">
             <span>Date Conferred: {certificate.date}</span>
             <span>Category: {certificate.category}</span>
@@ -70,7 +70,7 @@ export default function CertificateModal({ certificate, onClose }) {
             </span>
             <div className="flex flex-wrap gap-1.5">
               {certificate.skills.map((skill, idx) => (
-                <span key={idx} className="font-mono text-xs px-2.5 py-1 rounded bg-pastel-white text-pastel-ink border border-pastel-ink/10">
+                <span key={idx} className="font-mono text-xs px-2.5 py-1 rounded-full glass-pill text-pastel-ink">
                   {skill}
                 </span>
               ))}
@@ -87,7 +87,7 @@ export default function CertificateModal({ certificate, onClose }) {
 
           <button
             onClick={onClose}
-            className="px-4 py-2 rounded-xl bg-pastel-ink text-pastel-white text-xs font-medium hover:bg-pastel-ink/90 transition-all"
+            className="liquid-pill-primary px-5 py-2 text-xs font-medium"
           >
             Done
           </button>

@@ -43,28 +43,30 @@ export default function CodingPractice() {
             {codingPracticeData.categories.map((cat) => (
               <div 
                 key={cat.code}
-                className="glass-panel p-5 rounded-2xl border border-white/80 hover:bg-white/80 transition-all"
+                className="glass-card-interactive p-5 rounded-2xl border border-white/90 relative overflow-hidden"
               >
-                <div className="flex items-center justify-between mb-2">
-                  <span className="font-mono text-xs px-2 py-0.5 rounded bg-pastel-ink/5 text-pastel-ink font-semibold">
-                    {cat.code}
-                  </span>
-                  <span className="font-mono text-[10px] uppercase tracking-wider text-pastel-slate px-2 py-0.5 rounded-full bg-white border border-white">
-                    {cat.repoTag}
-                  </span>
+                <div className="relative z-10">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="font-mono text-xs px-2.5 py-0.5 rounded-lg glass-badge text-pastel-ink font-semibold">
+                      {cat.code}
+                    </span>
+                    <span className="font-mono text-[10px] uppercase tracking-wider text-pastel-slate px-2.5 py-0.5 rounded-full glass-badge">
+                      {cat.repoTag}
+                    </span>
+                  </div>
+
+                  <h3 className="font-display font-bold text-base text-pastel-ink mb-1">
+                    {cat.name}
+                  </h3>
+                  
+                  <p className="font-mono text-xs text-pastel-slate mb-2">
+                    Focus: <span className="text-pastel-ink font-medium">{cat.focus}</span>
+                  </p>
+
+                  <p className="font-body text-xs text-pastel-slate italic pt-2 border-t border-pastel-ink/5">
+                    "{cat.notes}"
+                  </p>
                 </div>
-
-                <h3 className="font-display font-bold text-base text-pastel-ink mb-1">
-                  {cat.name}
-                </h3>
-                
-                <p className="font-mono text-xs text-pastel-slate mb-2">
-                  Focus: <span className="text-pastel-ink">{cat.focus}</span>
-                </p>
-
-                <p className="font-body text-xs text-pastel-slate italic pt-2 border-t border-pastel-ink/5">
-                  "{cat.notes}"
-                </p>
               </div>
             ))}
           </div>
@@ -85,19 +87,21 @@ export default function CodingPractice() {
             {codingPracticeData.principles.map((pr) => (
               <div 
                 key={pr.index}
-                className="glass-panel tint-butter p-5 rounded-2xl border border-white/80"
+                className="glass-card-interactive p-5 rounded-2xl border border-white/90 relative overflow-hidden"
               >
-                <div className="flex items-center gap-2 mb-1.5">
-                  <span className="font-mono text-xs font-bold text-pastel-ink">
-                    § {pr.index}
-                  </span>
-                  <h3 className="font-display font-semibold text-sm text-pastel-ink">
-                    {pr.title}
-                  </h3>
+                <div className="relative z-10">
+                  <div className="flex items-center gap-2 mb-1.5">
+                    <span className="font-mono text-xs font-bold text-pastel-ink">
+                      § {pr.index}
+                    </span>
+                    <h3 className="font-display font-semibold text-sm text-pastel-ink">
+                      {pr.title}
+                    </h3>
+                  </div>
+                  <p className="font-body text-xs text-pastel-slate leading-relaxed">
+                    {pr.detail}
+                  </p>
                 </div>
-                <p className="font-body text-xs text-pastel-slate leading-relaxed">
-                  {pr.detail}
-                </p>
               </div>
             ))}
           </div>
@@ -132,9 +136,9 @@ export default function CodingPractice() {
               href={repo.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="glass-card-interactive p-5 rounded-2xl border border-white/80 flex flex-col justify-between group"
+              className="glass-card-interactive p-5 rounded-2xl border border-white/90 flex flex-col justify-between group relative overflow-hidden"
             >
-              <div>
+              <div className="relative z-10">
                 <div className="flex items-center justify-between mb-2">
                   <span className="font-mono text-xs font-semibold text-pastel-ink group-hover:underline">
                     {repo.name}
@@ -147,10 +151,10 @@ export default function CodingPractice() {
                 </p>
               </div>
 
-              <div>
+              <div className="relative z-10">
                 <div className="flex flex-wrap gap-1 mb-2">
                   {repo.topics.map((t, idx) => (
-                    <span key={idx} className="font-mono text-[9px] px-1.5 py-0.5 rounded bg-white/70 text-pastel-slate">
+                    <span key={idx} className="font-mono text-[9px] px-2 py-0.5 rounded-full glass-badge text-pastel-slate">
                       #{t}
                     </span>
                   ))}

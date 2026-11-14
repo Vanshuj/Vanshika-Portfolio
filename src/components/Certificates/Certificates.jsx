@@ -37,12 +37,10 @@ export default function Certificates() {
               cert.isNationalHonor ? 'ring-2 ring-accent-java/40' : ''
             }`}
           >
-            <div className="chromatic-flare-br opacity-50 !w-24 !h-24" />
-
             <div className="relative z-10">
               {/* Badge & Date */}
               <div className="flex items-center justify-between mb-4">
-                <span className="font-mono text-[10px] px-2.5 py-1 rounded-full bg-white/80 text-pastel-ink border border-white shadow-xs font-semibold">
+                <span className="font-mono text-[10px] px-2.5 py-1 rounded-full glass-badge text-pastel-ink font-semibold">
                   {cert.badge}
                 </span>
                 <span className="font-mono text-xs text-pastel-slate flex items-center gap-1">
@@ -69,7 +67,7 @@ export default function Certificates() {
             <div>
               <div className="flex flex-wrap gap-1 mb-4">
                 {cert.skills.slice(0, 3).map((s, idx) => (
-                  <span key={idx} className="font-mono text-[9px] px-2 py-0.5 rounded bg-white/60 text-pastel-ink border border-white/60">
+                  <span key={idx} className="font-mono text-[9px] px-2.5 py-0.5 rounded-full glass-pill text-pastel-ink">
                     {s}
                   </span>
                 ))}

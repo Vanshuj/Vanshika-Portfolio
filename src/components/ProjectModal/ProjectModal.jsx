@@ -23,9 +23,6 @@ export default function ProjectModal({ project, onClose }) {
         className="relative w-full max-w-4xl my-auto glass-panel p-6 sm:p-10 rounded-3xl sm:rounded-[32px] border border-white/90 shadow-glass-lg max-h-[92vh] overflow-y-auto relative overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Prismatic Rainbow Corner Flare */}
-        <div className="chromatic-flare-br opacity-60" />
-
         {/* Close Button */}
         <button
           onClick={onClose}
@@ -38,10 +35,10 @@ export default function ProjectModal({ project, onClose }) {
         {/* Modal Header */}
         <div className="mb-8 pr-12 relative z-10">
           <div className="flex flex-wrap items-center gap-2 mb-3">
-            <span className="font-mono text-xs px-2.5 py-1 rounded-full bg-pastel-lavender/60 text-pastel-ink border border-white">
+            <span className="font-mono text-xs px-2.5 py-1 rounded-full glass-badge text-pastel-ink">
               Project {project.number}
             </span>
-            <span className="font-mono text-xs px-2.5 py-1 rounded-full bg-white/70 text-pastel-slate border border-white">
+            <span className="font-mono text-xs px-2.5 py-1 rounded-full glass-badge text-pastel-slate">
               {project.category}
             </span>
             <span className="font-mono text-xs text-pastel-slate">
@@ -58,13 +55,13 @@ export default function ProjectModal({ project, onClose }) {
         </div>
 
         {/* Project Links & Actions */}
-        <div className="flex flex-wrap items-center gap-3 mb-8 p-4 rounded-2xl bg-white/60 border border-white/80 relative z-10">
+        <div className="flex flex-wrap items-center gap-3 mb-8 p-4 rounded-2xl glass-panel-subtle relative z-10">
           {project.githubUrl && (
             <a
               href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="liquid-pill-purple inline-flex items-center gap-2 px-5 py-2 text-xs font-mono tracking-wide shadow-sm"
+              className="liquid-pill-primary inline-flex items-center gap-2 px-5 py-2 text-xs font-mono tracking-wide shadow-sm"
             >
               <GithubIcon className="w-4 h-4" />
               <span>Inspect Source Repository</span>
@@ -77,14 +74,14 @@ export default function ProjectModal({ project, onClose }) {
               href={project.demoUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="liquid-pill-cyan inline-flex items-center gap-2 px-5 py-2 text-xs font-mono tracking-wide shadow-sm"
+              className="liquid-pill-secondary inline-flex items-center gap-2 px-5 py-2 text-xs font-mono tracking-wide shadow-sm"
             >
-              <ExternalLink className="w-4 h-4 text-white" />
+              <ExternalLink className="w-4 h-4 text-gold" />
               <span>Launch Live Deployment</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
             </a>
           ) : (
-            <div className="inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-pastel-white/80 border border-dashed border-pastel-slate/30 text-xs font-mono text-pastel-slate">
+            <div className="inline-flex items-center gap-2 px-3.5 py-2 rounded-full glass-badge border border-dashed border-pastel-slate/30 text-xs font-mono text-pastel-slate">
               <span className="w-2 h-2 rounded-full bg-accent-java" />
               <span>Live Demo Deployment Link (Reserved)</span>
             </div>
@@ -104,7 +101,7 @@ export default function ProjectModal({ project, onClose }) {
             {project.technologies.map((tech, idx) => (
               <span
                 key={idx}
-                className="px-3 py-1 rounded-lg bg-white/70 text-pastel-ink font-mono text-xs border border-white shadow-xs"
+                className="px-3 py-1 rounded-full glass-pill text-pastel-ink font-mono text-xs shadow-xs"
               >
                 {tech}
               </span>
@@ -117,9 +114,9 @@ export default function ProjectModal({ project, onClose }) {
           
           {/* Problem & Solution */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="p-5 rounded-2xl bg-white/50 border border-white space-y-2">
+            <div className="p-5 rounded-2xl glass-panel-subtle space-y-2">
               <h3 className="font-display font-semibold text-sm uppercase tracking-wider text-pastel-ink flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-red-400" />
+                <span className="w-2 h-2 rounded-full bg-accent-java" />
                 Problem Statement
               </h3>
               <p className="font-body text-xs sm:text-sm text-pastel-slate leading-relaxed">
@@ -127,7 +124,7 @@ export default function ProjectModal({ project, onClose }) {
               </p>
             </div>
 
-            <div className="p-5 rounded-2xl bg-white/50 border border-white space-y-2">
+            <div className="p-5 rounded-2xl glass-panel-subtle space-y-2">
               <h3 className="font-display font-semibold text-sm uppercase tracking-wider text-pastel-ink flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-accent-spring" />
                 Engineering Solution
@@ -146,7 +143,7 @@ export default function ProjectModal({ project, onClose }) {
             </h3>
             <div className="space-y-2">
               {project.caseStudy.architecture.map((item, i) => (
-                <div key={i} className="flex items-start gap-3 p-3 rounded-xl bg-white/40 border border-white/60">
+                <div key={i} className="flex items-start gap-3 p-3 rounded-xl glass-pill">
                   <span className="font-mono text-xs text-pastel-slate mt-0.5">0{i + 1}</span>
                   <span className="font-body text-xs sm:text-sm text-pastel-ink/90">{item}</span>
                 </div>

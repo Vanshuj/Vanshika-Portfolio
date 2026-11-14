@@ -35,7 +35,7 @@ export default function ProjectVisualPlaceholder({ project }) {
 
   // Interactive Domain-Specific Visualizations when no screenshot is added yet
   return (
-    <div className="relative w-full h-full min-h-[320px] sm:min-h-[380px] rounded-2xl bg-white/60 backdrop-blur-md border border-white/80 p-5 sm:p-6 flex flex-col justify-between overflow-hidden shadow-inner">
+    <div className="relative w-full h-full min-h-[320px] sm:min-h-[380px] rounded-2xl glass-panel-subtle border border-white/90 p-5 sm:p-6 flex flex-col justify-between overflow-hidden shadow-inner">
       
       {/* Decorative Pastel Ambient Backdrops */}
       <div 
@@ -78,15 +78,15 @@ export default function ProjectVisualPlaceholder({ project }) {
 
             {/* Visual pixel comparison grid mockup */}
             <div className="grid grid-cols-2 gap-3">
-              <div className="p-3 rounded-xl bg-pastel-blue/30 border border-white flex flex-col items-center justify-center text-center">
+              <div className="p-3 rounded-2xl glass-pill flex flex-col items-center justify-center text-center">
                 <span className="font-mono text-[10px] text-pastel-slate mb-1">Reference Frame</span>
-                <div className="w-16 h-16 rounded-lg bg-gradient-to-tr from-pastel-lavender to-pastel-blue flex items-center justify-center text-pastel-ink font-mono text-xs font-bold shadow-sm">
+                <div className="w-16 h-16 rounded-xl glass-badge flex items-center justify-center text-pastel-ink font-mono text-xs font-bold shadow-sm">
                   REF #402
                 </div>
               </div>
-              <div className="p-3 rounded-xl bg-pastel-peach/30 border border-white flex flex-col items-center justify-center text-center">
+              <div className="p-3 rounded-2xl glass-pill flex flex-col items-center justify-center text-center">
                 <span className="font-mono text-[10px] text-pastel-slate mb-1">User Submission</span>
-                <div className="w-16 h-16 rounded-lg bg-gradient-to-tr from-pastel-peach to-pastel-butter flex items-center justify-center text-pastel-ink font-mono text-xs font-bold shadow-sm">
+                <div className="w-16 h-16 rounded-xl glass-badge flex items-center justify-center text-pastel-ink font-mono text-xs font-bold shadow-sm">
                   USER #89
                 </div>
               </div>
@@ -102,7 +102,7 @@ export default function ProjectVisualPlaceholder({ project }) {
                   max="100" 
                   value={similarity} 
                   onChange={(e) => setSimilarity(Number(e.target.value))}
-                  className="w-full accent-pastel-ink cursor-pointer h-1.5 bg-pastel-lavender rounded-lg"
+                  className="w-full accent-pastel-ink cursor-pointer h-1.5 bg-pastel-ink/20 rounded-lg"
                 />
               </div>
               <div className="flex justify-between text-[10px] font-mono text-pastel-slate mt-1">
@@ -119,14 +119,14 @@ export default function ProjectVisualPlaceholder({ project }) {
               <span>Interactive Story Engine Tree</span>
               <button 
                 onClick={() => setIsPlayingAudio(!isPlayingAudio)}
-                className="flex items-center gap-1 text-[11px] px-2 py-0.5 rounded bg-pastel-mint/50 text-pastel-ink hover:bg-pastel-mint"
+                className="flex items-center gap-1 text-[11px] px-2.5 py-1 rounded-full glass-badge hover:bg-gold/15 transition-all"
               >
                 <Volume2 className="w-3 h-3" />
                 <span>{isPlayingAudio ? 'Speech Synthesizing...' : 'Test Web Speech'}</span>
               </button>
             </div>
 
-            <div className="p-3.5 rounded-xl bg-white/70 border border-white space-y-2">
+            <div className="p-3.5 rounded-xl glass-panel-subtle space-y-2">
               <div className="font-display font-semibold text-xs text-pastel-ink">
                 {storyNode === 'intro' ? 'Chapter 1: The Mountain Sanctuary' : 'Chapter 2: The Whispering Valley'}
               </div>
@@ -140,7 +140,7 @@ export default function ProjectVisualPlaceholder({ project }) {
               <div className="flex gap-2 pt-1">
                 <button 
                   onClick={() => setStoryNode(storyNode === 'intro' ? 'branch' : 'intro')}
-                  className="text-[11px] font-mono px-2.5 py-1 rounded bg-pastel-peach/60 hover:bg-pastel-peach text-pastel-ink border border-white"
+                  className="text-[11px] font-mono px-3 py-1 rounded-full glass-pill text-pastel-ink"
                 >
                   Branch: {storyNode === 'intro' ? 'Follow Valley' : 'Return to Ridge'}
                 </button>
@@ -156,28 +156,28 @@ export default function ProjectVisualPlaceholder({ project }) {
           <div className="space-y-3">
             <div className="flex items-center justify-between text-xs font-mono text-pastel-slate">
               <span>Knowledge Graph Visualization [ELK.js]</span>
-              <span className="text-[10px] bg-pastel-lavender/60 px-2 py-0.5 rounded text-pastel-ink">
+              <span className="text-[10px] glass-badge px-2 py-0.5 rounded text-pastel-ink">
                 Multi-LLM Active
               </span>
             </div>
 
             {/* Concept graph visualization mockup */}
-            <div className="p-3 rounded-xl bg-white/80 border border-white flex flex-col gap-2">
+            <div className="p-3 rounded-xl glass-panel-subtle flex flex-col gap-2">
               <div className="flex items-center justify-between text-[11px] font-mono">
                 <span className="text-pastel-ink font-semibold">Topic: Distributed Concurrency</span>
                 <span className="text-pastel-slate">Format: PDF / MD</span>
               </div>
               
               <div className="flex items-center justify-center gap-2 py-2">
-                <span className="px-2.5 py-1 rounded-lg bg-pastel-lavender text-pastel-ink text-xs font-mono shadow-sm">
+                <span className="px-2.5 py-1 rounded-lg glass-badge text-pastel-ink text-xs font-mono shadow-sm">
                   Deadlocks
                 </span>
                 <span className="text-pastel-slate font-mono text-xs">→</span>
-                <span className="px-2.5 py-1 rounded-lg bg-pastel-blue text-pastel-ink text-xs font-mono shadow-sm">
+                <span className="px-2.5 py-1 rounded-lg glass-badge text-pastel-ink text-xs font-mono shadow-sm">
                   Mutex Locks
                 </span>
                 <span className="text-pastel-slate font-mono text-xs">→</span>
-                <span className="px-2.5 py-1 rounded-lg bg-pastel-mint text-pastel-ink text-xs font-mono shadow-sm">
+                <span className="px-2.5 py-1 rounded-lg glass-badge text-pastel-ink text-xs font-mono shadow-sm">
                   Semaphores
                 </span>
               </div>

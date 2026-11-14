@@ -17,8 +17,8 @@ export const projectsData = [
     githubUrl: "https://github.com/Vanshuj/Pixel-Arena",
     
     status: "Production Ready / Deployed on Render",
-    accentColor: "#D5E8F5", // Powder Blue
-    badgeColor: "#F89820", // Java Orange accent
+    accentColor: "#FFEB97", // Golden Cream
+    badgeColor: "#583714", // Deep Warm Brown
     
     technologies: [
       "Node.js",
@@ -73,8 +73,8 @@ export const projectsData = [
     githubUrl: "https://github.com/Vanshuj/KathaVani",
     
     status: "Active / PWA Enabled",
-    accentColor: "#F6DFD2", // Soft Peach
-    badgeColor: "#6DB33F", // Spring Green accent
+    accentColor: "#E5BF5A", // Golden Amber
+    badgeColor: "#7B4F1F", // Warm Brown Mid
     
     technologies: [
       "React.js",
@@ -128,8 +128,8 @@ export const projectsData = [
     githubUrl: "https://github.com/Vanshuj/GYAN.AI",
     
     status: "Featured AI Platform",
-    accentColor: "#DCD5F5", // Lavender
-    badgeColor: "#252831",
+    accentColor: "#F6E6CE", // Golden Peach
+    badgeColor: "#36210A", // Warm Dark Brown
     
     technologies: [
       "React.js",

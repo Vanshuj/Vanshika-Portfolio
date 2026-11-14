@@ -1,8 +1,7 @@
 import React from 'react';
-import { ArrowDown, Mail, FileText, Sparkles, Terminal } from 'lucide-react';
+import { ArrowDown, Mail, FileText, Sparkles, Terminal, Code2, Award, GraduationCap, CheckCircle2, ChevronRight, Layers } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from '../Icons/BrandIcons';
 import { profileData } from '../../data/profile';
-import LiquidGlassSculpture from './LiquidGlassSculpture';
 
 export default function Hero({ onOpenResume, onOpenContactModal }) {
   return (
@@ -16,7 +15,7 @@ export default function Hero({ onOpenResume, onOpenContactModal }) {
         <div className="lg:col-span-7 flex flex-col items-start text-left z-10">
           
           {/* Status Badge */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-pill text-xs font-mono text-pastel-ink mb-6 border border-white/80 shadow-glass-sm animate-fade-in">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-pill text-xs font-mono text-pastel-ink mb-6 border border-white/90 shadow-glass-sm animate-fade-in">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent-spring opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-accent-spring"></span>
@@ -35,7 +34,7 @@ export default function Hero({ onOpenResume, onOpenContactModal }) {
           </div>
 
           {/* Editorial Philosophy Quote */}
-          <div className="relative pl-4 border-l-2 border-pastel-lavender mb-6 max-w-xl">
+          <div className="relative pl-4 border-l-2 border-pastel-ink/20 mb-6 max-w-xl">
             <p className="font-display italic text-base sm:text-lg text-pastel-ink/80 leading-relaxed">
               "{profileData.bio.philosophy}"
             </p>
@@ -50,7 +49,7 @@ export default function Hero({ onOpenResume, onOpenContactModal }) {
           <div className="flex flex-wrap items-center gap-3 sm:gap-4 mb-10 w-full sm:w-auto">
             <button
               onClick={onOpenResume}
-              className="liquid-pill-purple flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-medium tracking-wide shadow-lg"
+              className="liquid-pill-primary flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-medium tracking-wide shadow-lg"
             >
               <FileText className="w-4 h-4 text-white/90" />
               <span>Digital Resume</span>
@@ -58,10 +57,10 @@ export default function Hero({ onOpenResume, onOpenContactModal }) {
 
             <a
               href="#projects"
-              className="liquid-pill-cyan flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-medium tracking-wide shadow-lg"
+              className="liquid-pill-secondary flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-medium tracking-wide shadow-lg"
             >
               <span>Explore Projects</span>
-              <ArrowDown className="w-4 h-4 animate-bounce text-white/90" />
+              <ArrowDown className="w-4 h-4 animate-bounce text-pastel-ink" />
             </a>
           </div>
 
@@ -77,7 +76,7 @@ export default function Hero({ onOpenResume, onOpenContactModal }) {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub Profile"
-              className="p-2.5 rounded-full glass-panel text-pastel-ink hover:text-accent-java hover:bg-white transition-all duration-200"
+              className="p-2.5 rounded-full glass-pill text-pastel-ink hover:text-accent-java hover:bg-white transition-all duration-200"
             >
               <GithubIcon className="w-4 h-4" />
             </a>
@@ -88,7 +87,7 @@ export default function Hero({ onOpenResume, onOpenContactModal }) {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn Profile"
-              className="p-2.5 rounded-full glass-panel text-pastel-ink hover:text-blue-600 hover:bg-white transition-all duration-200"
+              className="p-2.5 rounded-full glass-pill text-pastel-ink hover:text-accent-java hover:bg-white transition-all duration-200"
             >
               <LinkedinIcon className="w-4 h-4" />
             </a>
@@ -97,7 +96,7 @@ export default function Hero({ onOpenResume, onOpenContactModal }) {
             <button
               onClick={onOpenContactModal}
               aria-label="Send direct message"
-              className="p-2.5 rounded-full glass-panel text-pastel-ink hover:text-pastel-ink hover:bg-white transition-all duration-200 flex items-center gap-1.5"
+              className="p-2.5 rounded-full glass-pill text-pastel-ink hover:text-pastel-ink hover:bg-white transition-all duration-200 flex items-center gap-1.5"
             >
               <Mail className="w-4 h-4" />
               <span className="font-mono text-xs hidden sm:inline text-pastel-slate">Get in touch</span>
@@ -111,20 +110,128 @@ export default function Hero({ onOpenResume, onOpenContactModal }) {
           </div>
         </div>
 
-        {/* Right Area: Liquid Glass Refractive Sculpture Visual Anchor */}
-        <div className="lg:col-span-5 flex flex-col items-center justify-center relative">
-          <div className="w-full max-w-[440px] p-4 sm:p-6 rounded-[36px] glass-panel border border-white/80 shadow-glass-lg relative overflow-hidden flex flex-col items-center">
-            {/* Prismatic Rainbow Corner Flares */}
-            <div className="chromatic-flare-br opacity-70" />
-            <div className="chromatic-flare-tl opacity-50" />
-
-            <div className="relative z-10 w-full flex flex-col items-center">
-              <LiquidGlassSculpture />
-              
-              {/* Subtle caption */}
-              <div className="mt-3 px-3.5 py-1 rounded-full glass-badge text-[10px] font-mono text-pastel-slate tracking-wider uppercase">
-                Interactive Liquid Glass Material
+        {/* Right Area: Transparent Liquid Glass Developer Identity & Telemetry Console */}
+        <div className="lg:col-span-5 flex flex-col items-center justify-center relative w-full">
+          <div className="w-full max-w-[460px] p-6 sm:p-7 rounded-[36px] glass-panel border border-white/90 shadow-glass-lg relative overflow-hidden flex flex-col space-y-5">
+            {/* Top Bar: Developer Identity Capsule */}
+            <div className="relative z-10 flex items-center justify-between pb-4 border-b border-pastel-ink/10">
+              <div className="flex items-center gap-3">
+                <div className="w-11 h-11 rounded-2xl glass-pill flex items-center justify-center font-display font-bold text-sm text-pastel-ink shadow-inner border border-white/90">
+                  VJ
+                </div>
+                <div>
+                  <div className="font-display font-bold text-sm text-pastel-ink flex items-center gap-1.5">
+                    <span>{profileData.name}</span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-accent-spring animate-pulse" />
+                  </div>
+                  <span className="font-mono text-[11px] text-pastel-slate">
+                    Full-Stack & Systems Engineer
+                  </span>
+                </div>
               </div>
+
+              {/* Status Pill */}
+              <div className="px-3 py-1 rounded-full glass-badge text-[10px] font-mono text-pastel-ink/80 flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-accent-spring" />
+                <span>Active '26</span>
+              </div>
+            </div>
+
+            {/* Inner Floating Glass Widget 1: Verified Academic & Hackathon Metrics */}
+            <div className="relative z-10 grid grid-cols-2 gap-3">
+              <div className="glass-panel-subtle p-3.5 rounded-2xl border border-white/80 relative overflow-hidden">
+                <div className="flex items-center gap-1.5 text-accent-java mb-1">
+                  <GraduationCap className="w-3.5 h-3.5" />
+                  <span className="font-mono text-[10px] uppercase text-pastel-slate font-medium">Academics</span>
+                </div>
+                <div className="font-display font-bold text-lg text-pastel-ink">7.54 CGPA</div>
+                <div className="font-mono text-[10px] text-pastel-slate">SRIT Jabalpur (CSE)</div>
+              </div>
+
+              <div className="glass-panel-subtle p-3.5 rounded-2xl border border-white/80 relative overflow-hidden">
+                <div className="flex items-center gap-1.5 text-accent-spring mb-1">
+                  <Award className="w-3.5 h-3.5" />
+                  <span className="font-mono text-[10px] uppercase text-pastel-slate font-medium">National Honor</span>
+                </div>
+                <div className="font-display font-bold text-lg text-pastel-ink">Top 40</div>
+                <div className="font-mono text-[10px] text-pastel-slate">Smart India Hackathon</div>
+              </div>
+            </div>
+
+            {/* Inner Floating Glass Widget 2: Core Engineering Stack */}
+            <div className="relative z-10 glass-panel-subtle p-4 rounded-2xl border border-white/80">
+              <div className="flex items-center justify-between mb-2.5">
+                <span className="font-mono text-[11px] uppercase tracking-wider text-pastel-slate flex items-center gap-1.5">
+                  <Code2 className="w-3.5 h-3.5 text-pastel-ink" />
+                  <span>Production Stack</span>
+                </span>
+                <span className="font-mono text-[10px] text-pastel-slate/70">Verified</span>
+              </div>
+              <div className="flex flex-wrap gap-1.5">
+                {['Java', 'Spring Boot', 'React', 'Node.js', 'MongoDB', 'MySQL'].map((tech) => (
+                  <span 
+                    key={tech} 
+                    className="font-mono text-[11px] px-3 py-1 rounded-full glass-pill text-pastel-ink shadow-xs"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Inner Floating Glass Widget 3: Key Architectures Snapshot */}
+            <div className="relative z-10 glass-panel-subtle p-4 rounded-2xl border border-white/80 space-y-2">
+              <div className="flex items-center justify-between text-[11px] font-mono text-pastel-slate mb-1">
+                <span className="flex items-center gap-1.5">
+                  <Layers className="w-3.5 h-3.5 text-accent-java" />
+                  <span>Signature Systems</span>
+                </span>
+                <span>Live Deployments</span>
+              </div>
+
+              {/* Pixel-Arena Mini Row */}
+              <a 
+                href="#projects" 
+                className="flex items-center justify-between p-2.5 rounded-xl glass-pill hover:bg-white/30 transition-all group"
+              >
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-accent-java shadow-xs" />
+                  <div>
+                    <span className="font-display font-semibold text-xs text-pastel-ink block">Pixel-Arena</span>
+                    <span className="font-mono text-[10px] text-pastel-slate">Real-time Canvas & WebSocket</span>
+                  </div>
+                </div>
+                <ChevronRight className="w-3.5 h-3.5 text-pastel-slate group-hover:translate-x-0.5 transition-transform" />
+              </a>
+
+              {/* KathaVani Mini Row */}
+              <a 
+                href="#projects" 
+                className="flex items-center justify-between p-2.5 rounded-xl glass-pill hover:bg-white/30 transition-all group"
+              >
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-accent-spring shadow-xs" />
+                  <div>
+                    <span className="font-display font-semibold text-xs text-pastel-ink block">KathaVani</span>
+                    <span className="font-mono text-[10px] text-pastel-slate">Multilingual Story Platform</span>
+                  </div>
+                </div>
+                <ChevronRight className="w-3.5 h-3.5 text-pastel-slate group-hover:translate-x-0.5 transition-transform" />
+              </a>
+            </div>
+
+            {/* Bottom Glass Control Pill */}
+            <div className="relative z-10 pt-2 flex items-center justify-between text-xs font-mono text-pastel-slate">
+              <span className="flex items-center gap-1.5">
+                <CheckCircle2 className="w-3.5 h-3.5 text-accent-spring" />
+                <span>Cisco AICTE Virtual Intern</span>
+              </span>
+              <a 
+                href="#contact" 
+                className="text-pastel-ink hover:text-accent-java font-medium transition-colors"
+              >
+                Open Comms ›
+              </a>
             </div>
           </div>
         </div>

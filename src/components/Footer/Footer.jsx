@@ -14,7 +14,7 @@ export default function Footer() {
         
         {/* Brand & Monogram */}
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-full bg-pastel-lavender/80 border border-white flex items-center justify-center font-display font-bold text-xs text-pastel-ink">
+          <div className="w-8 h-8 rounded-full glass-pill flex items-center justify-center font-display font-bold text-xs text-pastel-ink">
             {profileData.monogram}
           </div>
           <div>
@@ -22,14 +22,14 @@ export default function Footer() {
               {profileData.name}
             </div>
             <div className="font-mono text-[10px] text-pastel-slate">
-              Pastel Liquid Glass × Creative Engineering
+              Warm Golden Liquid Glass × Systems Engineering
             </div>
           </div>
         </div>
 
         {/* Center Editorial Quote */}
         <div className="text-center font-mono text-xs text-pastel-slate">
-          Built with React, Vite, Tailwind CSS & Three.js • Deployed on GitHub
+          Built with React, Vite & Tailwind CSS • 3D Liquid Glass Architecture
         </div>
 
         {/* Back to top */}

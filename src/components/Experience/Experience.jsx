@@ -41,43 +41,42 @@ export default function Experience() {
                 {/* Timeline Node */}
                 <div className="absolute left-1.5 top-1.5 w-3 h-3 rounded-full bg-pastel-white border-2 border-pastel-ink transition-transform group-hover:scale-125 shadow-xs" />
 
-                <div className="glass-panel p-6 rounded-2xl border border-white/80 transition-all hover:bg-white/40 relative overflow-hidden shadow-glass-sm">
-                  <div className="chromatic-flare-br opacity-50 !w-20 !h-20" />
+                <div className="glass-card-interactive p-6 sm:p-7 rounded-3xl border border-white/90 relative overflow-hidden">
                   <div className="relative z-10">
-                  <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
-                    <span className="font-mono text-xs text-pastel-slate flex items-center gap-1.5">
-                      <Calendar className="w-3.5 h-3.5" />
-                      {item.period}
-                    </span>
-                    <span className="font-mono text-[10px] px-2 py-0.5 rounded-full bg-pastel-blue/60 text-pastel-ink border border-white">
-                      {item.type}
-                    </span>
-                  </div>
-
-                  <h4 className="font-display font-bold text-lg text-pastel-ink">
-                    {item.role}
-                  </h4>
-                  
-                  <div className="font-body text-xs sm:text-sm font-medium text-pastel-slate mb-3">
-                    {item.organization} <span className="opacity-60">•</span> <span className="text-pastel-ink/80">{item.program}</span>
-                  </div>
-
-                  <ul className="space-y-2 mb-4">
-                    {item.responsibilities.map((resp, idx) => (
-                      <li key={idx} className="flex items-start gap-2 text-xs text-pastel-slate leading-relaxed">
-                        <span className="text-pastel-ink font-bold mt-0.5">•</span>
-                        <span>{resp}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  <div className="flex flex-wrap gap-1.5 pt-3 border-t border-pastel-ink/5">
-                    {item.tags.map((tag, tIdx) => (
-                      <span key={tag} className="font-mono text-[10px] px-2 py-0.5 rounded bg-white/70 text-pastel-ink border border-white">
-                        {tag}
+                    <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
+                      <span className="font-mono text-xs text-pastel-slate flex items-center gap-1.5">
+                        <Calendar className="w-3.5 h-3.5" />
+                        {item.period}
                       </span>
-                    ))}
-                  </div>
+                      <span className="font-mono text-[10px] px-2.5 py-0.5 rounded-full glass-badge text-pastel-ink border border-white/90 font-medium">
+                        {item.type}
+                      </span>
+                    </div>
+
+                    <h4 className="font-display font-bold text-lg text-pastel-ink">
+                      {item.role}
+                    </h4>
+
+                    <div className="font-body text-xs sm:text-sm font-medium text-pastel-slate mb-3">
+                      {item.organization} <span className="opacity-60">•</span> <span className="text-pastel-ink/80">{item.program}</span>
+                    </div>
+
+                    <ul className="space-y-2 mb-4">
+                      {item.responsibilities.map((resp, idx) => (
+                        <li key={idx} className="flex items-start gap-2 text-xs text-pastel-slate leading-relaxed">
+                          <span className="text-pastel-ink font-bold mt-0.5">•</span>
+                          <span>{resp}</span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    <div className="flex flex-wrap gap-1.5 pt-3 border-t border-pastel-ink/5">
+                      {item.tags.map((tag) => (
+                        <span key={tag} className="font-mono text-[10px] px-3 py-0.5 rounded-full glass-pill text-pastel-ink">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -100,42 +99,41 @@ export default function Experience() {
                 {/* Timeline Node */}
                 <div className="absolute left-1.5 top-1.5 w-3 h-3 rounded-full bg-pastel-white border-2 border-accent-spring transition-transform group-hover:scale-125 shadow-xs" />
 
-                <div className="glass-panel p-6 rounded-2xl border border-white/80 transition-all hover:bg-white/40 relative overflow-hidden shadow-glass-sm">
-                  <div className="chromatic-flare-br opacity-50 !w-20 !h-20" />
+                <div className="glass-card-interactive p-6 sm:p-7 rounded-3xl border border-white/90 relative overflow-hidden">
                   <div className="relative z-10">
-                  <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
-                    <span className="font-mono text-xs text-pastel-slate flex items-center gap-1.5">
-                      <Calendar className="w-3.5 h-3.5" />
-                      {edu.period}
-                    </span>
-                    <span className="font-mono text-xs font-semibold px-2.5 py-0.5 rounded-full bg-pastel-mint/80 text-pastel-ink border border-white">
-                      {edu.score}
-                    </span>
-                  </div>
+                    <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
+                      <span className="font-mono text-xs text-pastel-slate flex items-center gap-1.5">
+                        <Calendar className="w-3.5 h-3.5" />
+                        {edu.period}
+                      </span>
+                      <span className="font-mono text-xs font-semibold px-2.5 py-0.5 rounded-full glass-badge border border-white/90">
+                        {edu.score}
+                      </span>
+                    </div>
 
-                  <h4 className="font-display font-bold text-lg text-pastel-ink">
-                    {edu.degree}
-                  </h4>
+                    <h4 className="font-display font-bold text-lg text-pastel-ink">
+                      {edu.degree}
+                    </h4>
 
-                  <div className="font-body text-xs sm:text-sm font-medium text-pastel-slate mb-3">
-                    {edu.institution} <span className="opacity-60">•</span> <span className="text-pastel-ink/80">{edu.field}</span>
-                  </div>
+                    <div className="font-body text-xs sm:text-sm font-medium text-pastel-slate mb-3">
+                      {edu.institution} <span className="opacity-60">•</span> <span className="text-pastel-ink/80">{edu.field}</span>
+                    </div>
 
-                  <div className="text-[11px] font-mono text-pastel-slate mb-3 flex items-center gap-1">
-                    <MapPin className="w-3 h-3 text-pastel-slate/70" />
-                    <span>{edu.location}</span>
-                    <span className="mx-1">•</span>
-                    <span className="text-pastel-ink">{edu.status}</span>
-                  </div>
+                    <div className="text-[11px] font-mono text-pastel-slate mb-3 flex items-center gap-1">
+                      <MapPin className="w-3 h-3 text-pastel-slate/70" />
+                      <span>{edu.location}</span>
+                      <span className="mx-1">•</span>
+                      <span className="text-pastel-ink">{edu.status}</span>
+                    </div>
 
-                  <ul className="space-y-1.5 pt-2 border-t border-pastel-ink/5">
-                    {edu.highlights.map((hl, idx) => (
-                      <li key={idx} className="flex items-start gap-2 text-xs text-pastel-slate">
-                        <span className="text-accent-spring font-bold">•</span>
-                        <span>{hl}</span>
-                      </li>
-                    ))}
-                  </ul>
+                    <ul className="space-y-1.5 pt-2 border-t border-pastel-ink/5">
+                      {edu.highlights.map((hl, idx) => (
+                        <li key={idx} className="flex items-start gap-2 text-xs text-pastel-slate">
+                          <span className="text-accent-spring font-bold">•</span>
+                          <span>{hl}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
               </div>

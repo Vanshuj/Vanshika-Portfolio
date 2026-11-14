@@ -4,8 +4,8 @@ export const skillsData = {
       id: "languages",
       title: "Programming Languages",
       subtitle: "Core syntax, paradigms & system languages",
-      accent: "#DCD5F5", // Lavender
-      accentCode: "lavender",
+      accent: "#FFEB97", // Golden Cream
+      accentCode: "gold",
       skills: [
         { name: "Java", type: "Primary Enterprise Language", isHighlight: true, badge: "Java SE 17+" },
         { name: "JavaScript (ES6+)", type: "Modern Web Standard", isHighlight: true, badge: "Full-Stack" },
@@ -18,8 +18,8 @@ export const skillsData = {
       id: "backend",
       title: "Java Backend & Cloud Services",
       subtitle: "Enterprise architecture, APIs & microservices",
-      accent: "#F89820", // Java Orange
-      accentCode: "peach",
+      accent: "#E5BF5A", // Golden Amber
+      accentCode: "amber",
       skills: [
         { name: "Spring Boot", type: "Enterprise Framework", isHighlight: true, badge: "Backend Core" },
         { name: "Spring AI", type: "AI Application Framework", isHighlight: true, badge: "LLM Orchestration" },
@@ -32,8 +32,8 @@ export const skillsData = {
       id: "mern",
       title: "MERN Stack & Frontend",
       subtitle: "Reactive user interfaces & Node runtime ecosystem",
-      accent: "#D5E8F5", // Powder Blue
-      accentCode: "blue",
+      accent: "#F7E7B4", // Warm Golden Sand
+      accentCode: "sand",
       skills: [
         { name: "React.js", type: "Component UI Architecture", isHighlight: true, badge: "Frontend Engine" },
         { name: "Node.js", type: "Asynchronous I/O Runtime", isHighlight: true, badge: "Server Runtime" },
@@ -46,8 +46,8 @@ export const skillsData = {
       id: "databases",
       title: "Databases & Storage",
       subtitle: "Relational persistence, document stores & browser caches",
-      accent: "#D7EBDD", // Mint
-      accentCode: "mint",
+      accent: "#E8C97A", // Warm Bronze Gold
+      accentCode: "bronze",
       skills: [
         { name: "MongoDB", type: "Document Store / NoSQL", isHighlight: true, badge: "MERN" },
         { name: "MySQL", type: "Relational DBMS & SQL Queries", isHighlight: true, badge: "ACID RDBMS" },
@@ -58,7 +58,7 @@ export const skillsData = {
       id: "tools",
       title: "Tools, DevOps & Analytics",
       subtitle: "Workflow automation, version control & cloud deployment",
-      accent: "#F5EDCE", // Butter Yellow
+      accent: "#F5EDCE", // Butter Golden Cream
       accentCode: "butter",
       skills: [
         { name: "Git & GitHub", type: "Version Control & CI/CD", isHighlight: true, badge: "VCS" },
@@ -72,8 +72,8 @@ export const skillsData = {
       id: "core-cs",
       title: "Core Computer Science",
       subtitle: "Algorithmic thinking & structural software foundations",
-      accent: "#F1DCE5", // Blush Pink
-      accentCode: "pink",
+      accent: "#EAD9A6", // Warm Ochre Light
+      accentCode: "ochre",
       skills: [
         { name: "Data Structures & Algorithms", type: "Time & Space Optimization", isHighlight: true, badge: "DSA" },
         { name: "Object-Oriented Programming (OOP)", type: "Design Patterns & Modularity", isHighlight: true, badge: "OOP" },

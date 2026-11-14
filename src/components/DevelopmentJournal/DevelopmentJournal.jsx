@@ -26,26 +26,18 @@ export default function DevelopmentJournal() {
 
       {/* Journal Entries Grid */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-        {developmentJournalData.map((entry, index) => {
-          const tintClasses = [
-            'tint-mint',
-            'tint-blue',
-            'tint-peach',
-          ];
-          const chosenTint = tintClasses[index % tintClasses.length];
-
-          return (
-            <div 
-              key={entry.id}
-              className={`glass-card-interactive ${chosenTint} p-6 sm:p-7 rounded-3xl border border-white/90 flex flex-col justify-between`}
-            >
-              <div>
-                {/* Entry Date & Status */}
+        {developmentJournalData.map((entry) => (
+          <div 
+            key={entry.id}
+            className="glass-card-interactive p-6 sm:p-7 rounded-3xl border border-white/90 flex flex-col justify-between relative overflow-hidden"
+          >
+            <div className="relative z-10">
+              {/* Entry Date & Status */}
                 <div className="flex items-center justify-between mb-4">
                   <span className="font-mono text-xs text-pastel-slate">
                     {entry.date}
                   </span>
-                  <span className="font-mono text-[10px] px-2.5 py-0.5 rounded-full bg-white/80 text-pastel-ink border border-white shadow-xs">
+                  <span className="font-mono text-[10px] px-2.5 py-0.5 rounded-full glass-badge text-pastel-ink border border-white/90 font-medium">
                     {entry.status}
                   </span>
                 </div>
@@ -61,7 +53,7 @@ export default function DevelopmentJournal() {
                 </p>
 
                 {/* Recent Milestone */}
-                <div className="p-3.5 rounded-xl bg-white/70 border border-white space-y-1 mb-6">
+                <div className="p-3.5 rounded-2xl glass-panel-subtle border border-white/80 space-y-1 mb-6">
                   <div className="flex items-center gap-1.5 text-[11px] font-mono font-semibold text-pastel-ink">
                     <Milestone className="w-3.5 h-3.5 text-accent-java" />
                     <span>Recent Milestone</span>
@@ -73,10 +65,10 @@ export default function DevelopmentJournal() {
               </div>
 
               {/* Technologies & Links */}
-              <div>
-                <div className="flex flex-wrap gap-1 mb-4">
+              <div className="relative z-10">
+                <div className="flex flex-wrap gap-1.5 mb-4">
                   {entry.technologies.map((tech, i) => (
-                    <span key={i} className="font-mono text-[10px] px-2 py-0.5 rounded bg-white/60 text-pastel-ink border border-white/60">
+                    <span key={i} className="font-mono text-[10px] px-2.5 py-0.5 rounded-full glass-pill text-pastel-ink">
                       {tech}
                     </span>
                   ))}
@@ -98,8 +90,7 @@ export default function DevelopmentJournal() {
                 </div>
               </div>
             </div>
-          );
-        })}
+          ))}
       </div>
     </section>
   );

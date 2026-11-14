@@ -1,7 +1,8 @@
-# VANSHiKA JAIN — Developer Portfolio
+# Vanshika-Portfolio
 
-> **Pastel Liquid Glass × Editorial Minimalism × Creative Engineering**  
-> Personal developer portfolio for **VANSHiKA JAIN** — Full-Stack Developer specializing in MERN Stack, Enterprise Java Backend (Spring Boot), RESTful APIs, and AI integrations.
+> **VANSHiKA JAIN — Full-Stack Developer & Software Engineer Portfolio**  
+> 3D Liquid Crystal Glass UI × Clean Architecture × Systems Engineering  
+> Specializing in MERN Stack, Enterprise Java Backend (Spring Boot), RESTful APIs, and AI integrations.
 
 ---
 

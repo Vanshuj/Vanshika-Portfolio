@@ -7,16 +7,40 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Dependencies & Build Output
 node_modules
 dist
 dist-ssr
 *.local
+.cache/
 
-# Editor directories and files
+# Personal Details, Secrets & Private Credentials
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+*.pem
+*.key
+*.cert
+*.crt
+credentials.json
+secrets/
+private/
+personal/
+*.private.*
+*personal*
+*.pdf
+*.docx
+*.doc
+
+# Editor & OS Files
 .vscode/*
 !.vscode/extensions.json
 .idea
 .DS_Store
+Thumbs.db
 *.suo
 *.ntvs*
 *.njsproj

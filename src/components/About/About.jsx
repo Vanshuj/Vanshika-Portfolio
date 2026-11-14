@@ -30,8 +30,7 @@ export default function About() {
 
           {/* Quick Stats / Highlights Micro-Panels (Transparent Liquid Glass) */}
           <div className="grid grid-cols-2 gap-3 pt-2">
-            <div className="glass-panel p-4 rounded-2xl border border-white/80 shadow-sm relative overflow-hidden">
-              <div className="chromatic-flare-br opacity-50 !w-20 !h-20" />
+            <div className="glass-card-interactive p-4 rounded-2xl border border-white/90 relative overflow-hidden">
               <div className="relative z-10">
                 <div className="flex items-center gap-2 mb-1 text-accent-java">
                   <GraduationCap className="w-4 h-4" />
@@ -42,8 +41,7 @@ export default function About() {
               </div>
             </div>
 
-            <div className="glass-panel p-4 rounded-2xl border border-white/80 shadow-sm relative overflow-hidden">
-              <div className="chromatic-flare-br opacity-50 !w-20 !h-20" />
+            <div className="glass-card-interactive p-4 rounded-2xl border border-white/90 relative overflow-hidden">
               <div className="relative z-10">
                 <div className="flex items-center gap-2 mb-1 text-accent-spring">
                   <Award className="w-4 h-4" />
@@ -56,11 +54,10 @@ export default function About() {
           </div>
 
           {/* Working Philosophy Pill Panel */}
-          <div className="glass-panel tint-lavender p-5 rounded-2xl border border-white/90 shadow-glass-sm relative overflow-hidden">
-            <div className="chromatic-flare-br opacity-60" />
+          <div className="glass-card-interactive p-5 rounded-2xl border border-white/90 relative overflow-hidden">
             <div className="relative z-10">
               <div className="flex items-center gap-2 text-pastel-ink font-display font-semibold text-sm mb-2">
-                <Compass className="w-4 h-4 text-purple-700" />
+                <Compass className="w-4 h-4 text-accent-java" />
                 <span>Development Creed</span>
               </div>
               <p className="font-body text-xs sm:text-sm text-pastel-ink/90 leading-relaxed italic">
@@ -92,7 +89,7 @@ export default function About() {
 
             <div className="space-y-2.5">
               {profileData.bio.currentFocus.map((focus, i) => (
-                <div key={i} className="flex items-start gap-3 p-3 rounded-xl glass-panel-subtle hover:bg-white/70 transition-colors">
+                <div key={i} className="flex items-start gap-3 p-3.5 rounded-2xl glass-pill hover:bg-white/25 transition-all">
                   <span className="font-mono text-xs text-pastel-slate font-medium mt-0.5">
                     0{i + 1}
                   </span>
@@ -105,7 +102,7 @@ export default function About() {
           </div>
 
           {/* Working Approach Statement */}
-          <div className="p-4 rounded-xl border border-dashed border-pastel-ink/20 bg-white/30 flex items-center gap-3">
+          <div className="p-4 rounded-2xl glass-panel border border-white/90 flex items-center gap-3">
             <Code2 className="w-5 h-5 text-accent-spring flex-shrink-0" />
             <div className="text-xs font-mono text-pastel-slate">
               <span className="text-pastel-ink font-semibold">Approach: </span>
