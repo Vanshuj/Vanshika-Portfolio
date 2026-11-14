@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowUpRight, ExternalLink, Sparkles, Layers, Sliders, ChevronRight } from 'lucide-react';
+import { ArrowUpRight, ExternalLink, Sparkles, Layers, Sliders, ChevronRight, Play } from 'lucide-react';
 import { GithubIcon } from '../Icons/BrandIcons';
 import { projectsData } from '../../data/projects';
 import ProjectVisualPlaceholder from './ProjectVisualPlaceholder';
@@ -113,19 +113,33 @@ export default function Projects() {
                     <span>Source</span>
                   </a>
 
-                  {projectsData[0].demoUrl ? (
+                  {projectsData[0].demoUrl && (
                     <a
                       href={projectsData[0].demoUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 px-3 py-2 rounded-full glass-panel text-pastel-ink text-xs font-mono"
+                      className="liquid-pill-primary inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-mono tracking-wide shadow-sm"
                     >
                       <ExternalLink className="w-3.5 h-3.5" />
                       <span>Live Demo</span>
                     </a>
-                  ) : (
+                  )}
+
+                  {projectsData[0].videoUrl && (
+                    <a
+                      href={projectsData[0].videoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="liquid-pill-secondary inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-mono tracking-wide shadow-sm"
+                    >
+                      <Play className="w-3.5 h-3.5 text-accent-spring" />
+                      <span>Watch Demo</span>
+                    </a>
+                  )}
+
+                  {!projectsData[0].demoUrl && !projectsData[0].videoUrl && (
                     <span className="text-[11px] font-mono text-pastel-slate/70 italic">
-                      [Demo link reserved]
+                      [Demo links reserved]
                     </span>
                   )}
                 </div>
@@ -204,19 +218,33 @@ export default function Projects() {
                     <span>Source</span>
                   </a>
 
-                  {projectsData[1].demoUrl ? (
+                  {projectsData[1].demoUrl && (
                     <a
                       href={projectsData[1].demoUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 px-3 py-2 rounded-full glass-panel text-pastel-ink text-xs font-mono"
+                      className="liquid-pill-primary inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-mono tracking-wide shadow-sm"
                     >
                       <ExternalLink className="w-3.5 h-3.5" />
                       <span>Live Demo</span>
                     </a>
-                  ) : (
+                  )}
+
+                  {projectsData[1].videoUrl && (
+                    <a
+                      href={projectsData[1].videoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="liquid-pill-secondary inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-mono tracking-wide shadow-sm"
+                    >
+                      <Play className="w-3.5 h-3.5 text-accent-spring" />
+                      <span>Watch Demo</span>
+                    </a>
+                  )}
+
+                  {!projectsData[1].demoUrl && !projectsData[1].videoUrl && (
                     <span className="text-[11px] font-mono text-pastel-slate/70 italic">
-                      [Demo link reserved]
+                      [Demo links reserved]
                     </span>
                   )}
                 </div>
@@ -305,19 +333,33 @@ export default function Projects() {
                     <span>Source</span>
                   </a>
 
-                  {projectsData[2].demoUrl ? (
+                  {projectsData[2].demoUrl && (
                     <a
                       href={projectsData[2].demoUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 px-3 py-2 rounded-full glass-panel text-pastel-ink text-xs font-mono"
+                      className="liquid-pill-primary inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-mono tracking-wide shadow-sm"
                     >
                       <ExternalLink className="w-3.5 h-3.5" />
                       <span>Live Demo</span>
                     </a>
-                  ) : (
+                  )}
+
+                  {projectsData[2].videoUrl && (
+                    <a
+                      href={projectsData[2].videoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="liquid-pill-secondary inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-mono tracking-wide shadow-sm"
+                    >
+                      <Play className="w-3.5 h-3.5 text-accent-spring" />
+                      <span>Watch Demo</span>
+                    </a>
+                  )}
+
+                  {!projectsData[2].demoUrl && !projectsData[2].videoUrl && (
                     <span className="text-[11px] font-mono text-pastel-slate/70 italic">
-                      [Demo link reserved]
+                      [Demo links reserved]
                     </span>
                   )}
                 </div>

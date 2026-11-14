@@ -11,9 +11,11 @@ export const projectsData = [
     summary: "A real-time competitive gaming platform that challenges users to match reference imagery, featuring custom image-comparison middleware for pixel-level similarity scoring, live leaderboards, and centralized admin controls.",
     
     // Space reserved for user to add their screenshot and demo link
+    // Live links and demo video
     screenshot: null, // Set image path here: e.g. "/assets/projects/pixel-arena-main.png"
     additionalScreenshots: [],
-    demoUrl: "", // Space reserved for live deployment link (e.g. Render / Vercel)
+    demoUrl: "https://pixel-arena-1.onrender.com",
+    videoUrl: "./videos/pixel-arena-demo.mp4",
     githubUrl: "https://github.com/Vanshuj/Pixel-Arena",
     
     status: "Production Ready / Deployed on Render",
@@ -70,6 +72,7 @@ export const projectsData = [
     screenshot: null, // Set image path here: e.g. "/assets/projects/kathavani-main.png"
     additionalScreenshots: [],
     demoUrl: "", // Space reserved for live deployment link
+    videoUrl: "", // Space reserved for demo video link (YouTube, Loom, Google Drive, or MP4)
     githubUrl: "https://github.com/Vanshuj/KathaVani",
     
     status: "Active / PWA Enabled",
@@ -125,6 +128,7 @@ export const projectsData = [
     screenshot: null, // Set image path here: e.g. "/assets/projects/gyan-ai-main.png"
     additionalScreenshots: [],
     demoUrl: "", // Space reserved for live deployment link
+    videoUrl: "", // Space reserved for demo video link (YouTube, Loom, Google Drive, or MP4)
     githubUrl: "https://github.com/Vanshuj/GYAN.AI",
     
     status: "Featured AI Platform",
