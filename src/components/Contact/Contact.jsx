@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, FileText, Send, CheckCircle2, Copy, Check, ArrowUpRight, ShieldCheck, Sparkles } from 'lucide-react';
+import { Mail, FileText, Send, CheckCircle2, Copy, Check, ArrowUpRight, ShieldCheck, Sparkles, ExternalLink } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from '../Icons/BrandIcons';
 import { profileData } from '../../data/profile';
 import confetti from 'canvas-confetti';
@@ -159,6 +159,23 @@ export default function Contact({ onOpenResume }) {
               </div>
               <ArrowUpRight className="w-4 h-4 text-pastel-slate group-hover:text-pastel-ink group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </button>
+
+            {profileData.resumeUrl && (
+              <a
+                href={profileData.resumeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full flex items-center justify-between p-4 rounded-xl glass-panel hover:bg-white transition-all group"
+              >
+                <div className="flex items-center gap-3">
+                  <ExternalLink className="w-4 h-4 text-accent-spring" />
+                  <span className="font-display font-medium text-sm text-pastel-ink">
+                    Open Resume in Google Drive (PDF)
+                  </span>
+                </div>
+                <ArrowUpRight className="w-4 h-4 text-pastel-slate group-hover:text-pastel-ink group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              </a>
+            )}
           </div>
         </div>
 

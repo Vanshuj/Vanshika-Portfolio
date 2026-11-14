@@ -49,6 +49,18 @@ export default function ResumeModal({ onClose }) {
               <span>Print / Save PDF</span>
             </button>
 
+            {profileData.resumeUrl && (
+              <a
+                href={profileData.resumeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="liquid-pill-secondary inline-flex items-center gap-1.5 px-4 py-2 text-xs font-mono font-medium shadow-sm active:scale-95"
+              >
+                <ExternalLink className="w-3.5 h-3.5 text-accent-spring" />
+                <span>Google Drive</span>
+              </a>
+            )}
+
             <button
               onClick={onClose}
               className="p-1.5 rounded-full hover:bg-gray-100 text-pastel-slate hover:text-pastel-ink transition-colors"

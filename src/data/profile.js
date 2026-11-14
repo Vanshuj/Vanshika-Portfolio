@@ -43,6 +43,8 @@ export const profileData = {
     }
   },
 
+  resumeUrl: "https://drive.google.com/file/d/1KpNIf_a3M3KugNr7J8qYPby1IQUnNUwn/view?usp=drive_link",
+
   // Editable configuration for privacy flags
   privacy: {
     hidePhoneInPublic: true, // Guarantees phone is not exposed publicly
