@@ -33,33 +33,6 @@ export const codingPracticeData = {
     }
   ],
 
-  repositories: [
-    {
-      id: "repo-pixel-arena",
-      name: "Pixel-Arena",
-      description: "Competitive image-similarity gaming backend and custom comparison middleware.",
-      language: "JavaScript / Node",
-      url: "https://github.com/Vanshuj/Pixel-Arena",
-      topics: ["middleware", "gaming-api", "image-comparison", "render"]
-    },
-    {
-      id: "repo-kathavani",
-      name: "KathaVani",
-      description: "Branching narrative engine with Web Speech API integration and offline storage.",
-      language: "JavaScript / React",
-      url: "https://github.com/Vanshuj/KathaVani",
-      topics: ["react", "web-speech-api", "service-worker", "indexeddb"]
-    },
-    {
-      id: "repo-gyan-ai",
-      name: "GYAN.AI",
-      description: "AI technical note synthesizer with React Flow knowledge graphs and LLM pipelines.",
-      language: "JavaScript / Python",
-      url: "https://github.com/Vanshuj/GYAN.AI",
-      topics: ["gemini-api", "groq", "react-flow", "jwt-auth"]
-    }
-  ],
-
   principles: [
     {
       index: "01",

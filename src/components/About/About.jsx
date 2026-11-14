@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sparkles, Compass, Lightbulb, Code2, Award, BookOpen, GraduationCap } from 'lucide-react';
+import { Sparkles, Compass, Lightbulb, Code2, Server, Layout } from 'lucide-react';
 import { profileData } from '../../data/profile';
 
 export default function About() {
@@ -28,27 +28,31 @@ export default function About() {
             </p>
           </div>
 
-          {/* Quick Stats / Highlights Micro-Panels (Transparent Liquid Glass) */}
-          <div className="grid grid-cols-2 gap-3 pt-2">
+          {/* Architectural Focus Pillars */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
             <div className="glass-card-interactive p-4 rounded-2xl border border-white/90 relative overflow-hidden">
               <div className="relative z-10">
-                <div className="flex items-center gap-2 mb-1 text-accent-java">
-                  <GraduationCap className="w-4 h-4" />
-                  <span className="font-mono text-xs text-pastel-slate">Academics</span>
+                <div className="flex items-center gap-2 mb-1.5 text-accent-java">
+                  <Server className="w-4 h-4" />
+                  <span className="font-mono text-xs uppercase tracking-wider text-pastel-slate">Backend</span>
                 </div>
-                <div className="font-display font-bold text-xl text-pastel-ink">7.54 GPA</div>
-                <p className="font-mono text-[11px] text-pastel-slate">B.Tech Computer Engg (SRIT)</p>
+                <div className="font-display font-bold text-sm text-pastel-ink mb-1">Distributed Services</div>
+                <p className="font-body text-[11px] text-pastel-slate leading-relaxed">
+                  Enterprise Spring Boot microservices, clean DTO contracts, and transactional integrity.
+                </p>
               </div>
             </div>
 
             <div className="glass-card-interactive p-4 rounded-2xl border border-white/90 relative overflow-hidden">
               <div className="relative z-10">
-                <div className="flex items-center gap-2 mb-1 text-accent-spring">
-                  <Award className="w-4 h-4" />
-                  <span className="font-mono text-xs text-pastel-slate">National Honor</span>
+                <div className="flex items-center gap-2 mb-1.5 text-accent-spring">
+                  <Layout className="w-4 h-4" />
+                  <span className="font-mono text-xs uppercase tracking-wider text-pastel-slate">Frontend</span>
                 </div>
-                <div className="font-display font-bold text-xl text-pastel-ink">Top 40</div>
-                <p className="font-mono text-[11px] text-pastel-slate">Smart India Hackathon '25</p>
+                <div className="font-display font-bold text-sm text-pastel-ink mb-1">Tactile & Reactive UI</div>
+                <p className="font-body text-[11px] text-pastel-slate leading-relaxed">
+                  Responsive React applications with fluid state choreography and accessible design.
+                </p>
               </div>
             </div>
           </div>

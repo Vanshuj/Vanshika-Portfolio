@@ -109,63 +109,46 @@ export default function CodingPractice() {
 
       </div>
 
-      {/* GitHub Repository Catalog */}
+      {/* GitHub Open Source & Codebase Verification Hub */}
       <div className="pt-8 border-t border-pastel-ink/10">
-        <div className="flex items-center justify-between mb-6">
-          <div className="flex items-center gap-2">
-            <GithubIcon className="w-4 h-4 text-pastel-ink" />
-            <span className="font-display font-bold text-base text-pastel-ink">
-              Verified Public Repositories
-            </span>
+        <div className="glass-card-interactive p-6 sm:p-8 rounded-3xl border border-white/90 relative overflow-hidden flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div className="relative z-10 space-y-2 max-w-xl">
+            <div className="flex items-center gap-2 text-pastel-ink">
+              <GithubIcon className="w-5 h-5 text-pastel-ink" />
+              <span className="font-display font-bold text-lg text-pastel-ink">
+                Open Source & Engineering Repositories
+              </span>
+            </div>
+            <p className="font-body text-xs sm:text-sm text-pastel-slate leading-relaxed">
+              Explore complete codebase architectures, algorithmic problem sets, full commit histories, and active software prototyping across public repositories.
+            </p>
+            <div className="flex flex-wrap gap-2 pt-1">
+              <span className="font-mono text-[10px] px-2.5 py-0.5 rounded-full glass-badge text-pastel-slate">
+                #CleanArchitecture
+              </span>
+              <span className="font-mono text-[10px] px-2.5 py-0.5 rounded-full glass-badge text-pastel-slate">
+                #Microservices
+              </span>
+              <span className="font-mono text-[10px] px-2.5 py-0.5 rounded-full glass-badge text-pastel-slate">
+                #DSA-Solutions
+              </span>
+              <span className="font-mono text-[10px] px-2.5 py-0.5 rounded-full glass-badge text-pastel-slate">
+                #FullStack
+              </span>
+            </div>
           </div>
-          <a
-            href="https://github.com/Vanshuj"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-mono text-xs text-pastel-slate hover:text-pastel-ink flex items-center gap-1 group"
-          >
-            <span>github.com/Vanshuj</span>
-            <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </a>
-        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {codingPracticeData.repositories.map((repo) => (
+          <div className="relative z-10 flex-shrink-0 w-full md:w-auto">
             <a
-              key={repo.id}
-              href={repo.url}
+              href="https://github.com/Vanshuj"
               target="_blank"
               rel="noopener noreferrer"
-              className="glass-card-interactive p-5 rounded-2xl border border-white/90 flex flex-col justify-between group relative overflow-hidden"
+              className="liquid-pill-primary inline-flex items-center justify-center gap-2 px-6 py-3 text-xs font-mono font-medium tracking-wide shadow-md w-full md:w-auto group"
             >
-              <div className="relative z-10">
-                <div className="flex items-center justify-between mb-2">
-                  <span className="font-mono text-xs font-semibold text-pastel-ink group-hover:underline">
-                    {repo.name}
-                  </span>
-                  <ArrowUpRight className="w-3.5 h-3.5 text-pastel-slate group-hover:text-pastel-ink" />
-                </div>
-                
-                <p className="font-body text-xs text-pastel-slate mb-4 line-clamp-2">
-                  {repo.description}
-                </p>
-              </div>
-
-              <div className="relative z-10">
-                <div className="flex flex-wrap gap-1 mb-2">
-                  {repo.topics.map((t, idx) => (
-                    <span key={idx} className="font-mono text-[9px] px-2 py-0.5 rounded-full glass-badge text-pastel-slate">
-                      #{t}
-                    </span>
-                  ))}
-                </div>
-                <div className="font-mono text-[10px] text-pastel-slate pt-2 border-t border-pastel-ink/5 flex items-center justify-between">
-                  <span>{repo.language}</span>
-                  <span className="text-accent-spring">● Verified</span>
-                </div>
-              </div>
+              <span>Explore github.com/Vanshuj</span>
+              <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </a>
-          ))}
+          </div>
         </div>
       </div>
     </section>

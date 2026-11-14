@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowDown, Mail, FileText, Sparkles, Terminal, Code2, Award, GraduationCap, CheckCircle2, ChevronRight, Layers } from 'lucide-react';
+import { ArrowDown, Mail, FileText, Sparkles, Terminal, Code2, Award, GraduationCap, CheckCircle2 } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from '../Icons/BrandIcons';
 import { profileData } from '../../data/profile';
 
@@ -177,47 +177,6 @@ export default function Hero({ onOpenResume, onOpenContactModal }) {
                   </span>
                 ))}
               </div>
-            </div>
-
-            {/* Inner Floating Glass Widget 3: Key Architectures Snapshot */}
-            <div className="relative z-10 glass-panel-subtle p-4 rounded-2xl border border-white/80 space-y-2">
-              <div className="flex items-center justify-between text-[11px] font-mono text-pastel-slate mb-1">
-                <span className="flex items-center gap-1.5">
-                  <Layers className="w-3.5 h-3.5 text-accent-java" />
-                  <span>Signature Systems</span>
-                </span>
-                <span>Live Deployments</span>
-              </div>
-
-              {/* Pixel-Arena Mini Row */}
-              <a 
-                href="#projects" 
-                className="flex items-center justify-between p-2.5 rounded-xl glass-pill hover:bg-white/30 transition-all group"
-              >
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-accent-java shadow-xs" />
-                  <div>
-                    <span className="font-display font-semibold text-xs text-pastel-ink block">Pixel-Arena</span>
-                    <span className="font-mono text-[10px] text-pastel-slate">Real-time Canvas & WebSocket</span>
-                  </div>
-                </div>
-                <ChevronRight className="w-3.5 h-3.5 text-pastel-slate group-hover:translate-x-0.5 transition-transform" />
-              </a>
-
-              {/* KathaVani Mini Row */}
-              <a 
-                href="#projects" 
-                className="flex items-center justify-between p-2.5 rounded-xl glass-pill hover:bg-white/30 transition-all group"
-              >
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 rounded-full bg-accent-spring shadow-xs" />
-                  <div>
-                    <span className="font-display font-semibold text-xs text-pastel-ink block">KathaVani</span>
-                    <span className="font-mono text-[10px] text-pastel-slate">Multilingual Story Platform</span>
-                  </div>
-                </div>
-                <ChevronRight className="w-3.5 h-3.5 text-pastel-slate group-hover:translate-x-0.5 transition-transform" />
-              </a>
             </div>
 
             {/* Bottom Glass Control Pill */}
