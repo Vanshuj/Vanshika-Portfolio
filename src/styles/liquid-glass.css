@@ -1,0 +1,404 @@
+/* ========================================================
+   LIQUID GLASS DESIGN SYSTEM (liquid-glass.css)
+   Applied as an overlay layer preserving existing fonts,
+   colors, layout, and functionality.
+   ======================================================== */
+
+:root {
+  --lg-bg: rgba(255, 255, 255, 0.22);
+  --lg-bg-strong: rgba(255, 255, 255, 0.36);
+  --lg-border: rgba(255, 255, 255, 0.70);
+  --lg-border-bright: rgba(255, 255, 255, 0.95);
+  --lg-blur: 20px;
+  --lg-sat: 180%;
+  --lg-radius-pill: 9999px;
+  --lg-radius-card: 28px;
+  --lg-shadow:
+     0 12px 32px rgba(120, 110, 170, 0.16),
+     0 2px 6px rgba(120, 110, 170, 0.10),
+     inset 0 1.5px 1.5px rgba(255, 255, 255, 0.95),
+     inset 0 -8px 16px rgba(255, 255, 255, 0.25),
+     inset 0 0 0 1px rgba(255, 255, 255, 0.40);
+  
+  /* Pastel Aurora Color Accents */
+  --lg-tint-lavender: #C9C6FF;
+  --lg-tint-mint: #CFF1E3;
+  --lg-tint-peach: #FFD9C2;
+  --lg-tint-pink: #F7C6E8;
+}
+
+/* ========================================================
+   PHASE 2: AURORA BLOB DRIFT KEYFRAMES
+   ======================================================== */
+@keyframes lg-aurora-drift-1 {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(6vw, 4vh) scale(1.12); }
+  100% { transform: translate(-4vw, 8vh) scale(0.95); }
+}
+
+@keyframes lg-aurora-drift-2 {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-7vw, 6vh) scale(1.08); }
+  100% { transform: translate(5vw, -4vh) scale(0.92); }
+}
+
+@keyframes lg-aurora-drift-3 {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(5vw, -5vh) scale(1.14); }
+  100% { transform: translate(-6vw, 3vh) scale(0.96); }
+}
+
+@keyframes lg-aurora-drift-4 {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-5vw, -6vh) scale(1.10); }
+  100% { transform: translate(7vw, 5vh) scale(0.98); }
+}
+
+.lg-aurora-blob-1 {
+  animation: lg-aurora-drift-1 24s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+.lg-aurora-blob-2 {
+  animation: lg-aurora-drift-2 28s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+.lg-aurora-blob-3 {
+  animation: lg-aurora-drift-3 22s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+.lg-aurora-blob-4 {
+  animation: lg-aurora-drift-4 26s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+/* ========================================================
+   PHASE 4: MASTER LIQUID GLASS STYLING (OVERLAYS)
+   ======================================================== */
+
+/* Master Navigation and Large Containers */
+.glass-panel {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.48) 0%, rgba(255, 255, 255, 0.16) 60%, rgba(255, 255, 255, 0.32) 100%) !important;
+  -webkit-backdrop-filter: blur(var(--lg-blur)) saturate(var(--lg-sat)) !important;
+  backdrop-filter: blur(var(--lg-blur)) saturate(var(--lg-sat)) !important;
+  border: 1px solid var(--lg-border) !important;
+  box-shadow: var(--lg-shadow) !important;
+  border-radius: var(--lg-radius-card);
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.35s ease, background 0.35s ease !important;
+}
+
+/* Subtle Inner Widgets */
+.glass-panel-subtle {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.42) 0%, rgba(255, 255, 255, 0.14) 65%, rgba(255, 255, 255, 0.26) 100%) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(var(--lg-sat)) !important;
+  backdrop-filter: blur(16px) saturate(var(--lg-sat)) !important;
+  border: 1px solid rgba(255, 255, 255, 0.65) !important;
+  box-shadow: 
+    0 8px 24px rgba(120, 110, 170, 0.10),
+    inset 0 1px 1.5px rgba(255, 255, 255, 0.95),
+    inset 0 -4px 10px rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Interactive Cards (Projects, Skills, Experience, Notebook, Journal, Certificates) */
+.glass-card-interactive {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.46) 0%, rgba(255, 255, 255, 0.15) 60%, rgba(255, 255, 255, 0.30) 100%) !important;
+  -webkit-backdrop-filter: blur(var(--lg-blur)) saturate(var(--lg-sat)) !important;
+  backdrop-filter: blur(var(--lg-blur)) saturate(var(--lg-sat)) !important;
+  border: 1px solid var(--lg-border) !important;
+  box-shadow: var(--lg-shadow) !important;
+  border-radius: var(--lg-radius-card) !important;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.35s ease, background 0.35s ease, border-color 0.35s ease !important;
+}
+
+/* Specular Curved Highlight on Top Edge of Cards */
+.glass-card-interactive::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 45%;
+  border-radius: inherit;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0.08) 70%, transparent 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Polished Rim Light on Cards */
+.glass-card-interactive::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(201, 198, 255, 0.35) 45%, rgba(255, 255, 255, 0.75) 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0.85;
+  transition: opacity 0.35s ease;
+}
+
+/* Hover State: Subtle 3D Lift & Brighter Highlight */
+.glass-card-interactive:hover {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.62) 0%, rgba(255, 255, 255, 0.24) 60%, rgba(255, 255, 255, 0.42) 100%) !important;
+  transform: translateY(-4px) perspective(800px) rotateX(1deg) !important;
+  border-color: var(--lg-border-bright) !important;
+  box-shadow: 
+    0 22px 48px rgba(120, 110, 170, 0.20),
+    0 4px 12px rgba(120, 110, 170, 0.12),
+    0 0 28px rgba(201, 198, 255, 0.30),
+    inset 0 2px 2px rgba(255, 255, 255, 1),
+    inset 0 -10px 20px rgba(255, 255, 255, 0.35),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.60) !important;
+}
+
+.glass-card-interactive:hover::after {
+  opacity: 1;
+}
+
+/* ========================================================
+   GLASS BUTTONS, PILLS & CTAS
+   ======================================================== */
+
+/* General Glass Pills (Nav Items, Status Pills, Tech Stack Chips) */
+.glass-pill {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.58) 0%, rgba(255, 255, 255, 0.22) 65%, rgba(255, 255, 255, 0.40) 100%) !important;
+  -webkit-backdrop-filter: blur(14px) saturate(var(--lg-sat)) !important;
+  backdrop-filter: blur(14px) saturate(var(--lg-sat)) !important;
+  border: 1px solid rgba(255, 255, 255, 0.85) !important;
+  border-radius: var(--lg-radius-pill) !important;
+  box-shadow: 
+    0 4px 16px rgba(120, 110, 170, 0.10),
+    inset 0 1.5px 1.5px rgba(255, 255, 255, 0.95),
+    inset 0 -3px 6px rgba(255, 255, 255, 0.25) !important;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.25s ease, background 0.25s ease !important;
+}
+
+.glass-pill:hover {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0.35) 65%, rgba(255, 255, 255, 0.55) 100%) !important;
+  transform: translateY(-2px) !important;
+  border-color: rgba(255, 255, 255, 1) !important;
+  box-shadow: 
+    0 8px 24px rgba(120, 110, 170, 0.15),
+    inset 0 2px 2px rgba(255, 255, 255, 1),
+    inset 0 -4px 8px rgba(255, 255, 255, 0.35) !important;
+}
+
+.glass-pill:active {
+  transform: translateY(0.5px) scale(0.98) !important;
+}
+
+/* Primary Glass Action Pill (with soft colored glow shadow) */
+.liquid-pill-primary {
+  background: linear-gradient(135deg, #583714 0%, #462A0E 60%, #36210A 100%) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  backdrop-filter: blur(16px) !important;
+  border-radius: var(--lg-radius-pill) !important;
+  border: 1px solid rgba(255, 235, 151, 0.85) !important;
+  box-shadow: 
+    0 10px 28px rgba(160, 150, 255, 0.32),
+    0 4px 10px rgba(88, 55, 20, 0.22),
+    inset 0 1.5px 2px rgba(255, 235, 151, 0.95),
+    inset 0 -3px 6px rgba(0, 0, 0, 0.35) !important;
+  color: #FFFDF5 !important;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.28s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.28s ease, filter 0.28s ease !important;
+}
+
+.liquid-pill-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  border-radius: inherit;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+.liquid-pill-primary:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 
+    0 16px 36px rgba(160, 150, 255, 0.42),
+    0 6px 14px rgba(88, 55, 20, 0.28),
+    inset 0 2px 2.5px rgba(255, 235, 151, 1),
+    inset 0 -4px 8px rgba(0, 0, 0, 0.45) !important;
+  filter: brightness(1.06);
+}
+
+.liquid-pill-primary:active {
+  transform: translateY(0.5px) scale(0.98) !important;
+}
+
+/* Secondary Glass Action Pill (Light, translucent pastel sheen) */
+.liquid-pill-secondary {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.72) 0%, rgba(207, 241, 227, 0.35) 50%, rgba(201, 198, 255, 0.35) 100%) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(var(--lg-sat)) !important;
+  backdrop-filter: blur(18px) saturate(var(--lg-sat)) !important;
+  border-radius: var(--lg-radius-pill) !important;
+  border: 1.2px solid rgba(255, 255, 255, 0.95) !important;
+  box-shadow: 
+    0 8px 24px rgba(120, 110, 170, 0.16),
+    0 2px 6px rgba(120, 110, 170, 0.08),
+    inset 0 1.5px 1.5px rgba(255, 255, 255, 1),
+    inset 0 -3px 6px rgba(255, 255, 255, 0.4) !important;
+  color: #583714 !important;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.28s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.28s ease, background 0.28s ease !important;
+}
+
+.liquid-pill-secondary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  border-radius: inherit;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.6) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+.liquid-pill-secondary:hover {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.88) 0%, rgba(207, 241, 227, 0.48) 50%, rgba(201, 198, 255, 0.48) 100%) !important;
+  transform: translateY(-3px) !important;
+  border-color: rgba(255, 255, 255, 1) !important;
+  box-shadow: 
+    0 14px 32px rgba(160, 150, 255, 0.25),
+    0 4px 10px rgba(120, 110, 170, 0.12),
+    inset 0 2px 2px rgba(255, 255, 255, 1),
+    inset 0 -4px 8px rgba(255, 255, 255, 0.5) !important;
+}
+
+.liquid-pill-secondary:active {
+  transform: translateY(0.5px) scale(0.98) !important;
+}
+
+/* ========================================================
+   TAGS, CHIPS & BADGES
+   ======================================================== */
+.glass-badge {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.65) 0%, rgba(201, 198, 255, 0.20) 50%, rgba(207, 241, 227, 0.25) 100%) !important;
+  -webkit-backdrop-filter: blur(12px) saturate(var(--lg-sat)) !important;
+  backdrop-filter: blur(12px) saturate(var(--lg-sat)) !important;
+  border: 1px solid rgba(255, 255, 255, 0.85) !important;
+  box-shadow: 
+    0 3px 10px rgba(120, 110, 170, 0.08),
+    inset 0 1px 1px rgba(255, 255, 255, 0.95),
+    inset 0 -2px 4px rgba(255, 255, 255, 0.2) !important;
+  color: #462A0E !important;
+  border-radius: var(--lg-radius-pill);
+}
+
+/* ========================================================
+   INPUTS & TEXTAREAS (Inset Glass Fields)
+   ======================================================== */
+.liquid-glass-input,
+input[type="text"],
+input[type="email"],
+textarea {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.52) 0%, rgba(255, 255, 255, 0.25) 100%) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(var(--lg-sat)) !important;
+  backdrop-filter: blur(16px) saturate(var(--lg-sat)) !important;
+  border: 1px solid rgba(255, 255, 255, 0.80) !important;
+  box-shadow: 
+    inset 0 2px 4px rgba(120, 110, 170, 0.08),
+    inset 0 1px 2px rgba(255, 255, 255, 0.90),
+    0 2px 8px rgba(0, 0, 0, 0.02) !important;
+  color: #36210A !important;
+  border-radius: 16px !important;
+  transition: all 0.25s ease !important;
+}
+
+.liquid-glass-input:focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  background: rgba(255, 255, 255, 0.85) !important;
+  border-color: rgba(201, 198, 255, 0.9) !important;
+  outline: none !important;
+  box-shadow: 
+    0 0 0 3px rgba(201, 198, 255, 0.45),
+    0 8px 20px rgba(160, 150, 255, 0.15),
+    inset 0 1.5px 2px rgba(255, 255, 255, 1) !important;
+}
+
+/* ========================================================
+   CIRCULAR GLASS BUBBLES (Icons, Toggles, Controls)
+   ======================================================== */
+a.glass-pill.rounded-full,
+button.glass-pill.rounded-full {
+  position: relative;
+  overflow: hidden;
+}
+
+a.glass-pill.rounded-full::after,
+button.glass-pill.rounded-full::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  background: radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.75) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+/* ========================================================
+   PROGRESSIVE ENHANCEMENT: LIQUID REFRACTION DISTORTION
+   ======================================================== */
+@supports (backdrop-filter: url(#lg-distort) blur(1px)) or (-webkit-backdrop-filter: url(#lg-distort) blur(1px)) {
+  .glass-card-interactive,
+  .glass-panel {
+    backdrop-filter: url(#lg-distort) blur(var(--lg-blur)) saturate(var(--lg-sat));
+    -webkit-backdrop-filter: url(#lg-distort) blur(var(--lg-blur)) saturate(var(--lg-sat));
+  }
+}
+
+/* ========================================================
+   FALLBACK FOR BROWSERS WITHOUT BACKDROP-FILTER
+   ======================================================== */
+@supports not (backdrop-filter: blur(1px)) {
+  .glass-panel,
+  .glass-card-interactive,
+  .glass-pill,
+  .liquid-pill-primary,
+  .liquid-pill-secondary,
+  .glass-panel-subtle {
+    background: rgba(255, 255, 255, 0.85) !important;
+  }
+}
+
+/* ========================================================
+   REDUCED MOTION SUPPORT
+   ======================================================== */
+@media (prefers-reduced-motion: reduce) {
+  .lg-aurora-blob-1,
+  .lg-aurora-blob-2,
+  .lg-aurora-blob-3,
+  .lg-aurora-blob-4 {
+    animation: none !important;
+  }
+
+  .glass-card-interactive,
+  .glass-pill,
+  .liquid-pill-primary,
+  .liquid-pill-secondary {
+    transition: none !important;
+    transform: none !important;
+  }
+}
