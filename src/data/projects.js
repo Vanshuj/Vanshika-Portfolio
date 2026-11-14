@@ -124,12 +124,12 @@ export const projectsData = [
     role: "Full-Stack & AI Integration Engineer",
     summary: "An intelligent study and research engine that ingests YouTube lectures, technical documentation, and complex subjects to synthesize exam-ready notes, timestamped summaries, interactive knowledge graphs, and multi-format document exports.",
     
-    // Space reserved for user to add their screenshot and demo link
+    // Live links and demo video
     screenshot: null, // Set image path here: e.g. "/assets/projects/gyan-ai-main.png"
     additionalScreenshots: [],
-    demoUrl: "", // Space reserved for live deployment link
-    videoUrl: "", // Space reserved for demo video link (YouTube, Loom, Google Drive, or MP4)
-    githubUrl: "https://github.com/Vanshuj/GYAN.AI",
+    demoUrl: "https://gyan-ai-mbtq.onrender.com/",
+    videoUrl: "./videos/gyan-ai-demo.mp4",
+    githubUrl: "https://github.com/vansh16soni/GYAN.AI",
     
     status: "Featured AI Platform",
     accentColor: "#F6E6CE", // Golden Peach
