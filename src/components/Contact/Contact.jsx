@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, FileText, Send, CheckCircle2, Copy, Check, ArrowUpRight, ShieldCheck, Sparkles, ExternalLink } from 'lucide-react';
-import { GithubIcon, LinkedinIcon } from '../Icons/BrandIcons';
+import { GithubIcon, LinkedinIcon, LeetCodeIcon } from '../Icons/BrandIcons';
 import { profileData } from '../../data/profile';
 import confetti from 'canvas-confetti';
 
@@ -146,6 +146,23 @@ export default function Contact({ onOpenResume }) {
               </div>
               <ArrowUpRight className="w-4 h-4 text-pastel-slate group-hover:text-pastel-ink group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </a>
+
+            {profileData.socials.leetcode && (
+              <a
+                href={profileData.socials.leetcode.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-between p-4 rounded-xl glass-panel hover:bg-white transition-all group"
+              >
+                <div className="flex items-center gap-3">
+                  <LeetCodeIcon className="w-4 h-4 text-amber-500" />
+                  <span className="font-display font-medium text-sm text-pastel-ink">
+                    LeetCode Profile ({profileData.socials.leetcode.username})
+                  </span>
+                </div>
+                <ArrowUpRight className="w-4 h-4 text-pastel-slate group-hover:text-pastel-ink group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              </a>
+            )}
 
             <button
               onClick={onOpenResume}

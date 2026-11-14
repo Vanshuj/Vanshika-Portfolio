@@ -31,8 +31,13 @@ export const profileData = {
     },
     linkedin: {
       label: "LinkedIn",
-      username: "Vanshika Jain",
-      url: "https://www.linkedin.com/in/vanshuj/"
+      username: "vanshika-jain",
+      url: "https://www.linkedin.com/in/vanshika-jain-7217172a0/"
+    },
+    leetcode: {
+      label: "LeetCode",
+      username: "Vanshika_Jain_05",
+      url: "https://leetcode.com/u/Vanshika_Jain_05/"
     },
     // Personal details privacy guard: phone is omitted from public view per user instruction
     email: {

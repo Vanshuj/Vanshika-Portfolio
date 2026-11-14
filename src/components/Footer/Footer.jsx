@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowUp, Heart, Sparkles } from 'lucide-react';
-import { GithubIcon } from '../Icons/BrandIcons';
+import { GithubIcon, LinkedinIcon, LeetCodeIcon } from '../Icons/BrandIcons';
 import { profileData } from '../../data/profile';
 
 export default function Footer() {
@@ -32,8 +32,8 @@ export default function Footer() {
           Built with React, Vite & Tailwind CSS • 3D Liquid Glass Architecture
         </div>
 
-        {/* Back to top */}
-        <div className="flex items-center gap-3">
+        {/* Socials & Back to top */}
+        <div className="flex items-center gap-2.5">
           <a
             href={profileData.socials.github.url}
             target="_blank"
@@ -44,9 +44,33 @@ export default function Footer() {
             <GithubIcon className="w-4 h-4" />
           </a>
 
+          {profileData.socials.linkedin && (
+            <a
+              href={profileData.socials.linkedin.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-full glass-panel hover:bg-white text-pastel-ink hover:text-accent-java transition-all"
+              aria-label="LinkedIn Profile"
+            >
+              <LinkedinIcon className="w-4 h-4" />
+            </a>
+          )}
+
+          {profileData.socials.leetcode && (
+            <a
+              href={profileData.socials.leetcode.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-full glass-panel hover:bg-white text-pastel-ink hover:text-amber-500 transition-all"
+              aria-label="LeetCode Profile"
+            >
+              <LeetCodeIcon className="w-4 h-4" />
+            </a>
+          )}
+
           <button
             onClick={scrollToTop}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full glass-panel hover:bg-white text-xs font-mono text-pastel-ink transition-all"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full glass-panel hover:bg-white text-xs font-mono text-pastel-ink transition-all ml-1"
             aria-label="Scroll to top"
           >
             <span>Top</span>

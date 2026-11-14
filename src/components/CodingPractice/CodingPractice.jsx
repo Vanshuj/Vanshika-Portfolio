@@ -1,6 +1,6 @@
 import React from 'react';
 import { BookOpen, GitBranch, Code, ArrowUpRight, CheckSquare, Terminal } from 'lucide-react';
-import { GithubIcon } from '../Icons/BrandIcons';
+import { GithubIcon, LeetCodeIcon } from '../Icons/BrandIcons';
 import { codingPracticeData } from '../../data/codingPractice';
 
 export default function CodingPractice() {
@@ -138,14 +138,25 @@ export default function CodingPractice() {
             </div>
           </div>
 
-          <div className="relative z-10 flex-shrink-0 w-full md:w-auto">
+          <div className="relative z-10 flex-shrink-0 w-full md:w-auto flex flex-col sm:flex-row gap-3">
             <a
               href="https://github.com/Vanshuj"
               target="_blank"
               rel="noopener noreferrer"
-              className="liquid-pill-primary inline-flex items-center justify-center gap-2 px-6 py-3 text-xs font-mono font-medium tracking-wide shadow-md w-full md:w-auto group"
+              className="liquid-pill-primary inline-flex items-center justify-center gap-2 px-6 py-3 text-xs font-mono font-medium tracking-wide shadow-md w-full sm:w-auto group"
             >
+              <GithubIcon className="w-4 h-4" />
               <span>Explore github.com/Vanshuj</span>
+              <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </a>
+            <a
+              href="https://leetcode.com/u/Vanshika_Jain_05/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="liquid-pill-secondary inline-flex items-center justify-center gap-2 px-6 py-3 text-xs font-mono font-medium tracking-wide shadow-md w-full sm:w-auto group"
+            >
+              <LeetCodeIcon className="w-4 h-4 text-amber-600" />
+              <span>LeetCode @Vanshika_Jain_05</span>
               <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </a>
           </div>

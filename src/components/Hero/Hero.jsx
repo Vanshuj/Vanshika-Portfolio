@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowDown, Mail, FileText, Sparkles, Terminal, Code2, Award, GraduationCap, CheckCircle2 } from 'lucide-react';
-import { GithubIcon, LinkedinIcon } from '../Icons/BrandIcons';
+import { GithubIcon, LinkedinIcon, LeetCodeIcon } from '../Icons/BrandIcons';
 import { profileData } from '../../data/profile';
 
 export default function Hero({ onOpenResume, onOpenContactModal }) {
@@ -91,6 +91,19 @@ export default function Hero({ onOpenResume, onOpenContactModal }) {
             >
               <LinkedinIcon className="w-4 h-4" />
             </a>
+
+            {/* LeetCode */}
+            {profileData.socials.leetcode && (
+              <a
+                href={profileData.socials.leetcode.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LeetCode Profile"
+                className="p-2.5 rounded-full glass-pill text-pastel-ink hover:text-amber-500 hover:bg-white transition-all duration-200"
+              >
+                <LeetCodeIcon className="w-4 h-4" />
+              </a>
+            )}
 
             {/* Email Contact Action */}
             <button
