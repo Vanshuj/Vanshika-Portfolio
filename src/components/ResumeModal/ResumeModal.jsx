@@ -136,7 +136,19 @@ export default function ResumeModal({ onClose }) {
               {experienceData.workAndTraining.map((exp) => (
                 <div key={exp.id}>
                   <div className="flex flex-wrap items-center justify-between text-xs sm:text-sm font-semibold text-gray-900">
-                    <span>{exp.organization} — {exp.role}</span>
+                    <span className="flex items-center gap-2">
+                      <span>{exp.organization} — {exp.role}</span>
+                      {exp.certificateUrl && (
+                        <a
+                          href={exp.certificateUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-xs text-blue-700 hover:underline font-mono font-normal"
+                        >
+                          [Verify Credential]
+                        </a>
+                      )}
+                    </span>
                     <span className="font-mono font-normal text-xs text-gray-600">{exp.period}</span>
                   </div>
                   <div className="font-body italic text-xs text-gray-600 mb-1">

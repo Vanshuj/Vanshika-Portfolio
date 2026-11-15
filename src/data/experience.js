@@ -9,6 +9,7 @@ export const experienceData = {
       type: "Internship & Certification",
       location: "Virtual / Remote",
       accent: "#D5E8F5", // Powder Blue
+      certificateUrl: "https://drive.google.com/file/d/1LEc8zuzfat9xKRqCjG654OjLUGSW3Qw3/view?usp=sharing",
       responsibilities: [
         "Completed rigorous cybersecurity curriculum encompassing enterprise network architecture, defense-in-depth, and incident response.",
         "Analyzed network packets, vulnerability management workflows, and firewall configurations to identify exposure vectors.",
@@ -25,6 +26,7 @@ export const experienceData = {
       type: "Applied Training & Project",
       location: "Virtual",
       accent: "#DCD5F5", // Lavender
+      certificateUrl: "https://drive.google.com/file/d/10-CXHfeywY1nHMGeIcLZtcpVQNRUROR_/view?usp=sharing",
       responsibilities: [
         "Cleared the rigorous Advanced AI/ML assessment with distinction covering predictive modeling and feature engineering.",
         "Applied supervised machine learning pipelines to real-world telecom customer churn and network traffic datasets.",

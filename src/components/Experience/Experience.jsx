@@ -1,5 +1,5 @@
 import React from 'react';
-import { Briefcase, Calendar } from 'lucide-react';
+import { Briefcase, Calendar, ExternalLink } from 'lucide-react';
 import { experienceData } from '../../data/experience';
 
 export default function Experience() {
@@ -37,9 +37,24 @@ export default function Experience() {
                   <Calendar className="w-3.5 h-3.5" />
                   {item.period}
                 </span>
-                <span className="font-mono text-[10px] px-2.5 py-0.5 rounded-full glass-badge text-pastel-ink border border-white/90 font-medium">
-                  {item.type}
-                </span>
+                
+                <div className="flex items-center gap-2">
+                  {item.certificateUrl && (
+                    <a
+                      href={item.certificateUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-mono text-[10px] px-2.5 py-0.5 rounded-full glass-pill hover:bg-white text-pastel-ink flex items-center gap-1 transition-all group/cert border border-white/80"
+                      title="Verify Certificate Credential"
+                    >
+                      <span>Verify Certificate</span>
+                      <ExternalLink className="w-2.5 h-2.5 group-hover/cert:translate-x-0.5 group-hover/cert:-translate-y-0.5 transition-transform text-accent-spring" />
+                    </a>
+                  )}
+                  <span className="font-mono text-[10px] px-2.5 py-0.5 rounded-full glass-badge text-pastel-ink border border-white/90 font-medium">
+                    {item.type}
+                  </span>
+                </div>
               </div>
 
               <h3 className="font-display font-bold text-xl text-pastel-ink mb-1">
@@ -60,12 +75,26 @@ export default function Experience() {
               </ul>
             </div>
 
-            <div className="relative z-10 flex flex-wrap gap-1.5 pt-4 border-t border-pastel-ink/5">
-              {item.tags.map((tag) => (
-                <span key={tag} className="font-mono text-[10px] px-3 py-0.5 rounded-full glass-pill text-pastel-ink">
-                  {tag}
-                </span>
-              ))}
+            <div className="relative z-10 flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-pastel-ink/5">
+              <div className="flex flex-wrap gap-1.5">
+                {item.tags.map((tag) => (
+                  <span key={tag} className="font-mono text-[10px] px-3 py-0.5 rounded-full glass-pill text-pastel-ink">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              {item.certificateUrl && (
+                <a
+                  href={item.certificateUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-mono text-xs text-pastel-slate hover:text-pastel-ink flex items-center gap-1 transition-colors group/link ml-auto"
+                >
+                  <span>Credential</span>
+                  <ExternalLink className="w-3 h-3 text-pastel-slate group-hover/link:text-pastel-ink group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
+                </a>
+              )}
             </div>
           </div>
         ))}
