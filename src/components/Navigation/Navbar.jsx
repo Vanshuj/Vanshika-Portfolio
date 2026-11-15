@@ -3,7 +3,7 @@ import { FileText, ArrowUpRight, Menu, X, Sparkles } from 'lucide-react';
 import { profileData } from '../../data/profile';
 
 const navLinks = [
-  { label: 'About & Skills', href: '#about' },
+  { label: 'About', href: '#about' },
   { label: 'Projects', href: '#projects' },
   { label: 'Experience', href: '#experience' },
   { label: 'Certificates', href: '#certificates' },
