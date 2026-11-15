@@ -6,8 +6,6 @@ import About from './components/About/About';
 import Skills from './components/Skills/Skills';
 import Projects from './components/Projects/Projects';
 import Experience from './components/Experience/Experience';
-import CodingPractice from './components/CodingPractice/CodingPractice';
-import DevelopmentJournal from './components/DevelopmentJournal/DevelopmentJournal';
 import Certificates from './components/Certificates/Certificates';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
@@ -41,8 +39,6 @@ export default function App() {
         <Skills />
         <Projects />
         <Experience />
-        <CodingPractice />
-        <DevelopmentJournal />
         <Certificates />
         <Contact onOpenResume={() => setIsResumeOpen(true)} />
       </main>
