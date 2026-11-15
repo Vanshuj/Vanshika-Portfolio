@@ -39,11 +39,11 @@ export default function IntroSeal() {
     const gCtx = grainCv.getContext('2d');
     const imgData = gCtx.createImageData(128, 128);
     for (let i = 0; i < imgData.data.length; i += 4) {
-      const v = (Math.random() * 45) | 0;
+      const v = (Math.random() * 255) | 0;
       imgData.data[i] = v;
       imgData.data[i + 1] = v;
       imgData.data[i + 2] = v;
-      imgData.data[i + 3] = (Math.random() * 24 + 4) | 0;
+      imgData.data[i + 3] = (Math.random() * 12 + 2) | 0;
     }
     gCtx.putImageData(imgData, 0, 0);
     let grainPattern = ctx.createPattern(grainCv, 'repeat');
@@ -230,11 +230,11 @@ export default function IntroSeal() {
         }
       }
 
-      // 1. Draw light grey textured paper surface (matching photograph)
-      const grad = ctx.createRadialGradient(W / 2, H / 2, 80, W / 2, H / 2, Math.max(W, H) * 0.7);
-      grad.addColorStop(0, '#E3E3E6');
-      grad.addColorStop(0.65, '#D5D5D9');
-      grad.addColorStop(1, '#C7C7CC');
+      // 1. Draw sleek dark atmospheric surface
+      const grad = ctx.createRadialGradient(W / 2, H / 2, 60, W / 2, H / 2, Math.max(W, H) * 0.72);
+      grad.addColorStop(0, '#171A21'); // subtle dark charcoal center
+      grad.addColorStop(0.55, '#0E1015'); // deep dark obsidian
+      grad.addColorStop(1, '#07080B'); // midnight black edges
       ctx.fillStyle = grad;
       ctx.fillRect(0, 0, W, H);
 
@@ -337,14 +337,14 @@ export default function IntroSeal() {
         }
       }
 
-      // Stroke all filings in high-performance single passes
+      // Stroke all filings in high-performance single passes (metallic silver/steel on dark surface)
       ctx.lineWidth = 1.5;
       ctx.lineCap = 'round';
-      ctx.strokeStyle = 'rgba(20, 20, 24, 0.78)';
+      ctx.strokeStyle = 'rgba(215, 225, 240, 0.82)';
       ctx.stroke(darkFilingsPath);
 
       ctx.lineWidth = 0.85;
-      ctx.strokeStyle = 'rgba(255, 255, 255, 0.28)';
+      ctx.strokeStyle = 'rgba(255, 255, 255, 0.92)';
       ctx.stroke(highlightFilingsPath);
 
       // 3. Draw Bar Magnet & Charge Arc (Photograph Accuracy)
@@ -356,16 +356,14 @@ export default function IntroSeal() {
         const ringRadius = magnetW * 0.56;
         ctx.beginPath();
         ctx.arc(0, 0, ringRadius, 0, Math.PI * 2);
-        ctx.lineWidth = 3;
-        ctx.strokeStyle = 'rgba(55, 138, 221, 0.12)';
+        ctx.lineWidth = 2.5;
+        ctx.strokeStyle = 'rgba(56, 189, 248, 0.16)';
         ctx.stroke();
 
         if (charge > 0) {
           ctx.save();
-          if (charge > 0.8) {
-            ctx.shadowColor = 'rgba(55, 138, 221, 0.6)';
-            ctx.shadowBlur = 12;
-          }
+          ctx.shadowColor = 'rgba(56, 189, 248, 0.75)';
+          ctx.shadowBlur = 16;
           ctx.beginPath();
           ctx.arc(
             0,
@@ -376,17 +374,17 @@ export default function IntroSeal() {
           );
           ctx.lineWidth = 3.5;
           ctx.lineCap = 'round';
-          ctx.strokeStyle = '#378ADD';
+          ctx.strokeStyle = '#38BDF8';
           ctx.stroke();
           ctx.restore();
         }
 
-        // Magnet Drop Shadow (Soft ambient contact shadow)
+        // Magnet Drop Shadow (Soft ambient contact shadow on dark background)
         ctx.save();
-        ctx.shadowColor = 'rgba(18, 18, 22, 0.38)';
-        ctx.shadowBlur = 18;
+        ctx.shadowColor = 'rgba(0, 0, 0, 0.75)';
+        ctx.shadowBlur = 24;
         ctx.shadowOffsetX = 0;
-        ctx.shadowOffsetY = 8;
+        ctx.shadowOffsetY = 10;
 
         const hw = magnetW / 2;
         const hh = magnetH / 2;
@@ -403,7 +401,7 @@ export default function IntroSeal() {
         };
 
         // Draw shadow base
-        ctx.fillStyle = '#111';
+        ctx.fillStyle = '#08090C';
         drawMagnetBox();
         ctx.fill();
         ctx.restore(); // remove shadow state for interior details
@@ -415,17 +413,17 @@ export default function IntroSeal() {
 
         // Left Half: Red (North)
         const redGrad = ctx.createLinearGradient(0, -hh, 0, hh);
-        redGrad.addColorStop(0, '#E14646');
-        redGrad.addColorStop(0.3, '#D32F2F');
-        redGrad.addColorStop(1, '#B71C1C');
+        redGrad.addColorStop(0, '#F87171');
+        redGrad.addColorStop(0.25, '#EF4444');
+        redGrad.addColorStop(1, '#B91C1C');
         ctx.fillStyle = redGrad;
         ctx.fillRect(-hw, -hh, hw, magnetH);
 
         // Right Half: Blue (South)
         const blueGrad = ctx.createLinearGradient(0, -hh, 0, hh);
-        blueGrad.addColorStop(0, '#3978E3');
-        blueGrad.addColorStop(0.3, '#1E4FD8');
-        blueGrad.addColorStop(1, '#153DAA');
+        blueGrad.addColorStop(0, '#60A5FA');
+        blueGrad.addColorStop(0.25, '#2563EB');
+        blueGrad.addColorStop(1, '#1D4ED8');
         ctx.fillStyle = blueGrad;
         ctx.fillRect(0, -hh, hw, magnetH);
 
@@ -460,7 +458,7 @@ export default function IntroSeal() {
 
         // Crisp border outline
         ctx.lineWidth = 1;
-        ctx.strokeStyle = 'rgba(25, 25, 30, 0.85)';
+        ctx.strokeStyle = 'rgba(255, 255, 255, 0.4)';
         drawMagnetBox();
         ctx.stroke();
 
