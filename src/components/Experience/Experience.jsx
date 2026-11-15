@@ -84,9 +84,9 @@ export default function Experience() {
                 ))}
               </div>
 
-              {item.certificateUrl && (
+              {(item.credentialUrl || item.certificateUrl) && (
                 <a
-                  href={item.certificateUrl}
+                  href={item.credentialUrl || item.certificateUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-mono text-xs text-pastel-slate hover:text-pastel-ink flex items-center gap-1 transition-colors group/link ml-auto"

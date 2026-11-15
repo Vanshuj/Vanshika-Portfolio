@@ -145,7 +145,17 @@ export default function ResumeModal({ onClose }) {
                           rel="noopener noreferrer"
                           className="text-xs text-blue-700 hover:underline font-mono font-normal"
                         >
-                          [Verify Credential]
+                          [Certificate]
+                        </a>
+                      )}
+                      {exp.credentialUrl && exp.credentialUrl !== exp.certificateUrl && (
+                        <a
+                          href={exp.credentialUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-xs text-blue-700 hover:underline font-mono font-normal"
+                        >
+                          [GitHub Project]
                         </a>
                       )}
                     </span>
