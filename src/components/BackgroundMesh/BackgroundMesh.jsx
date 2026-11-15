@@ -7,57 +7,69 @@ export default function BackgroundMesh() {
       {/* 
         ========================================================
         PHASE 2: PASTEL AURORA BACKGROUND (HIGH SATURATION / HIGH OPACITY)
-        Increased opacity & vibrant gradients so the liquid glass 
-        and backdrop-filter refraction are strikingly visible.
-        - Lavender #B4B0FF / #C9C6FF
-        - Mint #8EE8C4 / #CFF1E3
-        - Peach #FFB894 / #FFD9C2
-        - Pink #F79BD6 / #F7C6E8
+        Vibrant, glowing pastel aurora gradients so the liquid glass 
+        and backdrop-filter refraction are strikingly visible across
+        all cards and modals with no empty/dead zones.
+        - Lavender #9F95FF / #B8B0FF
+        - Mint #4FE3AA / #7EEEBF
+        - Peach #FFA175 / #FFBE9E
+        - Pink #FF72C1 / #FFA2DA
+        - Sky Blue #45CAFF / #8FE0FF
+        - Warm Golden Light #FFD275
         ========================================================
       */}
 
-      {/* Blob 1: Vibrant Pastel Lavender - Placed behind Hero Console & Navbar */}
+      {/* Blob 1: Vibrant Pastel Lavender - Top Right */}
       <div 
         aria-hidden="true"
-        className="lg-aurora-blob-1 absolute top-[2%] right-[10%] w-[62vw] h-[62vw] max-w-[900px] max-h-[900px] rounded-full blur-[70px] opacity-80 pointer-events-none"
+        className="lg-aurora-blob-1 absolute -top-[5%] right-[2%] w-[70vw] h-[70vw] max-w-[1050px] max-h-[1050px] rounded-full blur-[65px] opacity-95 pointer-events-none"
         style={{ 
-          background: 'radial-gradient(circle, #B4B0FF 0%, #C9C6FF 40%, rgba(201, 198, 255, 0.65) 65%, transparent 85%)' 
+          background: 'radial-gradient(circle, #9F95FF 0%, #B8B0FF 35%, rgba(200, 195, 255, 0.80) 65%, transparent 88%)' 
         }}
       />
 
-      {/* Blob 2: Vibrant Pastel Mint - Placed mid-screen across About & Skills */}
+      {/* Blob 2: Vibrant Pastel Mint - Middle Left */}
       <div 
         aria-hidden="true"
-        className="lg-aurora-blob-2 absolute top-[22%] left-[4%] w-[58vw] h-[58vw] max-w-[850px] max-h-[850px] rounded-full blur-[75px] opacity-75 pointer-events-none"
+        className="lg-aurora-blob-2 absolute top-[15%] -left-[5%] w-[68vw] h-[68vw] max-w-[1000px] max-h-[1000px] rounded-full blur-[65px] opacity-90 pointer-events-none"
         style={{ 
-          background: 'radial-gradient(circle, #8EE8C4 0%, #CFF1E3 45%, rgba(207, 241, 227, 0.6) 70%, transparent 85%)' 
+          background: 'radial-gradient(circle, #4FE3AA 0%, #7EEEBF 35%, rgba(180, 245, 220, 0.80) 65%, transparent 88%)' 
         }}
       />
 
-      {/* Blob 3: Vibrant Pastel Peach - Placed across Projects & Timeline */}
+      {/* Blob 3: Vibrant Pastel Peach & Coral - Middle Right */}
       <div 
         aria-hidden="true"
-        className="lg-aurora-blob-3 absolute top-[48%] right-[5%] w-[56vw] h-[56vw] max-w-[820px] max-h-[820px] rounded-full blur-[75px] opacity-80 pointer-events-none"
+        className="lg-aurora-blob-3 absolute top-[40%] right-[0%] w-[66vw] h-[66vw] max-w-[980px] max-h-[980px] rounded-full blur-[65px] opacity-95 pointer-events-none"
         style={{ 
-          background: 'radial-gradient(circle, #FFB894 0%, #FFD9C2 45%, rgba(255, 217, 194, 0.6) 70%, transparent 85%)' 
+          background: 'radial-gradient(circle, #FFA175 0%, #FFBE9E 35%, rgba(255, 220, 198, 0.85) 65%, transparent 88%)' 
         }}
       />
 
-      {/* Blob 4: Vibrant Pastel Pink - Placed across Contact & Footer */}
+      {/* Blob 4: Vibrant Pastel Pink & Rose - Bottom Left */}
       <div 
         aria-hidden="true"
-        className="lg-aurora-blob-4 absolute top-[72%] left-[8%] w-[60vw] h-[60vw] max-w-[880px] max-h-[880px] rounded-full blur-[75px] opacity-75 pointer-events-none"
+        className="lg-aurora-blob-4 absolute top-[65%] -left-[3%] w-[70vw] h-[70vw] max-w-[1020px] max-h-[1020px] rounded-full blur-[65px] opacity-90 pointer-events-none"
         style={{ 
-          background: 'radial-gradient(circle, #F79BD6 0%, #F7C6E8 45%, rgba(247, 198, 232, 0.6) 70%, transparent 85%)' 
+          background: 'radial-gradient(circle, #FF72C1 0%, #FFA2DA 35%, rgba(255, 205, 238, 0.80) 65%, transparent 88%)' 
         }}
       />
 
-      {/* Additional Aurora Accent: Soft Violet/Blue in top-left to enrich Hero text */}
+      {/* Blob 5: Vibrant Sky Blue / Cyan - Central Viewport Glow (directly behind modals and central cards) */}
       <div 
         aria-hidden="true"
-        className="lg-aurora-blob-3 absolute -top-[5%] left-[2%] w-[48vw] h-[48vw] max-w-[700px] max-h-[700px] rounded-full blur-[70px] opacity-70 pointer-events-none"
+        className="lg-aurora-blob-1 absolute top-[28%] left-[16%] w-[65vw] h-[65vw] max-w-[950px] max-h-[950px] rounded-full blur-[70px] opacity-90 pointer-events-none"
         style={{ 
-          background: 'radial-gradient(circle, #C9C6FF 0%, rgba(201, 198, 255, 0.5) 50%, transparent 80%)' 
+          background: 'radial-gradient(circle, #45CAFF 0%, #8FE0FF 35%, rgba(195, 238, 255, 0.80) 65%, transparent 88%)' 
+        }}
+      />
+
+      {/* Blob 6: Luminous Pastel Amber Gold - Central Lower Viewport */}
+      <div 
+        aria-hidden="true"
+        className="lg-aurora-blob-2 absolute top-[52%] left-[25%] w-[60vw] h-[60vw] max-w-[850px] max-h-[850px] rounded-full blur-[70px] opacity-85 pointer-events-none"
+        style={{ 
+          background: 'radial-gradient(circle, #FFD275 0%, #FFE5A3 35%, rgba(255, 240, 195, 0.75) 65%, transparent 88%)' 
         }}
       />
 
@@ -66,20 +78,8 @@ export default function BackgroundMesh() {
         aria-hidden="true"
         className="absolute top-0 left-0 w-[85vw] h-[65vh] max-w-[1200px] pointer-events-none"
         style={{
-          background: 'radial-gradient(ellipse at 12% 8%, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.35) 45%, transparent 75%)'
+          background: 'radial-gradient(ellipse at 12% 8%, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.40) 45%, transparent 75%)'
         }}
-      />
-
-      {/* Warm Golden-Brown Depth Resonance Layers (Portfolio Brand Anchor) */}
-      <div 
-        aria-hidden="true"
-        className="absolute top-[32%] right-[15%] w-[45vw] h-[45vw] max-w-[650px] max-h-[650px] rounded-full blur-[140px] opacity-25 pointer-events-none"
-        style={{ background: 'radial-gradient(circle, #FFEB97 0%, rgba(255, 235, 151, 0.4) 50%, transparent 80%)' }}
-      />
-      <div 
-        aria-hidden="true"
-        className="absolute top-[80%] right-[5%] w-[50vw] h-[50vw] max-w-[700px] max-h-[700px] rounded-full blur-[150px] opacity-15 mix-blend-multiply pointer-events-none"
-        style={{ background: 'radial-gradient(circle, #583714 0%, rgba(88, 55, 20, 0.3) 50%, transparent 80%)' }}
       />
 
       {/* Technical Precision Grid */}

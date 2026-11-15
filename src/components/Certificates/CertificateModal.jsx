@@ -17,9 +17,12 @@ export default function CertificateModal({ certificate, onClose }) {
   if (!certificate) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-pastel-ink/35 backdrop-blur-md animate-fade-in">
+    <div 
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/25 animate-fade-in"
+      onClick={onClose}
+    >
       <div 
-        className="relative w-full max-w-2xl glass-panel p-6 sm:p-8 rounded-3xl border border-white shadow-glass-lg"
+        className="relative w-full max-w-2xl glass-panel p-6 sm:p-8 rounded-3xl border border-white/80 shadow-glass-lg"
         onClick={(e) => e.stopPropagation()}
       >
         <button
