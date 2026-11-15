@@ -4,7 +4,7 @@ export const profileData = {
   title: "Full-Stack Developer & Software Engineer",
   tagline: "Architecting resilient full-stack systems, AI-powered knowledge platforms, and fluid interactive web experiences.",
   location: "Jabalpur, MP, India",
-  status: "Available for Software Engineering Internships & Full-Time Roles",
+  status: "Open to Work",
   statusColor: "#6DB33F", // Spring Green
 
   bio: {
