@@ -1,14 +1,18 @@
 import React from 'react';
-import { Sparkles, Compass, Lightbulb, Code2, Server, Layout, Cpu, Database, Wrench, Binary, Layers } from 'lucide-react';
+import { 
+  Sparkles, Compass, Lightbulb, Code2, Server, Layout, Cpu, 
+  Database, Wrench, Binary, Layers, ShieldCheck, CheckCircle2, 
+  GraduationCap, Award 
+} from 'lucide-react';
 import { profileData } from '../../data/profile';
 import { skillsData } from '../../data/skills';
 
 const categoryIcons = {
   languages: Binary,
-  backend: Server,
   mern: Layout,
-  databases: Database,
-  tools: Wrench,
+  backend: Server,
+  auth: ShieldCheck,
+  tools: Database,
   'core-cs': Cpu,
 };
 
@@ -28,14 +32,14 @@ export default function About() {
       {/* Part 1: Narrative Biography & Philosophy */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start mb-20">
         
-        {/* Left Column: Big Editorial Statement & Micro-Panels */}
+        {/* Left Column: Editorial Summary & Focus Pillars */}
         <div className="lg:col-span-5 space-y-8">
           <div>
             <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-pastel-ink tracking-tight leading-tight mb-4">
-              Designing scalable backends with an eye for tactile interfaces.
+              Full-Stack Engineering with MERN, Java Enterprise & AI Integration.
             </h2>
             <p className="font-body text-base text-pastel-slate leading-relaxed">
-              Engineering web systems that solve real-world problems with architectural clarity, data integrity, and thoughtful user-centered aesthetics.
+              Computer Engineering undergraduate specializing in MERN stack applications, robust Spring Boot RESTful APIs, secure authentication systems, and AI-powered platforms.
             </p>
           </div>
 
@@ -45,11 +49,11 @@ export default function About() {
               <div className="relative z-10">
                 <div className="flex items-center gap-2 mb-1.5 text-accent-java">
                   <Server className="w-4 h-4" />
-                  <span className="font-mono text-xs uppercase tracking-wider text-pastel-slate">Backend</span>
+                  <span className="font-mono text-xs uppercase tracking-wider text-pastel-slate">Java Backend</span>
                 </div>
-                <div className="font-display font-bold text-sm text-pastel-ink mb-1">Distributed Services</div>
+                <div className="font-display font-bold text-sm text-pastel-ink mb-1">Spring Boot & REST</div>
                 <p className="font-body text-[11px] text-pastel-slate leading-relaxed">
-                  Enterprise Spring Boot microservices, clean DTO contracts, and transactional integrity.
+                  Enterprise RESTful APIs, Spring AI integration, and secure JWT / OAuth authentication workflows.
                 </p>
               </div>
             </div>
@@ -58,26 +62,53 @@ export default function About() {
               <div className="relative z-10">
                 <div className="flex items-center gap-2 mb-1.5 text-accent-spring">
                   <Layout className="w-4 h-4" />
-                  <span className="font-mono text-xs uppercase tracking-wider text-pastel-slate">Frontend</span>
+                  <span className="font-mono text-xs uppercase tracking-wider text-pastel-slate">MERN Stack</span>
                 </div>
-                <div className="font-display font-bold text-sm text-pastel-ink mb-1">Tactile & Reactive UI</div>
+                <div className="font-display font-bold text-sm text-pastel-ink mb-1">React & Node.js</div>
                 <p className="font-body text-[11px] text-pastel-slate leading-relaxed">
-                  Responsive React applications with fluid state choreography and accessible design.
+                  Interactive web applications with React, Express, MongoDB, and AI knowledge graph platforms.
                 </p>
               </div>
             </div>
           </div>
 
-          {/* Working Philosophy Pill Panel */}
+          {/* Development Creed */}
           <div className="glass-card-interactive p-5 rounded-2xl border border-white/90 relative overflow-hidden">
             <div className="relative z-10">
               <div className="flex items-center gap-2 text-pastel-ink font-display font-semibold text-sm mb-2">
                 <Compass className="w-4 h-4 text-accent-java" />
-                <span>Development Creed</span>
+                <span>Core Engineering Creed</span>
               </div>
               <p className="font-body text-xs sm:text-sm text-pastel-ink/90 leading-relaxed italic">
-                "Every layer—from database schemas and REST endpoints to client-side component state—deserves rigorous structural care and intentional design."
+                "{profileData.bio.philosophy}"
               </p>
+            </div>
+          </div>
+
+          {/* Resume Verified Highlights */}
+          <div className="glass-card-interactive p-4 rounded-2xl border border-white/90 relative overflow-hidden">
+            <div className="relative z-10 space-y-2">
+              <div className="flex items-center justify-between text-xs font-mono text-pastel-slate">
+                <span className="flex items-center gap-1.5 text-accent-spring">
+                  <CheckCircle2 className="w-3.5 h-3.5" />
+                  <span>Verified Credentials</span>
+                </span>
+                <span className="text-[10px] glass-badge px-2 py-0.5 rounded-full">SRIT Jabalpur</span>
+              </div>
+              <div className="flex flex-wrap gap-2 text-xs font-mono text-pastel-ink">
+                <span className="px-2.5 py-1 rounded-full glass-pill flex items-center gap-1.5">
+                  <GraduationCap className="w-3.5 h-3.5 text-accent-java" />
+                  <span>B.Tech CSE (7.54 GPA)</span>
+                </span>
+                <span className="px-2.5 py-1 rounded-full glass-pill flex items-center gap-1.5">
+                  <Award className="w-3.5 h-3.5 text-accent-spring" />
+                  <span>SIH Top 40</span>
+                </span>
+                <span className="px-2.5 py-1 rounded-full glass-pill flex items-center gap-1.5">
+                  <ShieldCheck className="w-3.5 h-3.5 text-accent-spring" />
+                  <span>Cisco Cybersecurity</span>
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -99,7 +130,7 @@ export default function About() {
           <div className="pt-4 border-t border-pastel-ink/10">
             <h3 className="font-display font-semibold text-sm uppercase tracking-wider text-pastel-ink mb-4 flex items-center gap-2">
               <Lightbulb className="w-4 h-4 text-accent-java" />
-              <span>Current Research & Architecture Focus</span>
+              <span>Current Technical Focus Areas</span>
             </h3>
 
             <div className="space-y-2.5">
@@ -135,10 +166,10 @@ export default function About() {
             <span>Technical Inventory & System Architectures</span>
           </div>
           <h3 className="font-display font-bold text-2xl sm:text-3xl text-pastel-ink tracking-tight mb-2">
-            Verified Engineering Competencies.
+            Verified Technical Skills.
           </h3>
           <p className="font-body text-xs sm:text-sm text-pastel-slate leading-relaxed">
-            A disciplined, production-tested toolkit spanning enterprise Java ecosystems, reactive modern JavaScript runtimes, and resilient data storage engines.
+            Directly from resume: languages, MERN stack, enterprise Java backend, authentication systems, databases, cloud tools, and core computer science fundamentals.
           </p>
         </div>
       </div>
@@ -147,7 +178,6 @@ export default function About() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
         {skillsData.categories.map((category) => {
           const Icon = categoryIcons[category.id] || Layers;
-          
           return (
             <div 
               key={category.id} 
@@ -199,7 +229,7 @@ export default function About() {
               <div 
                 className="mt-6 pt-3 border-t border-pastel-ink/5 flex items-center justify-between text-[11px] font-mono text-pastel-slate relative z-10"
               >
-                <span>{category.skills.length} core modules</span>
+                <span>{category.skills.length} core competencies</span>
                 <span className="opacity-0 group-hover:opacity-100 transition-opacity text-pastel-ink font-medium">
                   verified
                 </span>

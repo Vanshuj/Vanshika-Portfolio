@@ -8,19 +8,19 @@ export const profileData = {
   statusColor: "#6DB33F", // Spring Green
 
   bio: {
-    lead: "Computer Engineering undergraduate specializing in MERN stack and modern Java enterprise backend architecture.",
+    lead: "Computer Engineering undergraduate and Full-Stack Developer specializing in the MERN stack and Java-based backend development.",
     paragraphs: [
-      "I engineer end-to-end web applications, robust RESTful APIs, and intelligent data systems. My development philosophy unites rigorous software design principles with creative frontend execution.",
-      "With hands-on experience spanning Spring Boot, Spring AI, React, Node.js, and MongoDB, I focus on building scalable services, secure authentication workflows, and intuitive developer tooling that translates complex domain logic into seamless user experiences.",
-      "Beyond production systems, I continuously explore algorithms, system design, and emerging AI technologies — from custom knowledge graph visualizations to offline-first reactive web applications."
+      "Experienced in building web applications, RESTful APIs, authentication systems, and AI-powered platforms using React, Node.js, Spring Boot, and MongoDB.",
+      "Demonstrated ability in full-stack engineering across real-world projects: GYAN.AI (AI platform converting YouTube lectures and technical topics into structured notes, timestamped summaries, and interactive knowledge graphs with React Flow, ELK.js, and JWT auth), KathaVani (interactive branching narrative engine with multilingual Web Speech APIs and offline-first Service Worker/IndexedDB sync), and Pixel-Arena (competitive image similarity game with custom imageCompare.js middleware and live leaderboards deployed on Render).",
+      "Anchored by a strong foundation in object-oriented programming, database management (MySQL, MongoDB), and algorithmic problem-solving, complemented by practical virtual internship training in cybersecurity with Cisco Networking Academy (AICTE) and Telecom Data Analytics."
     ],
-    philosophy: "Code should be as structurally dependable as it is aesthetically intentional.",
+    philosophy: "Engineering dependable full-stack architectures and intelligent platforms through rigorous object-oriented design, clean RESTful APIs, and sound database management.",
     currentFocus: [
-      "Distributed backend architectures with Spring Boot & Microservices",
-      "Interactive knowledge visualization with React Flow & Graph layouts",
-      "Offline-first synchronization and Web Speech accessibility"
+      "MERN Stack & AI Platforms (React.js, Node.js, Express, MongoDB, Gemini, Groq)",
+      "Java Enterprise Backend & REST APIs (Spring Boot, Spring AI)",
+      "Secure Authentication & Cloud Deployment (JWT, GitHub OAuth, Render)"
     ],
-    workApproach: "Test-driven, modular, and performance-conscious with an obsessive eye for typography and fluid interaction."
+    workApproach: "Rigorous object-oriented software design with hands-on full-stack development, database management, and AI integration."
   },
 
   socials: {
