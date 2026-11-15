@@ -1,0 +1,254 @@
+/* ==========================================================================
+   MAGNET THEME STYLES (magnet.css)
+   ========================================================================== */
+
+/* 1. Custom Magnet Cursor */
+@media (pointer: fine) {
+  body:not(.magnet-touch-device) {
+    cursor: none !important;
+  }
+
+  body:not(.magnet-touch-device) * {
+    cursor: none !important;
+  }
+
+  /* Restore native text cursor over form controls and text fields */
+  body:not(.magnet-touch-device) input,
+  body:not(.magnet-touch-device) textarea,
+  body:not(.magnet-touch-device) select,
+  body:not(.magnet-touch-device) [contenteditable="true"] {
+    cursor: text !important;
+  }
+
+  body:not(.magnet-touch-device) input[type="button"],
+  body:not(.magnet-touch-device) input[type="submit"],
+  body:not(.magnet-touch-device) input[type="reset"],
+  body:not(.magnet-touch-device) input[type="checkbox"],
+  body:not(.magnet-touch-device) input[type="radio"] {
+    cursor: none !important;
+  }
+}
+
+/* Custom Magnet Cursor Element */
+.magnet-cursor-el {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 28px;
+  height: 28px;
+  margin-top: -14px;
+  margin-left: -14px;
+  pointer-events: none;
+  z-index: 999999;
+  will-change: transform, opacity;
+  transition: opacity 0.2s ease;
+  display: block;
+}
+
+.magnet-cursor-el.cursor-hidden {
+  opacity: 0 !important;
+}
+
+/* 2. Magnetic Buttons Helper */
+[data-magnetic="true"] {
+  will-change: translate;
+  /* translate property composes with existing transform / scale */
+}
+
+/* 3. Background Pole-Flip Canvas */
+#magnet-bg-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1; /* Sits just behind cards and hero content */
+  opacity: 0.85;
+}
+
+/* 4. Particle Trail Canvas */
+#magnet-trail-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 999998;
+}
+
+/* 5. Touch-and-Hold Seal Intro Overlay */
+#magnet-seal-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000000;
+  background: #D9D9DB;
+  cursor: none;
+  touch-action: none;
+  outline: none;
+  user-select: none;
+  -webkit-user-select: none;
+  overflow: hidden;
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.7s;
+  opacity: 1;
+  visibility: visible;
+}
+
+#magnet-seal-overlay.seal-opened {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+#magnet-seal-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  pointer-events: none;
+}
+
+/* Seal UI Controls */
+.seal-topbar {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.5rem;
+  z-index: 10;
+  pointer-events: auto;
+}
+
+.seal-skip-btn,
+.seal-reduced-btn {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: #374151;
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 8px -1px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04);
+  border-radius: 9999px;
+  padding: 0.5rem 1.15rem;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.seal-skip-btn:hover,
+.seal-reduced-btn:hover {
+  background: #ffffff;
+  color: #111827;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.12);
+}
+
+.seal-hint-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.seal-hint-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.5rem 1.15rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.08);
+  transition: all 0.25s ease;
+}
+
+.seal-hint-pill.holding {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 6px 20px -2px rgba(55, 138, 221, 0.25);
+  border-color: rgba(55, 138, 221, 0.3);
+  transform: scale(1.02);
+}
+
+.seal-pulse-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #378ADD;
+  box-shadow: 0 0 8px rgba(55, 138, 221, 0.6);
+  animation: sealPulse 1.8s infinite ease-in-out;
+}
+
+.seal-hint-pill.holding .seal-pulse-dot {
+  background: #E24B4A;
+  box-shadow: 0 0 10px rgba(226, 75, 74, 0.8);
+  animation: none;
+}
+
+@keyframes sealPulse {
+  0%, 100% {
+    transform: scale(0.9);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.25);
+    opacity: 1;
+  }
+}
+
+.seal-hint-text {
+  font-size: 0.84rem;
+  font-weight: 500;
+  color: #1f2937;
+  letter-spacing: -0.01em;
+}
+
+.seal-hint-shortcut {
+  font-size: 0.72rem;
+  color: #6b7280;
+  font-weight: 400;
+}
+
+/* Auto "Tap to open" button after 8s */
+.seal-auto-open-btn {
+  pointer-events: auto;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #1E4FD8;
+  background: #ffffff;
+  border: 1px solid rgba(30, 79, 216, 0.2);
+  border-radius: 9999px;
+  padding: 0.45rem 1rem;
+  box-shadow: 0 4px 12px rgba(30, 79, 216, 0.15);
+  animation: sealFadeIn 0.4s ease forwards;
+}
+
+@keyframes sealFadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 640px) {
+  .seal-hint-shortcut {
+    display: none;
+  }
+  .seal-topbar {
+    top: 1rem;
+    right: 1rem;
+  }
+  .seal-hint-container {
+    bottom: 1.5rem;
+  }
+}

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import IntroSeal from './components/IntroSeal/IntroSeal';
 import Navbar from './components/Navigation/Navbar';
 import BackgroundMesh from './components/BackgroundMesh/BackgroundMesh';
 import Hero from './components/Hero/Hero';
@@ -22,6 +23,9 @@ export default function App() {
 
   return (
     <div className="relative min-h-screen bg-pastel-white selection:bg-pastel-ink selection:text-pastel-white">
+      {/* Starting Magnet Seal Intro */}
+      <IntroSeal />
+
       {/* Background Atmospheric Mesh */}
       <BackgroundMesh />
 

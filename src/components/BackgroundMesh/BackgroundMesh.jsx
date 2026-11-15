@@ -1,16 +1,9 @@
 import React from 'react';
-import GlassButterfly from './GlassButterfly';
 
 export default function BackgroundMesh() {
   return (
     <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden bg-noise">
-      {/* 
-        Clean, subtle, visually calm studio backdrop.
-        Completely free of any full-page golden-brown gradient
-        so that liquid glass cards and boxes remain the primary visual focus.
-      */}
-
-      {/* Very faint, clean studio ambient light sheen */}
+      {/* Clean, subtle studio ambient light sheen */}
       <div 
         aria-hidden="true"
         className="absolute top-0 left-0 w-[85vw] h-[65vh] max-w-[1200px] pointer-events-none"
@@ -27,16 +20,6 @@ export default function BackgroundMesh() {
           backgroundSize: '80px 80px'
         }}
       />
-
-      {/* 
-        ========================================================
-        3D REAL GLASS BUTTERFLY (Three.js)
-        Procedural ExtrudeGeometry + MeshPhysicalMaterial with
-        Transmission, Iridescence, RoomEnvironment PMREM,
-        360° Continuous Rotation, Gentle Flap, Parallax Tilt.
-        ========================================================
-      */}
-      <GlassButterfly />
 
       {/* Progressive Enhancement: SVG Liquid Distort Filter */}
       <svg className="sr-only" aria-hidden="true">

@@ -24,18 +24,18 @@ export default function ResumeModal({ onClose }) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-pastel-ink/40 backdrop-blur-md animate-fade-in overflow-y-auto">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/60 backdrop-blur-md animate-fade-in overflow-y-auto">
       <div 
-        className="relative w-full max-w-4xl my-auto bg-white p-6 sm:p-12 rounded-3xl shadow-2xl max-h-[92vh] overflow-y-auto border border-pastel-ink/10 text-pastel-ink"
+        className="resume-modal-sheet relative w-full max-w-4xl my-auto bg-white p-6 sm:p-12 rounded-3xl shadow-2xl max-h-[92vh] overflow-y-auto border border-gray-200 text-gray-900"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Top Control Bar */}
-        <div className="flex items-center justify-between pb-6 mb-8 border-b border-pastel-ink/10 no-print">
+        <div className="flex items-center justify-between pb-6 mb-8 border-b border-gray-200 no-print">
           <div className="flex items-center gap-2">
-            <span className="font-mono text-xs px-2.5 py-1 rounded-full glass-badge font-semibold">
+            <span className="font-mono text-xs px-2.5 py-1 rounded-full resume-badge font-semibold">
               ATS-Standard Curriculum Vitae
             </span>
-            <span className="font-mono text-xs text-pastel-slate hidden sm:inline">
+            <span className="font-mono text-xs text-gray-600 hidden sm:inline">
               Verified Academic & Technical Record
             </span>
           </div>
@@ -54,16 +54,16 @@ export default function ResumeModal({ onClose }) {
                 href={profileData.resumeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="liquid-pill-secondary inline-flex items-center gap-1.5 px-4 py-2 text-xs font-mono font-medium shadow-sm active:scale-95"
+                className="resume-secondary-btn inline-flex items-center gap-1.5 px-4 py-2 text-xs font-mono font-medium shadow-sm active:scale-95"
               >
-                <ExternalLink className="w-3.5 h-3.5 text-accent-spring" />
+                <ExternalLink className="w-3.5 h-3.5 text-blue-600" />
                 <span>Google Drive</span>
               </a>
             )}
 
             <button
               onClick={onClose}
-              className="p-1.5 rounded-full hover:bg-gray-100 text-pastel-slate hover:text-pastel-ink transition-colors"
+              className="p-1.5 rounded-full hover:bg-gray-100 text-gray-600 hover:text-gray-900 transition-colors"
               aria-label="Close resume view"
             >
               <X className="w-5 h-5" />
@@ -86,30 +86,30 @@ export default function ResumeModal({ onClose }) {
                 href={profileData.socials.github.url} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="hover:underline flex items-center gap-1"
+                className="hover:underline flex items-center gap-1 text-gray-800 hover:text-black"
               >
-                <GithubIcon className="w-3.5 h-3.5" />
+                <GithubIcon className="w-3.5 h-3.5 text-gray-700" />
                 <span>github.com/{profileData.socials.github.username}</span>
               </a>
-              <span>•</span>
+              <span className="text-gray-400">•</span>
               <a 
                 href={profileData.socials.linkedin.url} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="hover:underline flex items-center gap-1 text-pastel-ink"
+                className="hover:underline flex items-center gap-1 text-gray-800 hover:text-blue-700"
               >
-                <LinkedinIcon className="w-3.5 h-3.5" />
+                <LinkedinIcon className="w-3.5 h-3.5 text-gray-700" />
                 <span>LinkedIn</span>
               </a>
-              <span>•</span>
+              <span className="text-gray-400">•</span>
               <a 
                 href={`mailto:${profileData.socials.email.address}`}
-                className="hover:underline flex items-center gap-1"
+                className="hover:underline flex items-center gap-1 text-gray-800 hover:text-black"
               >
-                <Mail className="w-3.5 h-3.5" />
+                <Mail className="w-3.5 h-3.5 text-gray-700" />
                 <span>{profileData.socials.email.address}</span>
               </a>
-              <span>•</span>
+              <span className="text-gray-400">•</span>
               {/* Privacy Protection: Phone is not exposed publicly per explicit instructions */}
               <span className="text-gray-500 italic">
                 Phone: Available on verified request
@@ -261,13 +261,13 @@ export default function ResumeModal({ onClose }) {
 
         {/* Footer */}
         <div className="mt-8 pt-6 border-t border-gray-200 flex flex-wrap items-center justify-between text-xs font-mono text-gray-500 no-print">
-          <div className="flex items-center gap-1.5 text-accent-spring">
-            <ShieldCheck className="w-4 h-4" />
+          <div className="flex items-center gap-1.5 text-emerald-700 font-medium">
+            <ShieldCheck className="w-4 h-4 text-emerald-600" />
             <span>Personal phone number protected from public crawlers</span>
           </div>
           <button 
             onClick={onClose}
-            className="text-gray-800 hover:underline font-semibold"
+            className="text-gray-800 hover:text-black hover:underline font-semibold"
           >
             Close Viewer
           </button>
