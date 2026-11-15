@@ -121,11 +121,9 @@ export default function Hero({ onOpenResume, onOpenContactModal }) {
               <span>B.Tech CSE '27</span>
             </div>
           </div>
-        </div>
 
-        {/* Right Area: Transparent Liquid Glass Developer Identity & Telemetry Console */}
-        <div className="lg:col-span-5 flex flex-col items-center justify-center relative w-full">
-          <div className="w-full max-w-[460px] p-6 sm:p-7 rounded-[36px] glass-panel border border-white/90 shadow-glass-lg relative overflow-hidden flex flex-col space-y-5">
+          {/* Developer Identity & Telemetry Console (Positioned just below Connect micro-bar) */}
+          <div className="w-full max-w-[460px] mt-8 p-6 sm:p-7 rounded-[36px] glass-panel border border-white/90 shadow-glass-lg relative overflow-hidden flex flex-col space-y-5">
             {/* Top Bar: Developer Identity Capsule */}
             <div className="relative z-10 flex items-center justify-between pb-4 border-b border-pastel-ink/10">
               <div className="flex items-center gap-3">
@@ -207,6 +205,9 @@ export default function Hero({ onOpenResume, onOpenContactModal }) {
             </div>
           </div>
         </div>
+
+        {/* Right Area: Showcase area for 3D Photoreal Glass Butterfly */}
+        <div className="lg:col-span-5 hidden lg:flex items-center justify-center relative w-full min-h-[420px] pointer-events-none" />
       </div>
     </section>
   );
