@@ -24,7 +24,7 @@ export default {
         },
         // Mapped to harmonious warm golden-brown palette for unified readability
         pastel: {
-          white: '#FAF7F0',
+          white: '#F8F9FA',
           ink: '#36210A',       // Deepest dark brown for headings
           'ink-soft': '#583714',  // Primary deep warm brown
           slate: '#7B5631',     // Warm brown slate for body/secondary
