@@ -123,92 +123,88 @@ export default function Hero({ onOpenResume, onOpenContactModal }) {
           </div>
         </div>
 
-        {/* Right Area: Spacious showcase area for 3D Photoreal Glass Butterfly */}
-        <div className="lg:col-span-5 hidden lg:flex items-center justify-center relative w-full min-h-[380px] pointer-events-none" />
-      </div>
-
-      {/* Bottom Area: Developer Identity & Telemetry Console (Repositioned in Hero Section) */}
-      <div className="w-full mt-12 lg:mt-16 z-10">
-        <div className="w-full rounded-[32px] glass-panel p-6 sm:p-7 border border-white/80 shadow-glass-lg relative overflow-hidden">
-          <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 items-center">
-            
-            {/* Identity & Status */}
-            <div className="lg:col-span-4 flex items-center justify-between lg:justify-start gap-3.5 lg:border-r lg:border-pastel-ink/10 lg:pr-6">
-              <div className="w-12 h-12 rounded-2xl glass-pill flex items-center justify-center font-display font-bold text-sm text-pastel-ink shadow-inner border border-white/90 flex-shrink-0">
-                VJ
-              </div>
-              <div className="min-w-0">
-                <div className="font-display font-bold text-sm sm:text-base text-pastel-ink flex items-center gap-1.5 truncate">
-                  <span>{profileData.name}</span>
-                  <span className="w-1.5 h-1.5 rounded-full bg-accent-spring animate-pulse flex-shrink-0" />
+        {/* Right Area: Transparent Liquid Glass Developer Identity & Telemetry Console */}
+        <div className="lg:col-span-5 flex flex-col items-center justify-center relative w-full">
+          <div className="w-full max-w-[460px] p-6 sm:p-7 rounded-[36px] glass-panel border border-white/90 shadow-glass-lg relative overflow-hidden flex flex-col space-y-5">
+            {/* Top Bar: Developer Identity Capsule */}
+            <div className="relative z-10 flex items-center justify-between pb-4 border-b border-pastel-ink/10">
+              <div className="flex items-center gap-3">
+                <div className="w-11 h-11 rounded-2xl glass-pill flex items-center justify-center font-display font-bold text-sm text-pastel-ink shadow-inner border border-white/90">
+                  VJ
                 </div>
-                <span className="font-mono text-xs text-pastel-slate block truncate">
-                  Full-Stack & Systems Engineer
-                </span>
+                <div>
+                  <div className="font-display font-bold text-sm text-pastel-ink flex items-center gap-1.5">
+                    <span>{profileData.name}</span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-accent-spring animate-pulse" />
+                  </div>
+                  <span className="font-mono text-[11px] text-pastel-slate">
+                    Full-Stack & Systems Engineer
+                  </span>
+                </div>
               </div>
-              <div className="px-3 py-1 rounded-full glass-badge text-[10px] font-mono text-pastel-ink/80 flex items-center gap-1.5 ml-auto flex-shrink-0">
+
+              {/* Status Pill */}
+              <div className="px-3 py-1 rounded-full glass-badge text-[10px] font-mono text-pastel-ink/80 flex items-center gap-1.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-accent-spring" />
                 <span>Active '26</span>
               </div>
             </div>
 
-            {/* Academic & Hackathon Metrics */}
-            <div className="lg:col-span-4 grid grid-cols-2 gap-3 lg:border-r lg:border-pastel-ink/10 lg:pr-6">
-              <div className="glass-panel-subtle p-3 rounded-2xl border border-white/70">
+            {/* Inner Floating Glass Widget 1: Verified Academic & Hackathon Metrics */}
+            <div className="relative z-10 grid grid-cols-2 gap-3">
+              <div className="glass-panel-subtle p-3.5 rounded-2xl border border-white/80 relative overflow-hidden">
                 <div className="flex items-center gap-1.5 text-accent-java mb-1">
-                  <GraduationCap className="w-3.5 h-3.5 flex-shrink-0" />
+                  <GraduationCap className="w-3.5 h-3.5" />
                   <span className="font-mono text-[10px] uppercase text-pastel-slate font-medium">Academics</span>
                 </div>
-                <div className="font-display font-bold text-base text-pastel-ink">7.54 CGPA</div>
-                <div className="font-mono text-[10px] text-pastel-slate truncate">SRIT Jabalpur (CSE)</div>
+                <div className="font-display font-bold text-lg text-pastel-ink">7.54 CGPA</div>
+                <div className="font-mono text-[10px] text-pastel-slate">SRIT Jabalpur (CSE)</div>
               </div>
 
-              <div className="glass-panel-subtle p-3 rounded-2xl border border-white/70">
+              <div className="glass-panel-subtle p-3.5 rounded-2xl border border-white/80 relative overflow-hidden">
                 <div className="flex items-center gap-1.5 text-accent-spring mb-1">
-                  <Award className="w-3.5 h-3.5 flex-shrink-0" />
+                  <Award className="w-3.5 h-3.5" />
                   <span className="font-mono text-[10px] uppercase text-pastel-slate font-medium">National Honor</span>
                 </div>
-                <div className="font-display font-bold text-base text-pastel-ink">Top 40</div>
-                <div className="font-mono text-[10px] text-pastel-slate truncate">Smart India Hackathon</div>
+                <div className="font-display font-bold text-lg text-pastel-ink">Top 40</div>
+                <div className="font-mono text-[10px] text-pastel-slate">Smart India Hackathon</div>
               </div>
             </div>
 
-            {/* Production Stack & Direct Comms */}
-            <div className="lg:col-span-4 flex flex-col justify-between space-y-2.5">
-              <div className="glass-panel-subtle p-3 rounded-2xl border border-white/70">
-                <div className="flex items-center justify-between mb-1.5">
-                  <span className="font-mono text-[10px] uppercase tracking-wider text-pastel-slate flex items-center gap-1.5">
-                    <Code2 className="w-3 h-3 text-pastel-ink" />
-                    <span>Production Stack</span>
-                  </span>
-                  <span className="font-mono text-[9px] text-pastel-slate/70">Verified</span>
-                </div>
-                <div className="flex flex-wrap gap-1.5">
-                  {['Java', 'Spring Boot', 'React', 'Node.js', 'MongoDB', 'MySQL'].map((tech) => (
-                    <span 
-                      key={tech} 
-                      className="font-mono text-[10px] px-2.5 py-0.5 rounded-full glass-pill text-pastel-ink shadow-xs"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              <div className="flex items-center justify-between text-[11px] font-mono text-pastel-slate px-1">
-                <span className="flex items-center gap-1.5">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-accent-spring" />
-                  <span>Cisco AICTE Virtual Intern</span>
+            {/* Inner Floating Glass Widget 2: Core Engineering Stack */}
+            <div className="relative z-10 glass-panel-subtle p-4 rounded-2xl border border-white/80">
+              <div className="flex items-center justify-between mb-2.5">
+                <span className="font-mono text-[11px] uppercase tracking-wider text-pastel-slate flex items-center gap-1.5">
+                  <Code2 className="w-3.5 h-3.5 text-pastel-ink" />
+                  <span>Production Stack</span>
                 </span>
-                <a 
-                  href="#contact" 
-                  className="text-pastel-ink hover:text-accent-java font-medium transition-colors"
-                >
-                  Open Comms ›
-                </a>
+                <span className="font-mono text-[10px] text-pastel-slate/70">Verified</span>
+              </div>
+              <div className="flex flex-wrap gap-1.5">
+                {['Java', 'Spring Boot', 'React', 'Node.js', 'MongoDB', 'MySQL'].map((tech) => (
+                  <span 
+                    key={tech} 
+                    className="font-mono text-[11px] px-3 py-1 rounded-full glass-pill text-pastel-ink shadow-xs"
+                  >
+                    {tech}
+                  </span>
+                ))}
               </div>
             </div>
 
+            {/* Bottom Glass Control Pill */}
+            <div className="relative z-10 pt-2 flex items-center justify-between text-xs font-mono text-pastel-slate">
+              <span className="flex items-center gap-1.5">
+                <CheckCircle2 className="w-3.5 h-3.5 text-accent-spring" />
+                <span>Cisco AICTE Virtual Intern</span>
+              </span>
+              <a 
+                href="#contact" 
+                className="text-pastel-ink hover:text-accent-java font-medium transition-colors"
+              >
+                Open Comms ›
+              </a>
+            </div>
           </div>
         </div>
       </div>
