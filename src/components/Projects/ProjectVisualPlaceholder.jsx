@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Image, Upload, ExternalLink, Sparkles, Sliders, Cpu, GitBranch, Play, Volume2, Video } from 'lucide-react';
+import MacBookFrame from './MacBookFrame';
 
 function getVideoEmbed(url) {
   if (!url) return null;
@@ -108,7 +109,7 @@ export default function ProjectVisualPlaceholder({ project }) {
       <div className="my-auto py-3 relative z-10">
         {/* VIEW 1: DEMO VIDEO */}
         {activeTab === 'video' && videoEmbed && (
-          <div className="relative w-full aspect-video rounded-2xl overflow-hidden glass-panel border border-white/80 shadow-inner">
+          <MacBookFrame>
             {videoEmbed.type === 'video' ? (
               <video 
                 src={videoEmbed.src} 
@@ -125,18 +126,18 @@ export default function ProjectVisualPlaceholder({ project }) {
                 allowFullScreen
               />
             )}
-          </div>
+          </MacBookFrame>
         )}
 
         {/* VIEW 2: STATIC SCREENSHOT (if image loaded and not video mode) */}
         {activeTab !== 'video' && imageSrc && (
-          <div className="relative w-full aspect-video rounded-2xl overflow-hidden group">
+          <MacBookFrame>
             <img 
               src={imageSrc} 
               alt={project.title} 
-              className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" 
+              className="w-full h-full object-cover object-top transition-transform duration-700 hover:scale-105" 
             />
-          </div>
+          </MacBookFrame>
         )}
 
         {/* VIEW 3: DOMAIN-SPECIFIC INTERACTIVE ARCHITECTURAL SANDBOX (Fallback / Default) */}

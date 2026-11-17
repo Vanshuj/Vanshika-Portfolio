@@ -1,0 +1,266 @@
+/* ========================================================
+   MACBOOK PRO SCREEN FRAME MOCKUP (MacBookFrame.css)
+   Pixel-perfect Apple MacBook Pro hardware enclosure.
+   Space Grey anodized aluminum chassis, thin black bezel,
+   top camera notch with camera optic & green status LED,
+   recessed hinge, and thumb-opening groove.
+   ======================================================== */
+
+.macbook-mockup-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* --------------------------------------------------------
+   1. DISPLAY LID (Aluminium body + black glass bezel)
+   -------------------------------------------------------- */
+.macbook-lid {
+  position: relative;
+  width: 97%;
+  background: linear-gradient(180deg, #2D313A 0%, #1E2128 40%, #15171C 100%);
+  border-radius: 18px 18px 3px 3px;
+  padding: 8px 8px 8px 8px;
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.20);
+  box-shadow: 
+    inset 0 1px 1px rgba(255, 255, 255, 0.30),
+    inset 0 -1px 2px rgba(0, 0, 0, 0.8),
+    0 12px 28px -6px rgba(0, 0, 0, 0.65);
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 640px) {
+  .macbook-lid {
+    border-radius: 22px 22px 4px 4px;
+    padding: 10px 10px 10px 10px;
+  }
+}
+
+/* --------------------------------------------------------
+   TOP BEZEL & CAMERA NOTCH
+   -------------------------------------------------------- */
+.macbook-top-bezel {
+  position: relative;
+  width: 100%;
+  height: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: #08090C;
+  border-radius: 6px 6px 0 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.9);
+}
+
+@media (min-width: 640px) {
+  .macbook-top-bezel {
+    height: 16px;
+    border-radius: 8px 8px 0 0;
+  }
+}
+
+.macbook-notch {
+  position: relative;
+  width: 58px;
+  height: 11px;
+  background: #040406;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+  z-index: 10;
+}
+
+@media (min-width: 640px) {
+  .macbook-notch {
+    width: 72px;
+    height: 13px;
+    gap: 6px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+  }
+}
+
+/* Camera Lens with Anti-Reflective Optical Coating */
+.macbook-camera-lens {
+  position: relative;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #1D2E4A 0%, #060911 75%);
+  border: 0.5px solid rgba(255, 255, 255, 0.35);
+  box-shadow: inset 0 0 2px rgba(56, 189, 248, 0.5);
+}
+
+@media (min-width: 640px) {
+  .macbook-camera-lens {
+    width: 6px;
+    height: 6px;
+  }
+}
+
+.macbook-lens-reflection {
+  position: absolute;
+  top: 0.5px;
+  left: 0.5px;
+  width: 1.5px;
+  height: 1.5px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* Green Status / Active Camera LED */
+.macbook-sensor-led {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #10B981;
+  opacity: 0.85;
+  box-shadow: 0 0 5px rgba(16, 185, 129, 0.85);
+}
+
+@media (min-width: 640px) {
+  .macbook-sensor-led {
+    width: 3.5px;
+    height: 3.5px;
+  }
+}
+
+/* --------------------------------------------------------
+   SCREEN VIEWPORT
+   -------------------------------------------------------- */
+.macbook-screen {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #050608;
+  border-radius: 0 0 6px 6px;
+  overflow: hidden;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.9);
+}
+
+@media (min-width: 640px) {
+  .macbook-screen {
+    border-radius: 0 0 8px 8px;
+  }
+}
+
+/* Content inside screen (video, iframe, image) */
+.macbook-screen video,
+.macbook-screen iframe,
+.macbook-screen img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+  border: none !important;
+  background-color: #000000;
+}
+
+/* Subtle Retina Glass Sheen / Reflection (non-intrusive, pointer-events-none) */
+.macbook-glass-glare {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    130deg,
+    rgba(255, 255, 255, 0.06) 0%,
+    rgba(255, 255, 255, 0.015) 30%,
+    transparent 55%
+  );
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* --------------------------------------------------------
+   2. RECESSED HINGE
+   -------------------------------------------------------- */
+.macbook-hinge {
+  width: 94%;
+  height: 3px;
+  background: #0B0C0E;
+  margin: 0 auto;
+  border-top: 1px solid rgba(0, 0, 0, 0.9);
+}
+
+@media (min-width: 640px) {
+  .macbook-hinge {
+    height: 4px;
+  }
+}
+
+/* --------------------------------------------------------
+   3. ALUMINUM BASE DECK WITH THUMB-OPENING GROOVE
+   -------------------------------------------------------- */
+.macbook-base {
+  position: relative;
+  width: 100%;
+  height: 11px;
+  background: linear-gradient(180deg, #323742 0%, #21242C 35%, #14161C 100%);
+  border-radius: 0 0 12px 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  border-left: 1px solid rgba(255, 255, 255, 0.14);
+  border-right: 1px solid rgba(255, 255, 255, 0.14);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.25),
+    0 4px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+@media (min-width: 640px) {
+  .macbook-base {
+    height: 14px;
+    border-radius: 0 0 16px 16px;
+  }
+}
+
+/* The Iconic Center Thumb Groove */
+.macbook-thumb-groove {
+  width: 62px;
+  height: 3.5px;
+  background: #0B0C0F;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-top: 1px solid rgba(0, 0, 0, 0.9);
+  border-left: 1px solid rgba(255, 255, 255, 0.06);
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 
+    inset 0 1px 2px rgba(0, 0, 0, 0.8),
+    0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+@media (min-width: 640px) {
+  .macbook-thumb-groove {
+    width: 80px;
+    height: 4.5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+}
+
+/* --------------------------------------------------------
+   4. AMBIENT BASE SHADOW (Depth on crystal card)
+   -------------------------------------------------------- */
+.macbook-ambient-shadow {
+  width: 92%;
+  height: 8px;
+  background: radial-gradient(ellipse at 50% 0%, rgba(0, 0, 0, 0.65) 0%, transparent 75%);
+  margin-top: 1px;
+}
