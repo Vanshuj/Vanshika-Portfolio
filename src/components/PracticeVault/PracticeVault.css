@@ -1,0 +1,340 @@
+/* ========================================================
+   PRACTICE VAULT: IDEA A — MAGNETIC COMPASS DIAL
+   (PracticeVault.css)
+   Precision radial compass bezel, 3 glowing 120° polarity
+   sectors, spring-damped N/S magnetic needle, and unified
+   crystal glass readout lens.
+   ======================================================== */
+
+.compass-vault-section {
+  position: relative;
+  width: 100%;
+  padding: 5rem 1rem 6rem;
+  overflow: hidden;
+}
+
+@media (min-width: 640px) {
+  .compass-vault-section {
+    padding: 6rem 2rem 7rem;
+  }
+}
+
+.compass-vault-container {
+  max-width: 78rem;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 10;
+}
+
+/* --------------------------------------------------------
+   3-SECTOR POLARITY JUMP BAR
+   -------------------------------------------------------- */
+.compass-sector-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+}
+
+.compass-sector-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.48rem 1.05rem;
+  border-radius: 9999px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #94A3B8;
+  background: rgba(18, 21, 28, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.compass-sector-pill:hover {
+  color: #F8FAFC;
+  background: rgba(28, 33, 44, 0.92);
+  border-color: rgba(255, 255, 255, 0.28);
+  transform: translateY(-1px);
+}
+
+.compass-sector-pill.active {
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.12);
+  border-color: var(--sector-color, #38BDF8);
+  box-shadow:
+    0 0 18px var(--sector-glow, rgba(56, 189, 248, 0.35)),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+.compass-sector-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* --------------------------------------------------------
+   MAIN INSTRUMENT HOUSING (COMPASS DIAL + CRYSTAL READOUT)
+   -------------------------------------------------------- */
+.compass-instrument-shell {
+  position: relative;
+  border-radius: 32px;
+  background: radial-gradient(ellipse at 30% 50%, #171B23 0%, #0E1015 55%, #08090C 100%);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.24),
+    inset 0 -1px 2px rgba(0, 0, 0, 0.85),
+    0 28px 65px -14px rgba(0, 0, 0, 0.8);
+  padding: 1.75rem 1.25rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
+  overflow: hidden;
+}
+
+@media (min-width: 640px) {
+  .compass-instrument-shell {
+    padding: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .compass-instrument-shell {
+    grid-template-columns: 1.15fr 1fr;
+    gap: 2.75rem;
+    padding: 2.75rem 3rem;
+  }
+}
+
+/* --------------------------------------------------------
+   LEFT: PRECISION MAGNETIC COMPASS DIAL
+   -------------------------------------------------------- */
+.compass-dial-stage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  touch-action: none;
+}
+
+.compass-svg {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  display: block;
+  overflow: visible;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.72));
+}
+
+.compass-needle-group {
+  transition: transform 0.68s cubic-bezier(0.28, 1.38, 0.56, 1);
+  transform-origin: 270px 270px;
+}
+
+.compass-needle-group.dragging {
+  transition: transform 0.08s linear;
+}
+
+.compass-node-hit {
+  cursor: pointer;
+}
+
+.compass-node-ring {
+  transition: r 0.22s ease, opacity 0.22s ease, stroke-width 0.22s ease;
+}
+
+.compass-dial-hint {
+  margin-top: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: 9999px;
+  background: rgba(12, 14, 19, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.6875rem;
+  color: #94A3B8;
+}
+
+/* --------------------------------------------------------
+   RIGHT: CRYSTAL LENS READOUT PANEL
+   -------------------------------------------------------- */
+.compass-readout-panel {
+  position: relative;
+  border-radius: 24px;
+  background: linear-gradient(165deg, rgba(26, 30, 39, 0.82) 0%, rgba(13, 15, 20, 0.94) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.22),
+    0 16px 36px rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .compass-readout-panel {
+    padding: 2rem;
+  }
+}
+
+.compass-readout-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.compass-bearing-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #CBD5E1;
+}
+
+.compass-step-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.compass-step-btn {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #CBD5E1;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.compass-step-btn:hover {
+  background: rgba(255, 255, 255, 0.16);
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.compass-metric-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.7rem 0.95rem;
+  border-radius: 12px;
+  background: rgba(6, 7, 10, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.72rem;
+}
+
+.compass-cta-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.65rem;
+  margin-top: 0.25rem;
+}
+
+@media (min-width: 480px) {
+  .compass-cta-row.has-live {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.compass-github-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.76rem 1.15rem;
+  border-radius: 9999px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #FFFFFF !important;
+  background: linear-gradient(135deg, #FF6B4A 0%, #D84227 100%);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow:
+    0 4px 18px rgba(216, 66, 39, 0.42),
+    inset 0 1px 0 rgba(255, 255, 255, 0.38);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.compass-github-cta:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 8px 26px rgba(216, 66, 39, 0.62),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  filter: brightness(1.08);
+}
+
+.compass-secondary-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.76rem 1.15rem;
+  border-radius: 9999px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #F8FAFC !important;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow:
+    0 4px 16px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.22);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.compass-secondary-cta:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.4);
+  color: #FFFFFF !important;
+}
+
+/* Smooth fade when readout switches node */
+@keyframes readoutFadeIn {
+  from {
+    opacity: 0.35;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.compass-readout-animate {
+  animation: readoutFadeIn 0.26s cubic-bezier(0.16, 1, 0.3, 1);
+}

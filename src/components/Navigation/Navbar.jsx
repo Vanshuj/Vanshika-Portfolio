@@ -5,6 +5,7 @@ import { profileData } from '../../data/profile';
 const navLinks = [
   { label: 'About', href: '#about' },
   { label: 'Projects', href: '#projects' },
+  { label: 'Code Vault', href: '#practice-vault' },
   { label: 'Experience', href: '#experience' },
   { label: 'Certificates', href: '#certificates' },
   { label: 'Contact', href: '#contact' },

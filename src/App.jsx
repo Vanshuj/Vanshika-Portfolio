@@ -5,6 +5,7 @@ import BackgroundMesh from './components/BackgroundMesh/BackgroundMesh';
 import Hero from './components/Hero/Hero';
 import About from './components/About/About';
 import Projects from './components/Projects/Projects';
+import PracticeVault from './components/PracticeVault/PracticeVault';
 import Experience from './components/Experience/Experience';
 import Certificates from './components/Certificates/Certificates';
 import Contact from './components/Contact/Contact';
@@ -40,6 +41,7 @@ export default function App() {
         />
         <About />
         <Projects />
+        <PracticeVault />
         <Experience />
         <Certificates />
         <Contact onOpenResume={() => setIsResumeOpen(true)} />
