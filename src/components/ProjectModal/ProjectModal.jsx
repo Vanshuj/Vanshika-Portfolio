@@ -80,13 +80,13 @@ export default function ProjectModal({ project, onClose }) {
               className="liquid-pill-secondary inline-flex items-center gap-2 px-5 py-2 text-xs font-mono tracking-wide shadow-sm"
             >
               <ExternalLink className="w-4 h-4 text-gold" />
-              <span>Launch Live Deployment</span>
+              <span>Launch Live Website</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
             </a>
           ) : (
             <div className="inline-flex items-center gap-2 px-3.5 py-2 rounded-full glass-badge border border-dashed border-pastel-slate/30 text-xs font-mono text-pastel-slate">
               <span className="w-2 h-2 rounded-full bg-accent-java" />
-              <span>Live Demo Deployment Link (Reserved)</span>
+              <span>Live Website Deployment Link (Reserved)</span>
             </div>
           )}
 

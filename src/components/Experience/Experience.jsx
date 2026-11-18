@@ -9,10 +9,9 @@ export default function Experience() {
       {/* Section Header */}
       <div className="flex items-center gap-3 mb-4">
         <span className="font-mono text-xs uppercase tracking-widest text-pastel-slate">
-          [ 03 // Trajectory ]
+          Experience
         </span>
         <div className="h-px bg-pastel-ink/10 flex-grow" />
-        <span className="font-mono text-xs text-pastel-slate">Experience</span>
       </div>
 
       <div className="max-w-2xl mb-16">

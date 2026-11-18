@@ -240,7 +240,6 @@ export default function PracticeVault() {
         {/* 3-Sector Quick-Jump Polarity Bar */}
         <div className="compass-sector-bar" role="tablist" aria-label="Compass Sectors">
           {practiceVaultData.directories.map((dir) => {
-            const count = practiceVaultData.files.filter((f) => f.dir === dir.id).length;
             const isActiveSector = activeNode.dir === dir.id;
             return (
               <button
@@ -257,7 +256,6 @@ export default function PracticeVault() {
               >
                 <span className="compass-sector-dot" style={{ backgroundColor: dir.color }} />
                 <span>{dir.label}</span>
-                <span className="text-[10px] opacity-70">({count})</span>
               </button>
             );
           })}
@@ -527,20 +525,6 @@ export default function PracticeVault() {
                       strokeWidth={isActive ? 2.5 : 1.8}
                       className="compass-node-ring"
                     />
-
-                    {/* Radial Index Number (01..14) */}
-                    <text
-                      x={numPos.x}
-                      y={numPos.y + 3.5}
-                      textAnchor="middle"
-                      fontFamily="'IBM Plex Mono', monospace"
-                      fontSize={isActive ? '10' : '8.5'}
-                      fontWeight={isActive ? '700' : '500'}
-                      fill={isActive ? '#FFFFFF' : isHovered ? node.sectorColor : '#64748B'}
-                      style={{ pointerEvents: 'none', transition: 'fill 0.2s ease' }}
-                    >
-                      {node.indexNumber}
-                    </text>
                   </g>
                 );
               })}
@@ -622,7 +606,7 @@ export default function PracticeVault() {
                   }}
                 />
                 <span>
-                  {formattedBearing} // [{activeNode.indexNumber}/14]
+                  {formattedBearing} // BEARING
                 </span>
               </div>
 
@@ -742,7 +726,7 @@ export default function PracticeVault() {
                     data-magnetic="true"
                   >
                     <Globe className="w-4 h-4" />
-                    <span>Live Website</span>
+                    <span>{activeNode.id === 'chat-app-java' ? 'Live Server' : 'Live Website'}</span>
                     <ExternalLink className="w-3.5 h-3.5" />
                   </a>
                 )}

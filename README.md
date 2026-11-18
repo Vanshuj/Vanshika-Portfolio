@@ -76,7 +76,7 @@ All project content is maintained in `src/data/projects.js`.
      ```
    - *Tip:* You can also test and preview screenshots directly in the live browser using the **Load Screenshot** button in each project card.
 
-2. **Add Live Demo Links**:
+2. **Add Live Website Links**:
    - In `src/data/projects.js`, locate `demoUrl` and insert your live URL:
      ```javascript
      demoUrl: "https://pixel-arena.onrender.com",

@@ -67,10 +67,9 @@ export default function Contact({ onOpenResume }) {
       {/* Section Header */}
       <div className="flex items-center gap-3 mb-4">
         <span className="font-mono text-xs uppercase tracking-widest text-pastel-slate">
-          [ 05 // Dialogue ]
+          Get in Touch
         </span>
         <div className="h-px bg-pastel-ink/10 flex-grow" />
-        <span className="font-mono text-xs text-pastel-slate">Get in Touch</span>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">

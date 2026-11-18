@@ -12,10 +12,9 @@ export default function Certificates() {
       {/* Section Header */}
       <div className="flex items-center gap-3 mb-4">
         <span className="font-mono text-xs uppercase tracking-widest text-pastel-slate">
-          [ 04 // Credentials ]
+          Achievements & Certifications
         </span>
         <div className="h-px bg-pastel-ink/10 flex-grow" />
-        <span className="font-mono text-xs text-pastel-slate">Achievements & Certifications</span>
       </div>
 
       <div className="max-w-2xl mb-16">

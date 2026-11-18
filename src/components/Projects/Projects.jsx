@@ -14,10 +14,9 @@ export default function Projects() {
       {/* Section Header */}
       <div className="flex items-center gap-3 mb-4">
         <span className="font-mono text-xs uppercase tracking-widest text-pastel-slate">
-          [ 02 // Core Projects ]
+          Featured Case Studies
         </span>
         <div className="h-px bg-pastel-ink/10 flex-grow" />
-        <span className="font-mono text-xs text-pastel-slate">Featured Case Studies</span>
       </div>
 
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-16">
@@ -54,18 +53,14 @@ export default function Projects() {
               {/* Information Panel (5 cols) */}
               <div className="lg:col-span-5 order-1 lg:order-2 flex flex-col justify-between space-y-6">
                 <div>
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="font-mono text-xs text-pastel-slate">
-                      {projectsData[0].number} // {projectsData[0].category}
-                    </span>
-                    <span className="font-mono text-[10px] px-2.5 py-1 rounded-full glass-badge text-pastel-ink">
+                  <div className="flex items-center justify-between gap-3 mb-2">
+                    <h3 className="font-display font-bold text-2xl sm:text-3xl text-pastel-ink tracking-tight">
+                      {projectsData[0].title}
+                    </h3>
+                    <span className="font-mono text-[10px] px-2.5 py-1 rounded-full glass-badge text-pastel-ink shrink-0">
                       {projectsData[0].year}
                     </span>
                   </div>
-
-                  <h3 className="font-display font-bold text-2xl sm:text-3xl text-pastel-ink tracking-tight mb-2">
-                    {projectsData[0].title}
-                  </h3>
                   <p className="font-mono text-xs text-accent-java font-medium mb-4">
                     {projectsData[0].tagline}
                   </p>
@@ -121,7 +116,7 @@ export default function Projects() {
                       className="liquid-pill-primary inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-mono tracking-wide shadow-sm"
                     >
                       <ExternalLink className="w-3.5 h-3.5" />
-                      <span>Live Demo</span>
+                      <span>Live Website</span>
                     </a>
                   )}
 
@@ -139,7 +134,7 @@ export default function Projects() {
 
                   {!projectsData[0].demoUrl && !projectsData[0].videoUrl && (
                     <span className="text-[11px] font-mono text-pastel-slate/70 italic">
-                      [Demo links reserved]
+                      [Live links reserved]
                     </span>
                   )}
                 </div>
@@ -159,18 +154,14 @@ export default function Projects() {
               {/* Information Panel (5 cols) - Left on desktop */}
               <div className="lg:col-span-5 flex flex-col justify-between space-y-6">
                 <div>
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="font-mono text-xs text-pastel-slate">
-                      {projectsData[1].number} // {projectsData[1].category}
-                    </span>
-                    <span className="font-mono text-[10px] px-2.5 py-1 rounded-full glass-badge text-pastel-ink">
+                  <div className="flex items-center justify-between gap-3 mb-2">
+                    <h3 className="font-display font-bold text-2xl sm:text-3xl text-pastel-ink tracking-tight">
+                      {projectsData[1].title}
+                    </h3>
+                    <span className="font-mono text-[10px] px-2.5 py-1 rounded-full glass-badge text-pastel-ink shrink-0">
                       {projectsData[1].year}
                     </span>
                   </div>
-
-                  <h3 className="font-display font-bold text-2xl sm:text-3xl text-pastel-ink tracking-tight mb-2">
-                    {projectsData[1].title}
-                  </h3>
                   <p className="font-mono text-xs text-accent-spring font-medium mb-4">
                     {projectsData[1].tagline}
                   </p>
@@ -226,7 +217,7 @@ export default function Projects() {
                       className="liquid-pill-primary inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-mono tracking-wide shadow-sm"
                     >
                       <ExternalLink className="w-3.5 h-3.5" />
-                      <span>Live Demo</span>
+                      <span>Live Website</span>
                     </a>
                   )}
 
@@ -244,7 +235,7 @@ export default function Projects() {
 
                   {!projectsData[1].demoUrl && !projectsData[1].videoUrl && (
                     <span className="text-[11px] font-mono text-pastel-slate/70 italic">
-                      [Demo links reserved]
+                      [Live links reserved]
                     </span>
                   )}
                 </div>
@@ -274,18 +265,14 @@ export default function Projects() {
               {/* Information Panel (5 cols) */}
               <div className="lg:col-span-5 order-1 lg:order-2 flex flex-col justify-between space-y-6">
                 <div>
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="font-mono text-xs text-pastel-slate">
-                      {projectsData[2].number} // {projectsData[2].category}
-                    </span>
-                    <span className="font-mono text-[10px] px-2.5 py-1 rounded-full glass-badge text-pastel-ink">
+                  <div className="flex items-center justify-between gap-3 mb-2">
+                    <h3 className="font-display font-bold text-2xl sm:text-3xl text-pastel-ink tracking-tight">
+                      {projectsData[2].title}
+                    </h3>
+                    <span className="font-mono text-[10px] px-2.5 py-1 rounded-full glass-badge text-pastel-ink shrink-0">
                       {projectsData[2].year}
                     </span>
                   </div>
-
-                  <h3 className="font-display font-bold text-2xl sm:text-3xl text-pastel-ink tracking-tight mb-2">
-                    {projectsData[2].title}
-                  </h3>
                   <p className="font-mono text-xs text-accent-java font-medium mb-4">
                     {projectsData[2].tagline}
                   </p>
@@ -341,7 +328,7 @@ export default function Projects() {
                       className="liquid-pill-primary inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-mono tracking-wide shadow-sm"
                     >
                       <ExternalLink className="w-3.5 h-3.5" />
-                      <span>Live Demo</span>
+                      <span>Live Website</span>
                     </a>
                   )}
 
@@ -359,7 +346,7 @@ export default function Projects() {
 
                   {!projectsData[2].demoUrl && !projectsData[2].videoUrl && (
                     <span className="text-[11px] font-mono text-pastel-slate/70 italic">
-                      [Demo links reserved]
+                      [Live links reserved]
                     </span>
                   )}
                 </div>

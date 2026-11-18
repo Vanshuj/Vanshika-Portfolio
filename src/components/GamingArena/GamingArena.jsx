@@ -56,7 +56,6 @@ export default function GamingArena() {
           <div className="arena-topbar">
             <div className="arena-cartridge-label">
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-              <span>CARTRIDGE {activeGame.slot} //</span>
               <strong className="text-pastel-ink">{activeGame.title.toUpperCase()}</strong>
               <span className="arena-polarity-pill hidden sm:inline-flex" aria-hidden="true">
                 <span className="arena-pole-n">N</span>
@@ -219,7 +218,7 @@ export default function GamingArena() {
                   data-magnetic="true"
                 >
                   <Play className="w-4 h-4 fill-current" />
-                  <span>Play Fullscreen</span>
+                  <span>Live Website</span>
                   <ExternalLink className="w-3.5 h-3.5" />
                 </a>
 

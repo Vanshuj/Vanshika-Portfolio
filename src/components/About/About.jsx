@@ -23,10 +23,9 @@ export default function About() {
       {/* Section Header */}
       <div className="flex items-center gap-3 mb-12">
         <span className="font-mono text-xs uppercase tracking-widest text-pastel-slate">
-          [ 01 // Narrative & Core Stack ]
+          About & Technical Inventory
         </span>
         <div className="h-px bg-pastel-ink/10 flex-grow" />
-        <span className="font-mono text-xs text-pastel-slate">About & Technical Inventory</span>
       </div>
 
       {/* Part 1: Narrative Biography & Philosophy */}

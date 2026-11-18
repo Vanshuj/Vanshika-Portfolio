@@ -276,7 +276,7 @@ export default function ProjectVisualPlaceholder({ project }) {
         {project.videoUrl ? (
           <span className="text-accent-java font-mono">Demo Video Available</span>
         ) : (
-          <span>Space reserved for live demo</span>
+          <span>Space reserved for live website</span>
         )}
       </div>
     </div>
