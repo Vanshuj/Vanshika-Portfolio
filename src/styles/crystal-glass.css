@@ -155,9 +155,9 @@ h6,
   display: none !important;
 }
 
-/* Ensure contents sit above pseudo-elements */
-.glass-panel>*,
-.glass-card-interactive>* {
+/* Ensure contents sit above pseudo-elements without displacing absolute decorative backdrops */
+.glass-panel>*:not(.absolute),
+.glass-card-interactive>*:not(.absolute) {
   position: relative;
   z-index: 3;
 }
