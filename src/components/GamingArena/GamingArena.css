@@ -1,0 +1,375 @@
+/* ========================================================
+   THE GAMING ARENA (GamingArena.css)
+   Obsidian crystal arcade cabinet featuring dipole N/S
+   polarity ambient lighting, tactile mechanical keycaps,
+   live gameplay preview & embedded Play Live mode.
+   ======================================================== */
+
+.gaming-arena-section {
+  position: relative;
+  width: 100%;
+  padding: 5rem 1rem 6rem;
+  overflow: hidden;
+}
+
+@media (min-width: 640px) {
+  .gaming-arena-section {
+    padding: 6rem 2rem 7rem;
+  }
+}
+
+.gaming-arena-container {
+  max-width: 78rem;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 10;
+}
+
+/* --------------------------------------------------------
+   MAIN ARCADE CABINET CHASSIS
+   -------------------------------------------------------- */
+.arena-cabinet {
+  position: relative;
+  border-radius: 32px;
+  background: linear-gradient(170deg, #161922 0%, #0D1016 55%, #07080B 100%);
+  border: 1px solid rgba(255, 255, 255, 0.17);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.24),
+    inset 0 -1px 2px rgba(0, 0, 0, 0.85),
+    0 28px 68px -14px rgba(0, 0, 0, 0.85);
+  overflow: hidden;
+}
+
+/* Subtle North (Red) & South (Blue) Dipole Corner Glows */
+.arena-dipole-north {
+  position: absolute;
+  top: -80px;
+  left: -60px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(239, 68, 68, 0.22) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.arena-dipole-south {
+  position: absolute;
+  bottom: -90px;
+  right: -60px;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.22) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* --------------------------------------------------------
+   TOP CONSOLE HEADER BAR
+   -------------------------------------------------------- */
+.arena-topbar {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1.25rem;
+  padding: 1rem 1.5rem;
+  background: rgba(10, 12, 17, 0.82);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+@media (min-width: 768px) {
+  .arena-topbar {
+    padding: 1.05rem 2rem;
+  }
+}
+
+.arena-cartridge-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.75rem;
+  color: #CBD5E1;
+}
+
+.arena-polarity-pill {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.65rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.arena-pole-n {
+  padding: 0.22rem 0.45rem;
+  background: linear-gradient(180deg, #EF4444, #B91C1C);
+  color: #FFFFFF;
+}
+
+.arena-pole-s {
+  padding: 0.22rem 0.45rem;
+  background: linear-gradient(180deg, #3B82F6, #1D4ED8);
+  color: #FFFFFF;
+}
+
+/* Mode Switcher (Preview Video vs Embedded Play Live) */
+.arena-mode-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.arena-mode-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.38rem 0.85rem;
+  border-radius: 9999px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #94A3B8;
+  background: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.arena-mode-btn:hover {
+  color: #F8FAFC;
+}
+
+.arena-mode-btn.active {
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.28);
+}
+
+.arena-mode-btn.play-active {
+  color: #FFFFFF;
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.85) 0%, rgba(37, 99, 235, 0.85) 100%);
+  border-color: rgba(255, 255, 255, 0.32);
+  box-shadow: 0 0 18px rgba(59, 130, 246, 0.45);
+}
+
+/* --------------------------------------------------------
+   MAIN 2-COLUMN STAGE
+   -------------------------------------------------------- */
+.arena-stage-grid {
+  position: relative;
+  z-index: 5;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 1.5rem;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .arena-stage-grid {
+    padding: 2.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .arena-stage-grid {
+    grid-template-columns: 7fr 5fr;
+    gap: 2.5rem;
+    padding: 2.5rem 2.75rem;
+  }
+}
+
+/* Embedded Live Game Iframe Container */
+.arena-live-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: #050608;
+  display: block;
+}
+
+/* --------------------------------------------------------
+   RIGHT PANEL: MISSION BRIEFING & MECHANICAL KEYCAPS
+   -------------------------------------------------------- */
+.arena-briefing {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.arena-controls-box {
+  border-radius: 16px;
+  background: rgba(8, 10, 14, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  padding: 0.95rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.arena-control-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  font-size: 0.75rem;
+}
+
+.arena-keycaps {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  flex-wrap: wrap;
+}
+
+.arena-keycap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  padding: 0.18rem 0.48rem;
+  border-radius: 6px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.66rem;
+  font-weight: 700;
+  color: #F8FAFC;
+  background: linear-gradient(180deg, #272B36 0%, #171A22 100%);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-bottom-width: 2.5px;
+  border-bottom-color: rgba(0, 0, 0, 0.8);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.arena-cta-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.65rem;
+  padding-top: 0.25rem;
+}
+
+@media (min-width: 480px) {
+  .arena-cta-row {
+    grid-template-columns: 1.25fr 1fr;
+  }
+}
+
+.arena-play-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.78rem 1.25rem;
+  border-radius: 9999px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #FFFFFF !important;
+  background: linear-gradient(135deg, #FF6B4A 0%, #D84227 100%);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  box-shadow:
+    0 4px 18px rgba(216, 66, 39, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.arena-play-cta:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 8px 26px rgba(216, 66, 39, 0.65),
+    inset 0 1px 0 rgba(255, 255, 255, 0.55);
+  filter: brightness(1.08);
+}
+
+.arena-source-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  padding: 0.78rem 1.15rem;
+  border-radius: 9999px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #F8FAFC !important;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.22);
+  text-decoration: none;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.arena-source-cta:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.38);
+  color: #FFFFFF !important;
+}
+
+/* --------------------------------------------------------
+   BOTTOM ARENA CARTRIDGE DOCK (OTHER PLAYABLE GAMES)
+   -------------------------------------------------------- */
+.arena-dock {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1.25rem;
+  padding: 0.95rem 1.5rem;
+  background: rgba(9, 11, 15, 0.88);
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+@media (min-width: 768px) {
+  .arena-dock {
+    padding: 0.95rem 2rem;
+  }
+}
+
+.arena-dock-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.arena-cartridge-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem 0.8rem;
+  border-radius: 9999px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.7rem;
+  color: #CBD5E1;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.arena-cartridge-chip:hover {
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.13);
+  border-color: rgba(255, 255, 255, 0.32);
+  transform: translateY(-1px);
+}
