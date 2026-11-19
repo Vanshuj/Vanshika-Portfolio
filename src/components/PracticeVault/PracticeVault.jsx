@@ -223,7 +223,7 @@ export default function PracticeVault() {
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-badge mb-3">
             <Compass className="w-3.5 h-3.5 text-accent-spring animate-pulse" />
             <span className="font-mono text-xs text-pastel-slate">
-              sys://github.com/Vanshuj/magnetic-compass
+              github.com/Vanshuj/practice-vault
             </span>
           </div>
 

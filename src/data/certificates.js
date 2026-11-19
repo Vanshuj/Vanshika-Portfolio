@@ -17,11 +17,11 @@ export const certificatesData = [
     title: "AWS Academy Graduate — Machine Learning for NLP",
     issuer: "Amazon Web Services (AWS) Academy",
     date: "2026",
-    category: "Cloud & AI Certification",
+    category: "Cloud & ML Certification",
     badge: "AWS Certified Graduate",
     accent: "#E5BF5A", // Golden Amber
     description: "Mastered natural language processing pipelines, tokenization, sequence modeling, and transformer models deployed on AWS cloud machine learning infrastructure (Amazon SageMaker).",
-    skills: ["Natural Language Processing", "Amazon SageMaker", "Transformers", "Cloud AI"],
+    skills: ["Natural Language Processing", "Amazon SageMaker", "Transformers", "Cloud Infrastructure"],
     verificationUrl: "https://drive.google.com/file/d/1SOo2bZk_kivzckQPw7BD_y9sWe_mGE2K/view?usp=sharing",
     isNationalHonor: false
   },
@@ -30,7 +30,7 @@ export const certificatesData = [
     title: "AWS Academy Graduate — Machine Learning Foundations",
     issuer: "Amazon Web Services (AWS) Academy",
     date: "2026",
-    category: "Cloud & AI Certification",
+    category: "Cloud & ML Certification",
     badge: "AWS Certified Graduate",
     accent: "#F7E7B4", // Warm Golden Sand
     description: "Validated proficiency in machine learning workflows, data preparation, supervised/unsupervised model training, and evaluation metrics using AWS services.",

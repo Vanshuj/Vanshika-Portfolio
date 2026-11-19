@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { ArrowUpRight, ExternalLink, Sparkles, Layers, Sliders, ChevronRight, Play } from 'lucide-react';
+import { ArrowUpRight, ExternalLink, Layers, Sliders, ChevronRight, Play } from 'lucide-react';
 import { GithubIcon } from '../Icons/BrandIcons';
 import { projectsData } from '../../data/projects';
-import ProjectVisualPlaceholder from './ProjectVisualPlaceholder';
+import ProjectShowcase from './ProjectShowcase';
 import ProjectModal from '../ProjectModal/ProjectModal';
 
 export default function Projects() {
@@ -25,7 +25,7 @@ export default function Projects() {
             Architected Platforms & Creative Systems.
           </h2>
           <p className="font-body text-sm sm:text-base text-pastel-slate max-w-xl">
-            Selected full-stack software spanning algorithmic middleware, progressive web narratives, and AI-driven knowledge platforms.
+            Selected full-stack software spanning algorithmic middleware, progressive web narratives, and distributed systems.
           </p>
         </div>
 
@@ -47,7 +47,7 @@ export default function Projects() {
               
               {/* Visual Showcase (7 cols) */}
               <div className="lg:col-span-7 order-2 lg:order-1">
-                <ProjectVisualPlaceholder project={projectsData[0]} />
+                <ProjectShowcase project={projectsData[0]} />
               </div>
 
               {/* Information Panel (5 cols) */}
@@ -130,12 +130,6 @@ export default function Projects() {
                       <Play className="w-3.5 h-3.5 text-accent-spring" />
                       <span>Watch Demo</span>
                     </a>
-                  )}
-
-                  {!projectsData[0].demoUrl && !projectsData[0].videoUrl && (
-                    <span className="text-[11px] font-mono text-pastel-slate/70 italic">
-                      [Live links reserved]
-                    </span>
                   )}
                 </div>
               </div>
@@ -232,18 +226,12 @@ export default function Projects() {
                       <span>Watch Demo</span>
                     </a>
                   )}
-
-                  {!projectsData[1].demoUrl && !projectsData[1].videoUrl && (
-                    <span className="text-[11px] font-mono text-pastel-slate/70 italic">
-                      [Live links reserved]
-                    </span>
-                  )}
                 </div>
               </div>
 
               {/* Visual Showcase (7 cols) - Right on desktop */}
               <div className="lg:col-span-7">
-                <ProjectVisualPlaceholder project={projectsData[1]} />
+                <ProjectShowcase project={projectsData[1]} />
               </div>
 
             </div>
@@ -259,7 +247,7 @@ export default function Projects() {
               
               {/* Visual Showcase (7 cols) */}
               <div className="lg:col-span-7 order-2 lg:order-1">
-                <ProjectVisualPlaceholder project={projectsData[2]} />
+                <ProjectShowcase project={projectsData[2]} />
               </div>
 
               {/* Information Panel (5 cols) */}
@@ -342,12 +330,6 @@ export default function Projects() {
                       <Play className="w-3.5 h-3.5 text-accent-spring" />
                       <span>Watch Demo</span>
                     </a>
-                  )}
-
-                  {!projectsData[2].demoUrl && !projectsData[2].videoUrl && (
-                    <span className="text-[11px] font-mono text-pastel-slate/70 italic">
-                      [Live links reserved]
-                    </span>
                   )}
                 </div>
               </div>

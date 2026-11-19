@@ -20,8 +20,8 @@ export const experienceData = {
     },
     {
       id: "telecom-aiml",
-      role: "Advanced AI/ML Trainee",
-      organization: "Advanced AI/ML Training Program",
+      role: "Machine Learning Trainee",
+      organization: "Machine Learning Training Program",
       program: "Telecom Data Analytics Initiative",
       period: "Feb 2026",
       type: "Applied Training & Project",
@@ -31,7 +31,7 @@ export const experienceData = {
       credentialUrl: "https://github.com/vansh16soni/Telecom_project",
       projectUrl: "https://github.com/vansh16soni/Telecom_project",
       responsibilities: [
-        "Cleared the rigorous Advanced AI/ML assessment with distinction covering predictive modeling and feature engineering.",
+        "Cleared the technical assessment with distinction covering predictive modeling and feature engineering.",
         "Applied supervised machine learning pipelines to real-world telecom customer churn and network traffic datasets.",
         "Constructed exploratory data analytics workflows and visual correlation matrices using modern analytical libraries."
       ],

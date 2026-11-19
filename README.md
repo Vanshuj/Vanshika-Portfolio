@@ -2,7 +2,7 @@
 
 > **VANSHiKA JAIN — Full-Stack Developer & Software Engineer Portfolio**  
 > 3D Liquid Crystal Glass UI × Clean Architecture × Systems Engineering  
-> Specializing in MERN Stack, Enterprise Java Backend (Spring Boot), RESTful APIs, and AI integrations.
+> Specializing in MERN Stack, Enterprise Java Backend (Spring Boot), RESTful APIs, and distributed systems.
 
 ---
 
@@ -64,22 +64,18 @@ The output will be placed in the `dist/` directory, ready to deploy to GitHub Pa
 
 ---
 
-## 🖼️ Adding Project Screenshots & Live Demo Links
+## 🖼️ Media & Live Website Links
 
 All project content is maintained in `src/data/projects.js`.
 
-1. **Add Screenshots**:
-   - Place your image files in `public/assets/projects/` (e.g., `pixel-arena.png`).
-   - Open `src/data/projects.js` and set:
-     ```javascript
-     screenshot: "/assets/projects/pixel-arena.png",
-     ```
-   - *Tip:* You can also test and preview screenshots directly in the live browser using the **Load Screenshot** button in each project card.
+1. **Add Screenshots / Demos**:
+   - Place media files in `public/assets/projects/` or `public/videos/`.
+   - Update `screenshot` or `videoUrl` in `src/data/projects.js`.
 
 2. **Add Live Website Links**:
    - In `src/data/projects.js`, locate `demoUrl` and insert your live URL:
      ```javascript
-     demoUrl: "https://pixel-arena.onrender.com",
+     demoUrl: "https://pixel-arena-1.onrender.com",
      ```
 
 ---

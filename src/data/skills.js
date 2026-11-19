@@ -9,7 +9,7 @@ export const skillsData = {
       skills: [
         { name: "Java", type: "Object-Oriented Enterprise Language", isHighlight: true, badge: "Core Language" },
         { name: "JavaScript", type: "Full-Stack Web & Runtime Standard", isHighlight: true, badge: "ES6+" },
-        { name: "Python", type: "Scripting, Data & AI Tooling", isHighlight: false, badge: "Data / AI" },
+        { name: "Python", type: "Scripting, Automation & Data Pipelines", isHighlight: false, badge: "Scripting" },
         { name: "C++", type: "Systems Programming & Problem Solving", isHighlight: false, badge: "Core CS" },
         { name: "C", type: "Foundational Procedural Language", isHighlight: false, badge: "Low-Level" },
       ]
@@ -30,12 +30,12 @@ export const skillsData = {
     {
       id: "backend",
       title: "Java Backend",
-      subtitle: "Enterprise REST services & AI pipelines",
+      subtitle: "Enterprise REST services & Microservices",
       accent: "#E5BF5A", // Golden Amber
       accentCode: "amber",
       skills: [
         { name: "Spring Boot", type: "Robust Enterprise Backend Framework", isHighlight: true, badge: "Enterprise Core" },
-        { name: "Spring AI", type: "Generative AI Integration & Tooling", isHighlight: true, badge: "AI Framework" },
+        { name: "Spring Security", type: "Role-Based Access Control & JWT", isHighlight: true, badge: "Security" },
         { name: "REST APIs", type: "Stateless RESTful Service Architecture", isHighlight: true, badge: "REST Standard" },
       ]
     },

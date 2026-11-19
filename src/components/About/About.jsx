@@ -1,6 +1,6 @@
 import React from 'react';
 import { 
-  Sparkles, Compass, Lightbulb, Code2, Server, Layout, Cpu, 
+  Compass, Lightbulb, Code2, Server, Layout, Cpu, 
   Database, Wrench, Binary, Layers, ShieldCheck, CheckCircle2, 
   GraduationCap, Award 
 } from 'lucide-react';
@@ -35,10 +35,10 @@ export default function About() {
         <div className="lg:col-span-5 space-y-8">
           <div>
             <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-pastel-ink tracking-tight leading-tight mb-4">
-              Full-Stack Engineering with MERN, Java Enterprise & AI Integration.
+              Full-Stack Engineering with MERN, Java Enterprise & Scalable Systems.
             </h2>
             <p className="font-body text-base text-pastel-slate leading-relaxed">
-              Computer Engineering undergraduate specializing in MERN stack applications, robust Spring Boot RESTful APIs, secure authentication systems, and AI-powered platforms.
+              Computer Engineering undergraduate specializing in MERN stack applications, robust Spring Boot RESTful APIs, secure authentication workflows, and distributed systems.
             </p>
           </div>
 
@@ -52,7 +52,7 @@ export default function About() {
                 </div>
                 <div className="font-display font-bold text-sm text-pastel-ink mb-1">Spring Boot & REST</div>
                 <p className="font-body text-[11px] text-pastel-slate leading-relaxed">
-                  Enterprise RESTful APIs, Spring AI integration, and secure JWT / OAuth authentication workflows.
+                  Enterprise RESTful APIs, Spring Boot microservices, and secure JWT / OAuth authentication workflows.
                 </p>
               </div>
             </div>
@@ -65,7 +65,7 @@ export default function About() {
                 </div>
                 <div className="font-display font-bold text-sm text-pastel-ink mb-1">React & Node.js</div>
                 <p className="font-body text-[11px] text-pastel-slate leading-relaxed">
-                  Interactive web applications with React, Express, MongoDB, and AI knowledge graph platforms.
+                  Interactive web applications with React, Express, MongoDB, and graph visualization platforms.
                 </p>
               </div>
             </div>
@@ -117,7 +117,7 @@ export default function About() {
           
           {/* Paragraphs */}
           <div className="space-y-4 font-body text-sm sm:text-base text-pastel-ink/80 leading-relaxed">
-            <p className="first-letter:text-4xl first-letter:font-display first-letter:font-bold first-letter:mr-2 first-letter:float-left first-letter:text-pastel-ink">
+            <p className="first-letter:text-4xl first-letter:font-display first-letter:font-bold first-letter:mr-2 first-letter:float-left first-letter:text-white">
               {profileData.bio.lead}
             </p>
             {profileData.bio.paragraphs.map((p, idx) => (
@@ -211,7 +211,7 @@ export default function About() {
                       className="flex items-center justify-between p-2.5 rounded-full glass-pill hover:bg-white/25 transition-all duration-200"
                     >
                       <div className="flex items-center gap-2 pl-1">
-                        <span className={`w-1.5 h-1.5 rounded-full ${skill.isHighlight ? 'bg-pastel-ink' : 'bg-pastel-slate/40'}`} />
+                        <span className={`w-1.5 h-1.5 rounded-full ${skill.isHighlight ? 'bg-white' : 'bg-white/40'}`} />
                         <span className="font-body text-xs sm:text-sm font-medium text-pastel-ink">
                           {skill.name}
                         </span>

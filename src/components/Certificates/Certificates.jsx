@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Award, ShieldCheck, ExternalLink, Calendar, ChevronRight, Sparkles } from 'lucide-react';
+import { Award, ShieldCheck, ExternalLink, Calendar, ChevronRight } from 'lucide-react';
 import { certificatesData } from '../../data/certificates';
 import CertificateModal from './CertificateModal';
 

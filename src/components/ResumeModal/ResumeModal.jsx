@@ -123,7 +123,7 @@ export default function ResumeModal({ onClose }) {
               Summary
             </h2>
             <p className="font-body text-xs sm:text-[13px] text-gray-700 leading-relaxed">
-              Computer Engineering undergraduate and Full-Stack Developer specializing in the MERN stack and Java-based backend development. Experienced in building web applications, RESTful APIs, authentication systems, and AI-powered platforms using React, Node.js, Spring Boot, and MongoDB. Strong foundation in object-oriented programming, database management, and problem-solving, with hands-on experience in full-stack development and AI integration.
+              Computer Engineering undergraduate and Full-Stack Developer specializing in the MERN stack and Java-based backend development. Experienced in building web applications, RESTful APIs, authentication systems, and distributed platforms using React, Node.js, Spring Boot, and MongoDB. Strong foundation in object-oriented programming, database management, and problem-solving, with hands-on experience in full-stack engineering.
             </p>
           </div>
 
@@ -236,7 +236,7 @@ export default function ResumeModal({ onClose }) {
             <div className="space-y-1 font-body text-xs sm:text-[13px] text-gray-700">
               <div><strong className="text-gray-900 font-semibold">Languages:</strong> Java, JavaScript, Python, C, C++</div>
               <div><strong className="text-gray-900 font-semibold">MERN Stack:</strong> MongoDB, Express.js, React.js, Node.js</div>
-              <div><strong className="text-gray-900 font-semibold">Java Backend:</strong> Spring Boot, Spring AI, REST APIs</div>
+              <div><strong className="text-gray-900 font-semibold">Java Backend:</strong> Spring Boot, Spring Security, REST APIs</div>
               <div><strong className="text-gray-900 font-semibold">Authentication:</strong> JWT, GitHub OAuth</div>
               <div><strong className="text-gray-900 font-semibold">Databases & Tools:</strong> MySQL, MongoDB, Git, GitHub, Render, Power BI</div>
               <div><strong className="text-gray-900 font-semibold">Core CS:</strong> Data Structures & Algorithms, Object-Oriented Programming (OOP)</div>

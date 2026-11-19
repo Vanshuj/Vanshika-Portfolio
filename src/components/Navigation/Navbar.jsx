@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FileText, ArrowUpRight, Menu, X, Sparkles } from 'lucide-react';
+import { FileText, ArrowUpRight, Menu, X } from 'lucide-react';
 import { profileData } from '../../data/profile';
 
 const navLinks = [

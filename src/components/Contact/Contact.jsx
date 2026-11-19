@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, FileText, Send, CheckCircle2, Copy, Check, ArrowUpRight, ShieldCheck, Sparkles, ExternalLink } from 'lucide-react';
+import { Mail, FileText, Send, CheckCircle2, Copy, Check, ArrowUpRight, ShieldCheck, ExternalLink } from 'lucide-react';
 import { GithubIcon, LinkedinIcon, LeetCodeIcon } from '../Icons/BrandIcons';
 import { profileData } from '../../data/profile';
 import confetti from 'canvas-confetti';
@@ -39,7 +39,7 @@ export default function Contact({ onOpenResume }) {
     setErrors({});
     setStatus('submitting');
 
-    // Simulate reliable dispatch and open mailto link to guarantee delivery to user's real email
+    // Dispatch form data and launch mail client
     setTimeout(() => {
       setStatus('success');
       try {
@@ -51,7 +51,7 @@ export default function Contact({ onOpenResume }) {
         });
       } catch (e) {}
 
-      // Trigger user mail client fallback as backup
+      // Construct mailto link
       const mailtoUrl = `mailto:${profileData.socials.email.address}?subject=${encodeURIComponent(
         formData.subject || `Inquiry from ${formData.name}`
       )}&body=${encodeURIComponent(
@@ -81,7 +81,7 @@ export default function Contact({ onOpenResume }) {
               Let's build something exceptional together.
             </h2>
             <p className="font-body text-base text-pastel-slate leading-relaxed">
-              Whether you're exploring full-stack engineering candidates, seeking an intern with modern Java & MERN experience, or wishing to collaborate on AI-driven platforms, I'd love to connect.
+              Whether you're exploring full-stack engineering candidates, seeking an intern with modern Java & MERN experience, or wishing to collaborate on high-impact projects, I'd love to connect.
             </p>
           </div>
 

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { X, ExternalLink, Layers, CheckCircle2, Terminal, ArrowUpRight, ShieldCheck, Sparkles } from 'lucide-react';
+import { X, ExternalLink, Layers, CheckCircle2, Terminal, ArrowUpRight, ShieldCheck } from 'lucide-react';
 import { GithubIcon } from '../Icons/BrandIcons';
 
 export default function ProjectModal({ project, onClose }) {
@@ -72,7 +72,7 @@ export default function ProjectModal({ project, onClose }) {
             </a>
           )}
 
-          {project.demoUrl ? (
+          {project.demoUrl && (
             <a
               href={project.demoUrl}
               target="_blank"
@@ -83,11 +83,6 @@ export default function ProjectModal({ project, onClose }) {
               <span>Launch Live Website</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
             </a>
-          ) : (
-            <div className="inline-flex items-center gap-2 px-3.5 py-2 rounded-full glass-badge border border-dashed border-pastel-slate/30 text-xs font-mono text-pastel-slate">
-              <span className="w-2 h-2 rounded-full bg-accent-java" />
-              <span>Live Website Deployment Link (Reserved)</span>
-            </div>
           )}
 
           <div className="ml-auto text-xs font-mono text-pastel-slate hidden md:block">

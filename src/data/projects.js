@@ -10,9 +10,7 @@ export const projectsData = [
     role: "Full-Stack Engineer & Middleware Architect",
     summary: "A real-time competitive gaming platform that challenges users to match reference imagery, featuring custom image-comparison middleware for pixel-level similarity scoring, live leaderboards, and centralized admin controls.",
     
-    // Space reserved for user to add their screenshot and demo link
-    // Live links and demo video
-    screenshot: null, // Set image path here: e.g. "/assets/projects/pixel-arena-main.png"
+    screenshot: null,
     additionalScreenshots: [],
     demoUrl: "https://pixel-arena-1.onrender.com",
     videoUrl: "./videos/pixel-arena-demo.mp4",
@@ -68,8 +66,7 @@ export const projectsData = [
     role: "Frontend Architect & Narrative Systems Developer",
     summary: "An interactive branching narrative platform enabling cultural creators to craft non-linear folklore and interactive stories with dynamic story trees, multi-lingual speech narration, and offline-first client storage.",
     
-    // Live links and demo video
-    screenshot: null, // Set image path here: e.g. "/assets/projects/kathavani-main.png"
+    screenshot: null,
     additionalScreenshots: [],
     demoUrl: "https://kathavani-frontend.onrender.com",
     videoUrl: "./videos/kathavani-demo.mp4",
@@ -117,21 +114,20 @@ export const projectsData = [
     id: "gyan-ai",
     number: "03",
     title: "GYAN.AI",
-    tagline: "AI-Powered Technical Notes & Knowledge Platform",
-    category: "Full-Stack AI Application",
-    type: "Advanced AI/ML Project",
+    tagline: "Technical Video Notes & Interactive Knowledge Graph Platform",
+    category: "Full-Stack Web Platform",
+    type: "Full-Stack Engineering Project",
     year: "2026",
-    role: "Full-Stack & AI Integration Engineer",
-    summary: "An intelligent study and research engine that ingests YouTube lectures, technical documentation, and complex subjects to synthesize exam-ready notes, timestamped summaries, interactive knowledge graphs, and multi-format document exports.",
+    role: "Full-Stack Systems Engineer",
+    summary: "An intelligent study and research engine that ingests technical lectures, documentation, and complex subjects to synthesize exam-ready notes, timestamped summaries, interactive knowledge graphs, and multi-format document exports.",
     
-    // Live links and demo video
-    screenshot: null, // Set image path here: e.g. "/assets/projects/gyan-ai-main.png"
+    screenshot: null,
     additionalScreenshots: [],
     demoUrl: "https://gyan-ai-mbtq.onrender.com/",
     videoUrl: "./videos/gyan-ai-demo.mp4",
     githubUrl: "https://github.com/vansh16soni/GYAN.AI",
     
-    status: "Featured AI Platform",
+    status: "Production Ready / Deployed on Render",
     accentColor: "#F6E6CE", // Golden Peach
     badgeColor: "#36210A", // Warm Dark Brown
     
@@ -141,33 +137,32 @@ export const projectsData = [
       "ELK.js",
       "Node.js",
       "Express.js",
-      "Google Gemini API",
-      "Groq LPU",
-      "OpenAI API",
+      "Natural Language Processing",
+      "RESTful Ingestion Pipelines",
       "JWT Authentication",
       "PDF & DOCX Exporters"
     ],
 
     highlights: [
-      "Orchestrated multi-LLM pipelines leveraging Gemini, Groq, and OpenAI for high-speed technical summarization",
-      "Converted lengthy technical video lectures into structured, timestamped markdown study guides and flashcards",
-      "Implemented interactive knowledge graphs using React Flow and ELK.js hierarchical graph layouts",
-      "Built secure JWT authentication with encrypted user sessions and personalized study preference matrices",
+      "Orchestrated high-throughput transcript extraction and content processing pipelines for technical lecture indexing",
+      "Converted complex video lectures into structured, timestamped markdown study guides and flashcards",
+      "Implemented interactive directed concept graphs using React Flow and ELK.js hierarchical DAG layouts",
+      "Built secure JWT authentication with encrypted user sessions and personalized preference matrices",
       "Enabled high-fidelity document exports directly to PDF, DOCX, and Markdown formats"
     ],
 
     caseStudy: {
       problem: "Engineers and students spend hundreds of hours watching dense technical lectures without an efficient means to index concepts, review contextual timestamps, or visualize prerequisite topic relationships visually.",
-      solution: "Developed GYAN.AI to automate technical content ingestion, extracting transcripts, applying structured prompt engineering across state-of-the-art LLMs, and rendering concept graphs with node navigation and immediate document compilation.",
+      solution: "Developed GYAN.AI to automate technical content ingestion, extracting transcripts, applying structured natural language parsing pipelines, and rendering concept graphs with node navigation and document compilation.",
       architecture: [
-        "Backend ingestion pipeline extracting video audio/transcripts and batching chunks for LLM processing",
-        "Multi-model routing switch querying Groq for lightning-fast parsing and Gemini for deep analytical synthesis",
+        "Backend ingestion pipeline extracting video audio/transcripts and batching chunks for content synthesis",
+        "Multi-endpoint routing switch querying high-throughput services for parsing and deep synthesis",
         "Graph orchestration micro-module computing directed acyclic graphs via ELK.js layout algorithms and rendered through React Flow",
         "Export pipeline transforming dynamic AST (Abstract Syntax Tree) notes into formatted PDF and DOCX files"
       ],
       contributions: [
         "Designed the reactive frontend interface incorporating liquid glass node cards and graph zooming controls",
-        "Authored the backend token-budgeting algorithm to optimize prompt context windows across different AI providers",
+        "Authored the backend token-budgeting algorithm to optimize context windows across API providers",
         "Integrated secure JWT auth flow with refresh tokens and session storage"
       ]
     }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUp, Heart, Sparkles } from 'lucide-react';
+import { ArrowUp, Heart } from 'lucide-react';
 import { GithubIcon, LinkedinIcon, LeetCodeIcon } from '../Icons/BrandIcons';
 import { profileData } from '../../data/profile';
 

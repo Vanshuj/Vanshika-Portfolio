@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowDown, Mail, FileText, Sparkles, Terminal, Code2, Award, GraduationCap, CheckCircle2 } from 'lucide-react';
+import { ArrowDown, Mail, FileText, Terminal, Code2, Award, GraduationCap, CheckCircle2 } from 'lucide-react';
 import { GithubIcon, LinkedinIcon, LeetCodeIcon } from '../Icons/BrandIcons';
 import { profileData } from '../../data/profile';
 
@@ -42,7 +42,7 @@ export default function Hero({ onOpenResume, onOpenContactModal }) {
 
           {/* Brief Introduction */}
           <p className="font-body text-sm sm:text-base text-pastel-slate max-w-xl leading-relaxed mb-8">
-            {profileData.tagline} Focused on modern full-stack systems with <span className="text-pastel-ink font-medium">Java, Spring Boot, React, and Node.js</span>, bridging robust enterprise engineering with intelligent AI capabilities.
+            {profileData.tagline} Focused on modern full-stack systems with <span className="text-pastel-ink font-medium">Java, Spring Boot, React, and Node.js</span>, bridging robust enterprise engineering with high-performance web architectures.
           </p>
 
           {/* Action CTAs (Transparent Liquid Glass Buttons) */}

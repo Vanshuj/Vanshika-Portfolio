@@ -8,7 +8,6 @@ import {
   ExternalLink,
   Code2,
   CheckCircle2,
-  Sparkles,
   RotateCcw,
   Keyboard,
 } from 'lucide-react';
@@ -32,7 +31,7 @@ export default function GamingArena() {
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-badge mb-3">
             <Gamepad2 className="w-3.5 h-3.5 text-accent-spring" />
             <span className="font-mono text-xs text-pastel-slate">
-              sys://vanshuj.arcade/gaming-arena
+              Interactive Browser Arcade
             </span>
           </div>
 
@@ -241,7 +240,7 @@ export default function GamingArena() {
           {/* Bottom Arena Cartridge Dock (More Playable Builds) */}
           <div className="arena-dock">
             <div className="flex items-center gap-2 font-mono text-[11px] text-pastel-slate">
-              <Sparkles className="w-3.5 h-3.5 text-accent-spring" />
+              <Gamepad2 className="w-3.5 h-3.5 text-accent-spring" />
               <span>MORE PLAYABLE BUILDS IN ARENA:</span>
             </div>
 
